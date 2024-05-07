@@ -1,0 +1,482 @@
+SanPham As screen:
+    Fill: =RGBA(241, 244, 249, 1)
+
+    Container1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =100
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Image2 As image:
+            Image: =BHKlogo
+            Width: =256
+            ZIndex: =1
+
+        Label5 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =15
+            Text: =LookUp('mWarehouse.Users',account = TextInput1.Text).Title
+            Width: =259
+            X: =1107
+            Y: =3
+            ZIndex: =2
+
+        Label5_1 As label:
+            Color: =RGBA(99, 139, 44, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Text: =LookUp('mWarehouse.Users',account = TextInput1.Text).role.Value
+            Width: =259
+            X: =1107
+            Y: =50
+            ZIndex: =3
+
+        Image3 As image:
+            Image: ='kisspng-user-computer-icons-gravatar-blog-happy-woman-5aca6d038826d9.7357010215232156195577'
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            X: =1007
+            ZIndex: =4
+
+    Container3 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height-110
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Width: |
+            =200
+        Y: =110
+        ZIndex: =2
+
+        "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            DelayItemLoading: =true
+            Height: =420
+            Items: |-
+                =Table({ID: 1,Title:"Trang chủ"},{ID: 2,Title:"Sản phẩm",Name: SanPham},{ID: 3,Title:"Báo giá",Name:YeuCau},{ID: 4,Title:"Thống kê"},{ID: 5,Title:"Duyệt đơn"})
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            OnSelect: |-
+                =Set(ShowFill,ThisItem.ID);
+                Navigate(ThisItem.Name)
+            TemplatePadding: =0
+            TemplateSize: =83
+            Width: =200
+            Y: =12
+            ZIndex: =1
+
+            Separator1 As rectangle:
+                Height: =7
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =39
+                ZIndex: =5
+
+            Label6 As label:
+                Align: =Align.Center
+                Fill: =If(ThisItem.ID = ShowFill,Color.Gray,RGBA(0,0,0,0))
+                FontWeight: =FontWeight.Semibold
+                Height: =53
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.Title
+                Width: =200
+                Y: =23
+                ZIndex: =7
+
+        Label7 As label:
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Navigate(DangNhap); Reset(TextInput1);Reset(TextInput1_1);
+            Text: ="Đăng xuất"
+            Width: =100
+            X: =66
+            Y: =597
+            ZIndex: =2
+
+        Image4 As image:
+            Height: =59
+            Image: ='icons8-logout-100'
+            OnSelect: =Navigate(DangNhap); Reset(TextInput1);Reset(TextInput1_1);
+            Width: =61
+            X: =17
+            Y: =588
+            ZIndex: =3
+
+    Container4 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height - 110
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Width: =Parent.Width - 210
+        X: =210
+        Y: =110
+        ZIndex: =3
+
+        Container2 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Semilight
+            Height: =70
+            Width: =Parent.Width
+            ZIndex: =1
+
+            Label8 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =35
+                Size: =16
+                Text: ="📑 Danh sách sản phẩm "
+                Width: =267
+                X: =15
+                Y: =15
+                ZIndex: =1
+
+            Button5 As button:
+                OnSelect: |-
+                    =UpdateContext({ShowThemNCC: true})
+                Text: ="Thêm NCC"
+                X: =988
+                Y: =15
+                ZIndex: =2
+
+            Button5_1 As button:
+                OnSelect: |-
+                    =UpdateContext({ShowThemSP:true})
+                Text: ="Thêm SP"
+                X: =790
+                Y: =15
+                ZIndex: =3
+
+            Button5_2 As button:
+                OnSelect: |-
+                    =UpdateContext({ShowThemDon:true})
+                Text: ="Tạo đơn nhập"
+                X: =593
+                Y: =15
+                ZIndex: =4
+
+        Container5 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Semilight
+            Height: |
+                =100
+            Width: =Parent.Width
+            Y: =70
+            ZIndex: =2
+
+            Label9 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =41
+                Text: ="Tìm kiếm"
+                Width: =113
+                X: =15
+                Y: =10
+                ZIndex: =1
+
+            TextInput2 As text:
+                Default: ="Text input"
+                X: =110
+                Y: =11
+                ZIndex: =2
+
+            Button1 As button:
+                Text: ="🔍"
+                Width: =70
+                X: =430
+                Y: =10
+                ZIndex: =3
+
+        Container7 As groupContainer.manualLayoutContainer:
+            Height: =70
+            Width: =Parent.Width
+            Y: =170
+            ZIndex: =3
+
+            Label10_1 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Text: ="Tên sản phẩm"
+                Width: =323
+                X: =15
+                Y: =15
+                ZIndex: =2
+
+            Label10_2 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Text: ="Loại"
+                Width: =109
+                X: =338
+                Y: =15
+                ZIndex: =3
+
+            Label10_3 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Text: ="Số lượng"
+                Width: =84
+                X: =447
+                Y: =15
+                ZIndex: =4
+
+            Label10_4 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Text: ="Giá nhập"
+                Width: =104
+                X: =555
+                Y: =15
+                ZIndex: =5
+
+            Label10_5 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Text: ="Giá xuất"
+                Width: =104
+                X: =719
+                Y: =15
+                ZIndex: =6
+
+            Label10_6 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Text: ="Hình ảnh"
+                Width: =104
+                X: =877
+                Y: =15
+                ZIndex: =7
+
+        Container8 As groupContainer.manualLayoutContainer:
+            Height: =415
+            Width: =Parent.Width
+            Y: =240
+            ZIndex: =4
+
+            "Gallery3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                DelayItemLoading: =true
+                Height: =Parent.Height
+                Items: ='mWarehouse.Products'
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =80
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Separator4 As rectangle:
+                    Height: =8
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - Self.Height
+                    ZIndex: =3
+
+                Container14 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Regular
+                    Height: =80
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Width: =Parent.Width
+                    ZIndex: =5
+
+                    Label15 As label:
+                        Height: =45
+                        Text: =ThisItem.Name
+                        Width: =330
+                        Y: =16
+                        ZIndex: =1
+
+                    Button2 As button:
+                        DisplayMode: =DisplayMode.View
+                        Fill: |-
+                            =//RGBA(221, 79, 14, 0.75)
+                            If(
+                                ThisItem.category.Value = "Điện thoại",
+                                RGBA(
+                                    221,
+                                    79,
+                                    14,
+                                    0.75
+                                ),
+                                If(
+                                    ThisItem.category.Value = "Laptop",
+                                    RGBA(
+                                        127,
+                                        178,
+                                        57,
+                                        0.75
+                                    ),RGBA(0, 121, 187, 0.75)
+                                )
+                            )
+                        RadiusBottomLeft: =20
+                        RadiusBottomRight: =20
+                        RadiusTopLeft: =20
+                        RadiusTopRight: =20
+                        Size: =12
+                        Text: =ThisItem.category.Value
+                        Width: =100
+                        X: =343
+                        Y: =21
+                        ZIndex: =2
+
+                    Label17 As label:
+                        Align: =Align.Center
+                        Text: =ThisItem.quantity
+                        Width: =50
+                        X: =468
+                        Y: =18
+                        ZIndex: =3
+
+                    Label18 As label:
+                        Text: |-
+                            =Concatenate(Text(ThisItem.priceImport,"###,###")," VNĐ")
+                        Width: =157
+                        X: =537
+                        Y: =21
+                        ZIndex: =4
+
+                    Label18_1 As label:
+                        Text: |-
+                            =Concatenate(Text(ThisItem.priceExport,"###,###")," VNĐ")
+                        Width: =155
+                        X: =706
+                        Y: =21
+                        ZIndex: =5
+
+                    Image7 As image:
+                        Height: =75
+                        Image: =ThisItem.image
+                        X: =873
+                        Y: =3
+                        ZIndex: =6
+
+                    Container15 As groupContainer.manualLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =80
+                        Width: =150
+                        X: =1000
+                        ZIndex: =7
+
+                        Label19 As label:
+                            Align: =Align.Center
+                            Height: =36
+                            Size: =20
+                            Text: ="✏️"
+                            Width: =60
+                            Y: =24
+                            ZIndex: =1
+
+                        Label20 As label:
+                            Align: =Align.Center
+                            Size: =25
+                            Text: ="📋"
+                            Width: =60
+                            X: =60
+                            Y: =20
+                            ZIndex: =2
+
+    ThemSp As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =6
+
+        Rectangle1 As rectangle:
+            BorderColor: =RGBA(202, 202, 202, 1)
+            Fill: =RGBA(202, 202, 202, 0.5)
+            Height: =Parent.Height
+            OnSelect: |-
+                =UpdateContext({ShowThemSP: false})
+            Visible: =ShowThemSP
+            Width: =Parent.Width
+            ZIndex: =4
+
+        Container9 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height/1.2
+            Visible: =ShowThemSP
+            Width: =Parent.Width/1.2
+            X: =Rectangle1.Width/12
+            Y: =Rectangle1.Height/12
+            ZIndex: =5
+
+            Label1 As label:
+                Text: ="Thêm sản phẩm"
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+    ThemNCC As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =8
+
+        Rectangle1_1 As rectangle:
+            BorderColor: =RGBA(202, 202, 202, 1)
+            Fill: =RGBA(202, 202, 202, 0.5)
+            Height: =Parent.Height
+            OnSelect: |-
+                =UpdateContext({ShowThemNCC: false})
+            Visible: =ShowThemNCC
+            Width: =Parent.Width
+            ZIndex: =6
+
+        Container9_1 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height/1.2
+            Visible: =ShowThemNCC
+            Width: =Parent.Width/1.2
+            X: =Rectangle1_1.Width/12
+            Y: =Rectangle1_1.Height/12
+            ZIndex: =7
+
+            Label1_1 As label:
+                Text: ="Thêm Nhà cung cấp"
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+    ThemDon As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =10
+
+        Rectangle1_2 As rectangle:
+            BorderColor: =RGBA(202, 202, 202, 1)
+            Fill: =RGBA(202, 202, 202, 0.5)
+            Height: =Parent.Height
+            OnSelect: |-
+                =UpdateContext({ShowThemDon: false})
+            Visible: =ShowThemDon
+            Width: =Parent.Width
+            ZIndex: =8
+
+        Container9_2 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height/1.2
+            Visible: =ShowThemDon
+            Width: =Parent.Width/1.2
+            X: =Rectangle1_2.Width/12
+            Y: =Rectangle1_2.Height/12
+            ZIndex: =9
+
+            Label1_2 As label:
+                Text: ="Thêm Đơn"
+                X: =40
+                Y: =40
+                ZIndex: =1
+
