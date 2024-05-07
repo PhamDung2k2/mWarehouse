@@ -158,6 +158,42 @@ YeuCau As screen:
                 Y: =15
                 ZIndex: =4
 
+            Button4 As button:
+                Color: =RGBA(0, 0, 0, 1)
+                Fill: =RGBA(109, 49, 162, 1)
+                Height: =25
+                HoverColor: =RGBA(0, 0, 0, 1)
+                Size: =12
+                Text: ="Tất cả"
+                Width: =100
+                X: =255
+                Y: =23
+                ZIndex: =5
+
+            Button4_1 As button:
+                Color: =RGBA(0, 0, 0, 1)
+                Fill: =RGBA(109, 49, 162, 1)
+                Height: =25
+                HoverColor: =RGBA(0, 0, 0, 1)
+                Size: =12
+                Text: ="Báo giá"
+                Width: =100
+                X: =369
+                Y: =23
+                ZIndex: =6
+
+            Button4_2 As button:
+                Color: =RGBA(0, 0, 0, 1)
+                Fill: =RGBA(109, 49, 162, 1)
+                Height: =25
+                HoverColor: =RGBA(0, 0, 0, 1)
+                Size: =12
+                Text: ="Đơn hàng"
+                Width: =100
+                X: =481
+                Y: =23
+                ZIndex: =7
+
         Container5_1 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Semilight
             Height: |
@@ -197,7 +233,7 @@ YeuCau As screen:
             Label10_7 As label:
                 Align: =Align.Center
                 FontWeight: =FontWeight.Semibold
-                Text: ="Tên sản phẩm"
+                Text: ="Tên yêu cầu"
                 Width: =323
                 X: =15
                 Y: =15
@@ -206,47 +242,29 @@ YeuCau As screen:
             Label10_8 As label:
                 Align: =Align.Center
                 FontWeight: =FontWeight.Semibold
-                Text: ="Loại"
+                Text: ="Ngày tạo"
                 Width: =109
-                X: =338
+                X: =393
                 Y: =15
                 ZIndex: =3
 
             Label10_9 As label:
                 Align: =Align.Center
                 FontWeight: =FontWeight.Semibold
-                Text: ="Số lượng"
+                Text: ="Loại"
                 Width: =84
-                X: =447
+                X: =580
                 Y: =15
                 ZIndex: =4
 
             Label10_10 As label:
                 Align: =Align.Center
                 FontWeight: =FontWeight.Semibold
-                Text: ="Giá nhập"
+                Text: ="Tổng giá"
                 Width: =104
-                X: =555
+                X: =862
                 Y: =15
                 ZIndex: =5
-
-            Label10_11 As label:
-                Align: =Align.Center
-                FontWeight: =FontWeight.Semibold
-                Text: ="Giá xuất"
-                Width: =104
-                X: =719
-                Y: =15
-                ZIndex: =6
-
-            Label10_12 As label:
-                Align: =Align.Center
-                FontWeight: =FontWeight.Semibold
-                Text: ="Hình ảnh"
-                Width: =104
-                X: =877
-                Y: =15
-                ZIndex: =7
 
         Container8_1 As groupContainer.manualLayoutContainer:
             Height: =415
@@ -257,7 +275,7 @@ YeuCau As screen:
             "Gallery3_1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
                 DelayItemLoading: =true
                 Height: =Parent.Height
-                Items: ='mWarehouse.Products'
+                Items: ='mWarehouse.Exports'
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -284,44 +302,29 @@ YeuCau As screen:
 
                     Label15_1 As label:
                         Height: =45
-                        Text: =ThisItem.Name
+                        Text: =ThisItem.Title
                         Width: =332
                         Y: =16
                         ZIndex: =1
 
-                    Button2_1 As button:
-                        DisplayMode: =DisplayMode.View
-                        Fill: =RGBA(221, 79, 14, 0.75)
-                        RadiusBottomLeft: =20
-                        RadiusBottomRight: =20
-                        RadiusTopLeft: =20
-                        RadiusTopRight: =20
-                        Size: =12
-                        Text: =ThisItem.category.Value
-                        Width: =100
-                        X: =343
-                        Y: =21
-                        ZIndex: =2
-
                     Label17_1 As label:
                         Align: =Align.Center
-                        Text: =ThisItem.quantity
-                        Width: =50
-                        X: =468
+                        Text: =ThisItem.Created
+                        Width: =170
+                        X: =367
                         Y: =18
                         ZIndex: =3
 
                     Label18_2 As label:
-                        Text: |-
-                            =Concatenate(Text(ThisItem.priceImport,"###,###")," VNĐ")
+                        Text: =
                         Width: =157
-                        X: =537
-                        Y: =21
+                        X: =637
+                        Y: =16
                         ZIndex: =4
 
                     Label18_3 As label:
                         Text: |-
-                            =Concatenate(Text(ThisItem.priceExport,"###,###")," VNĐ")
+                            =Concatenate(Text(ThisItem.totalPrice,"###,###")," VNĐ")
                         Width: =155
                         X: =706
                         Y: =21
@@ -358,4 +361,37 @@ YeuCau As screen:
                             X: =60
                             Y: =20
                             ZIndex: =2
+
+                    Button2_1 As button:
+                        DisplayMode: =DisplayMode.View
+                        Fill: |-
+                            =//RGBA(221, 79, 14, 0.75)
+                            If(
+                                ThisItem.status.Value = "Chờ hàng",
+                                RGBA(
+                                    221,
+                                    79,
+                                    14,
+                                    0.75
+                                ),
+                                If(
+                                    ThisItem.status.Value = "Chờ duyệt",
+                                    RGBA(
+                                        127,
+                                        178,
+                                        57,
+                                        0.75
+                                    ),RGBA(0, 121, 187, 0.75)
+                                )
+                            )
+                        RadiusBottomLeft: =20
+                        RadiusBottomRight: =20
+                        RadiusTopLeft: =20
+                        RadiusTopRight: =20
+                        Size: =12
+                        Text: =ThisItem.category.Value
+                        Width: =100
+                        X: =571
+                        Y: =20
+                        ZIndex: =8
 
