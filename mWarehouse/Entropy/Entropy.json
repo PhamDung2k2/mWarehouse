@@ -59,7 +59,6 @@
     "Image4": 24,
     "Image4_1": 81,
     "Image7": 50,
-    "Image7_1": 107,
     "Label1": 14,
     "Label1_1": 16,
     "Label1_2": 18,
@@ -118,7 +117,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "05/07/2024 07:11:59",
+  "HeaderLastSavedDateTimeUTC": "05/07/2024 07:17:36",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "ce53e2f7-f540-4b78-9d1c-1b5ba04748a1": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/0ed383145d4d4d42b8e33ae014a8b8d5\""
@@ -245,7 +244,6 @@
     "Image4": {},
     "Image4_1": {},
     "Image7": {},
-    "Image7_1": {},
     "Label1": {},
     "Label1_1": {},
     "Label1_2": {},
@@ -362,7 +360,6 @@
     "Image4": 31,
     "Image4_1": 74,
     "Image7": 57,
-    "Image7_1": 101,
     "Label1": 21,
     "Label1_1": 23,
     "Label1_2": 25,
