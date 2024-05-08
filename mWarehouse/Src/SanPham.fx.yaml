@@ -68,7 +68,7 @@ SanPham As screen:
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: |-
                 =Set(ShowFill,ThisItem.ID);
-                Navigate(ThisItem.Name)
+                Navigate(ThisItem.Name,ScreenTransition.Fade)
             TemplatePadding: =0
             TemplateSize: =83
             Width: =200
