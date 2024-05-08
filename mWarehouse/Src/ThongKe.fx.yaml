@@ -1,5 +1,6 @@
 ThongKe As screen:
     Fill: =RGBA(241, 244, 249, 1)
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
 
     Container1_4 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
@@ -13,11 +14,18 @@ ThongKe As screen:
         ZIndex: =1
 
         Image2_4 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Image: =BHKlogo
             Width: =256
             ZIndex: =1
 
         Label5_8 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             FontWeight: =FontWeight.Bold
             Height: =47
             Size: =15
@@ -28,9 +36,13 @@ ThongKe As screen:
             ZIndex: =2
 
         Label5_9 As label:
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(99, 139, 44, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             FontWeight: =FontWeight.Bold
             Height: =47
+            Size: =13
             Text: =LookUp('mWarehouse.Users',account = TextInput1.Text).role.Value
             Width: =259
             X: =1107
@@ -38,6 +50,9 @@ ThongKe As screen:
             ZIndex: =3
 
         Image3_4 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Image: ='kisspng-user-computer-icons-gravatar-blog-happy-woman-5aca6d038826d9.7357010215232156195577'
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
@@ -60,6 +75,7 @@ ThongKe As screen:
         ZIndex: =2
 
         "Gallery1_4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            BorderColor: =App.Theme.Colors.Darker40
             DelayItemLoading: =true
             Height: =420
             Items: |-
@@ -76,6 +92,8 @@ ThongKe As screen:
             ZIndex: =1
 
             Separator1_4 As rectangle:
+                BorderColor: =App.Theme.Colors.Darker40
+                Fill: =RGBA(255, 255, 255, 1)
                 Height: =7
                 OnSelect: =Select(Parent)
                 Width: =Parent.TemplateWidth
@@ -84,18 +102,28 @@ ThongKe As screen:
 
             Label6_4 As label:
                 Align: =Align.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
                 Fill: =If(ThisItem.ID = ShowFill,Color.Gray,RGBA(0,0,0,0))
+                Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =53
                 OnSelect: =Select(Parent)
+                Size: =13
                 Text: =ThisItem.Title
                 Width: =200
                 Y: =23
                 ZIndex: =7
 
         Label7_4 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             FontWeight: =FontWeight.Semibold
             OnSelect: =Navigate(DangNhap); Reset(TextInput1);Reset(TextInput1_1);
+            Size: =13
             Text: ="Đăng xuất"
             Width: =100
             X: =66
@@ -103,6 +131,9 @@ ThongKe As screen:
             ZIndex: =2
 
         Image4_4 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =59
             Image: ='icons8-logout-100'
             OnSelect: =Navigate(DangNhap); Reset(TextInput1);Reset(TextInput1_1);
@@ -127,10 +158,18 @@ ThongKe As screen:
         Container2_4 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Semilight
             Height: =70
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             Width: =Parent.Width
             ZIndex: =1
 
             Label8_4 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =35
                 Size: =16
@@ -141,24 +180,66 @@ ThongKe As screen:
                 ZIndex: =1
 
             Button5_14 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: |-
                     =UpdateContext({ShowThemNCC: true})
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
                 Text: ="Thêm NCC"
                 X: =988
                 Y: =15
                 ZIndex: =2
 
             Button5_13 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: |-
                     =UpdateContext({ShowThemSP:true})
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
                 Text: ="Thêm SP"
                 X: =790
                 Y: =15
                 ZIndex: =3
 
             Button5_12 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: |-
                     =UpdateContext({ShowThemDon:true})
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
                 Text: ="Tạo đơn nhập"
                 X: =593
                 Y: =15
@@ -168,13 +249,22 @@ ThongKe As screen:
             DropShadow: =DropShadow.Semilight
             Height: |
                 =100
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             Width: =Parent.Width
             Y: =70
             ZIndex: =2
 
             Label9_4 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =41
+                Size: =13
                 Text: ="Tìm kiếm"
                 Width: =113
                 X: =15
@@ -182,12 +272,38 @@ ThongKe As screen:
                 ZIndex: =1
 
             TextInput2_4 As text:
+                BorderColor: =App.Theme.Colors.Darker40
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
                 Default: ="Text input"
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                FocusedBorderThickness: =4
+                Font: =App.Theme.Font
+                HoverBorderColor: =App.Theme.Colors.Darker40
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =App.Theme.Colors.Lighter70
+                Size: =13
                 X: =110
                 Y: =11
                 ZIndex: =2
 
             Button1_4 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
                 Text: ="🔍"
                 Width: =70
                 X: =430
@@ -195,7 +311,12 @@ ThongKe As screen:
                 ZIndex: =3
 
         Container10 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
             Height: =485
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             Width: =Parent.Width
             Y: |
                 =172
@@ -210,6 +331,9 @@ ThongKe As screen:
 
                 Title1 As label:
                     Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
                     Height: =25
                     Text: ="Chart Title"
                     Width: =400
@@ -218,16 +342,19 @@ ThongKe As screen:
                     ZIndex: =2
 
                 PieChart1 As pieChart:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                     Items: =PieChartSample
                     X: =2
                     Y: =55
                     ZIndex: =3
 
                 Legend1 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
                     Height: =200
                     ItemColorSet: =PieChart1.ItemColorSet
                     Items: =PieChart1.SeriesLabels
-                    Size: =16
                     Width: =400
                     X: =585
                     Y: =135
@@ -251,8 +378,13 @@ ThongKe As screen:
             ZIndex: =4
 
         Container9_6 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height/1.2
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             Visible: =ShowThemSP
             Width: =Parent.Width/1.2
             X: =Rectangle1_6.Width/12
@@ -260,6 +392,11 @@ ThongKe As screen:
             ZIndex: =5
 
             Label1_6 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Size: =13
                 Text: ="Thêm sản phẩm"
                 X: =40
                 Y: =40
@@ -283,8 +420,13 @@ ThongKe As screen:
             ZIndex: =6
 
         Container9_7 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height/1.2
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             Visible: =ShowThemNCC
             Width: =Parent.Width/1.2
             X: =Rectangle1_7.Width/12
@@ -292,6 +434,11 @@ ThongKe As screen:
             ZIndex: =7
 
             Label1_7 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Size: =13
                 Text: ="Thêm Nhà cung cấp"
                 X: =40
                 Y: =40
@@ -315,8 +462,13 @@ ThongKe As screen:
             ZIndex: =8
 
         Container9_8 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height/1.2
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             Visible: =ShowThemDon
             Width: =Parent.Width/1.2
             X: =Rectangle1_8.Width/12
@@ -324,6 +476,11 @@ ThongKe As screen:
             ZIndex: =9
 
             Label1_8 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Size: =13
                 Text: ="Thêm Đơn"
                 X: =40
                 Y: =40
