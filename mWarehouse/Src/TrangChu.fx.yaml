@@ -68,7 +68,7 @@ TrangChu As screen:
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: |-
                 =Set(ShowFill,ThisItem.ID);
-                Navigate(ThisItem.Name,ScreenTransition.Fade)
+                Navigate(ThisItem.Name,ScreenTransition.CoverRight)
             TemplatePadding: =0
             TemplateSize: =83
             Width: =200
