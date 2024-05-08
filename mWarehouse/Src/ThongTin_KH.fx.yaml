@@ -186,13 +186,17 @@ ThongTin_KH As screen:
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(255, 255, 255, 1)
+                Fill: |-
+                    =//RGBA(255, 255, 255, 1)
+                    clsp
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =25
                 HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+                OnSelect: |-
+                    =UpdateContext({clsp:RGBA(109, 49, 162, 1),clncc:RGBA(255, 255, 255, 1),clkh:RGBA(255, 255, 255, 1)})
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
@@ -210,20 +214,24 @@ ThongTin_KH As screen:
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(255, 255, 255, 1)
+                Fill: |-
+                    =//RGBA(255, 255, 255, 1)
+                    clncc
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =25
                 HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+                OnSelect: |-
+                    =UpdateContext({clsp:RGBA(109, 49, 162, 1),clncc:RGBA(255, 255, 255, 1),clkh:RGBA(255, 255, 255, 1)})
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
                 Size: =12
                 Text: ="Nhà cung cấp"
                 Width: =120
-                X: =402
+                X: =412
                 Y: =22
                 ZIndex: =6
 
@@ -234,13 +242,17 @@ ThongTin_KH As screen:
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(109, 49, 162, 1)
+                Fill: |-
+                    =//RGBA(109, 49, 162, 1)
+                    clkh
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =25
                 HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+                OnSelect: |-
+                    =UpdateContext({clsp:RGBA(109, 49, 162, 1),clncc:RGBA(255, 255, 255, 1),clkh:RGBA(255, 255, 255, 1)})
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
