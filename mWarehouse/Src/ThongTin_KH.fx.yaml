@@ -188,7 +188,7 @@ ThongTin_KH As screen:
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: |-
                     =//RGBA(255, 255, 255, 1)
-                    If (Color = clsp,clsp)
+                    If (   = clsp,clsp)
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =25
