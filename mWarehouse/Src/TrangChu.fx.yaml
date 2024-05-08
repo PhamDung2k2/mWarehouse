@@ -164,225 +164,27 @@ TrangChu As screen:
                 Y: =15
                 ZIndex: =4
 
-        Container5_3 As groupContainer.manualLayoutContainer:
-            DropShadow: =DropShadow.Semilight
-            Height: |
-                =100
+        Container8_3 As groupContainer.manualLayoutContainer:
+            Height: =588
             Width: =Parent.Width
             Y: =70
-            ZIndex: =2
-
-            Label9_3 As label:
-                FontWeight: =FontWeight.Semibold
-                Height: =41
-                Text: ="Tìm kiếm"
-                Width: =113
-                X: =15
-                Y: =10
-                ZIndex: =1
-
-            TextInput2_3 As text:
-                Default: ="Text input"
-                X: =110
-                Y: =11
-                ZIndex: =2
-
-            Button1_3 As button:
-                Text: ="🔍"
-                Width: =70
-                X: =430
-                Y: =10
-                ZIndex: =3
-
-        Container7_3 As groupContainer.manualLayoutContainer:
-            Height: =70
-            Width: =Parent.Width
-            Y: =170
-            ZIndex: =3
-
-            Label10_15 As label:
-                Align: =Align.Center
-                FontWeight: =FontWeight.Semibold
-                Text: ="Tên sản phẩm"
-                Width: =323
-                X: =15
-                Y: =15
-                ZIndex: =2
-
-            Label10_16 As label:
-                Align: =Align.Center
-                FontWeight: =FontWeight.Semibold
-                Text: ="Loại"
-                Width: =109
-                X: =338
-                Y: =15
-                ZIndex: =3
-
-            Label10_17 As label:
-                Align: =Align.Center
-                FontWeight: =FontWeight.Semibold
-                Text: ="Số lượng"
-                Width: =84
-                X: =447
-                Y: =15
-                ZIndex: =4
-
-            Label10_18 As label:
-                Align: =Align.Center
-                FontWeight: =FontWeight.Semibold
-                Text: ="Giá nhập"
-                Width: =104
-                X: =555
-                Y: =15
-                ZIndex: =5
-
-            Label10_19 As label:
-                Align: =Align.Center
-                FontWeight: =FontWeight.Semibold
-                Text: ="Giá xuất"
-                Width: =104
-                X: =719
-                Y: =15
-                ZIndex: =6
-
-            Label10_20 As label:
-                Align: =Align.Center
-                FontWeight: =FontWeight.Semibold
-                Text: ="Hình ảnh"
-                Width: =104
-                X: =877
-                Y: =15
-                ZIndex: =7
-
-        Container8_3 As groupContainer.manualLayoutContainer:
-            Height: =415
-            Width: =Parent.Width
-            Y: =240
             ZIndex: =4
 
-            "Gallery3_3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
-                DelayItemLoading: =true
-                Height: =Parent.Height
-                Items: ='mWarehouse.Products'
-                Layout: =Layout.Vertical
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplatePadding: =0
-                TemplateSize: =80
-                Width: =Parent.Width
+            Container11 As groupContainer.manualLayoutContainer:
+                Fill: =RGBA(232, 244, 217, 1)
+                Height: =Parent.Height/2.5
+                Width: =Parent.Width/2
+                Y: |
+                    =10
                 ZIndex: =1
 
-                Separator4_3 As rectangle:
-                    Height: =8
-                    OnSelect: =Select(Parent)
-                    Width: =Parent.TemplateWidth
-                    Y: =Parent.TemplateHeight - Self.Height
-                    ZIndex: =3
-
-                Container14_3 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Regular
-                    Height: =80
-                    RadiusBottomLeft: =10
-                    RadiusBottomRight: =10
-                    RadiusTopLeft: =10
-                    RadiusTopRight: =10
-                    Width: =Parent.Width
-                    ZIndex: =5
-
-                    Label15_3 As label:
-                        Height: =45
-                        Text: =ThisItem.Name
-                        Width: =330
-                        Y: =16
-                        ZIndex: =1
-
-                    Button2_3 As button:
-                        DisplayMode: =DisplayMode.View
-                        Fill: |-
-                            =//RGBA(221, 79, 14, 0.75)
-                            If(
-                                ThisItem.category.Value = "Điện thoại",
-                                RGBA(
-                                    221,
-                                    79,
-                                    14,
-                                    0.75
-                                ),
-                                If(
-                                    ThisItem.category.Value = "Laptop",
-                                    RGBA(
-                                        127,
-                                        178,
-                                        57,
-                                        0.75
-                                    ),RGBA(0, 121, 187, 0.75)
-                                )
-                            )
-                        RadiusBottomLeft: =20
-                        RadiusBottomRight: =20
-                        RadiusTopLeft: =20
-                        RadiusTopRight: =20
-                        Size: =12
-                        Text: =ThisItem.category.Value
-                        Width: =100
-                        X: =343
-                        Y: =21
-                        ZIndex: =2
-
-                    Label17_3 As label:
-                        Align: =Align.Center
-                        Text: =ThisItem.quantity
-                        Width: =50
-                        X: =468
-                        Y: =18
-                        ZIndex: =3
-
-                    Label18_6 As label:
-                        Text: |-
-                            =Concatenate(Text(ThisItem.priceImport,"###,###")," VNĐ")
-                        Width: =157
-                        X: =537
-                        Y: =21
-                        ZIndex: =4
-
-                    Label18_7 As label:
-                        Text: |-
-                            =Concatenate(Text(ThisItem.priceExport,"###,###")," VNĐ")
-                        Width: =155
-                        X: =706
-                        Y: =21
-                        ZIndex: =5
-
-                    Image7_1 As image:
-                        Height: =75
-                        Image: =ThisItem.image
-                        X: =873
-                        Y: =3
-                        ZIndex: =6
-
-                    Container15_3 As groupContainer.manualLayoutContainer:
-                        DropShadow: =DropShadow.None
-                        Height: =80
-                        Width: =150
-                        X: =1000
-                        ZIndex: =7
-
-                        Label19_3 As label:
-                            Align: =Align.Center
-                            Height: =36
-                            Size: =20
-                            Text: ="✏️"
-                            Width: =60
-                            Y: =24
-                            ZIndex: =1
-
-                        Label20_3 As label:
-                            Align: =Align.Center
-                            Size: =25
-                            Text: ="📋"
-                            Width: =60
-                            X: =60
-                            Y: =20
-                            ZIndex: =2
+                Label2 As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =15
+                    Text: ="Nhà cung cấp"
+                    X: =40
+                    Y: =12
+                    ZIndex: =1
 
     ThemSp_1 As group:
         Height: =5

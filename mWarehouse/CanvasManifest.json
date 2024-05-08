@@ -134,8 +134,8 @@
   },
   "ScreenOrder": [
     "DangNhap",
-    "SanPham",
     "TrangChu",
+    "SanPham",
     "ThongKe",
     "YeuCau",
     "DuyetDon"

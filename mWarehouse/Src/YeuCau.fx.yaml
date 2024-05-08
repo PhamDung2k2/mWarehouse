@@ -374,7 +374,7 @@ YeuCau As screen:
                                     0.75
                                 ),
                                 If(
-                                    ThisItem.status.Value = "Chờ duyệt",
+                                    ThisItem.status.Value = "Báo giá",
                                     RGBA(
                                         127,
                                         178,
