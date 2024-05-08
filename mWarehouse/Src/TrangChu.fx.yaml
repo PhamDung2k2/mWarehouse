@@ -134,7 +134,7 @@ TrangChu As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =35
                 Size: =16
-                Text: ="📑 Danh sách sản phẩm "
+                Text: ="📑 Trang chủ tổng quan "
                 Width: =267
                 X: =15
                 Y: =15
