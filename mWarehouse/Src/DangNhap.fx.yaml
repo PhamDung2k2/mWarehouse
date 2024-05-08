@@ -99,7 +99,7 @@ DangNhap As screen:
                             account = TextInput1.Text And pass = TextInput1_1.Text
                         ).Title
                     ),
-                    Navigate(SanPham);
+                    Navigate(TrangChu);
                     UpdateContext({ShowForgetMessage: false}),
                     UpdateContext({ShowForgetMessage: true})
                 )
