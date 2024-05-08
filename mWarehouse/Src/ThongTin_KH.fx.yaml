@@ -186,7 +186,7 @@ ThongTin_KH As screen:
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(109, 49, 162, 1)
+                Fill: =RGBA(255, 255, 255, 1)
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =25
@@ -234,7 +234,7 @@ ThongTin_KH As screen:
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(109, 49, 162, 1)
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =25
@@ -247,7 +247,7 @@ ThongTin_KH As screen:
                 Size: =12
                 Text: ="Khách hàng"
                 Width: =120
-                X: =522
+                X: =532
                 Y: =22
                 ZIndex: =7
 
@@ -333,32 +333,11 @@ ThongTin_KH As screen:
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
                 Size: =15
-                Text: ="Thêm SP"
-                X: =983
+                Text: ="Thêm khách hàng"
+                Width: =180
+                X: =967
                 Y: =28
                 ZIndex: =4
-
-            Button5_10 As button:
-                BorderColor: =App.Theme.Colors.Primary
-                DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =App.Theme.Colors.Primary
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =App.Theme.Colors.Darker10
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =App.Theme.Colors.Darker10
-                OnSelect: |-
-                    =UpdateContext({ShowThemDon:true})
-                PressedBorderColor: =App.Theme.Colors.Darker40
-                PressedColor: =Self.Color
-                PressedFill: =App.Theme.Colors.Darker40
-                Size: =15
-                Text: ="Tạo đơn nhập"
-                X: =786
-                Y: =28
-                ZIndex: =5
 
         Container7_5 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -379,39 +358,11 @@ ThongTin_KH As screen:
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Size: =13
-                Text: ="Tên sản phẩm"
+                Text: ="Tên khách hàng"
                 Width: =323
                 X: =15
                 Y: =15
                 ZIndex: =2
-
-            Label10_40 As label:
-                Align: =Align.Center
-                BorderColor: =App.Theme.Colors.Darker40
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                Size: =13
-                Text: ="Loại"
-                Width: =109
-                X: =338
-                Y: =15
-                ZIndex: =3
-
-            Label10_41 As label:
-                Align: =Align.Center
-                BorderColor: =App.Theme.Colors.Darker40
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                Size: =13
-                Text: ="Số lượng"
-                Width: =84
-                X: =447
-                Y: =15
-                ZIndex: =4
 
             Label10_42 As label:
                 Align: =Align.Center
@@ -421,9 +372,9 @@ ThongTin_KH As screen:
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Size: =13
-                Text: ="Giá nhập"
+                Text: ="Địa chỉ"
                 Width: =104
-                X: =555
+                X: =438
                 Y: =15
                 ZIndex: =5
 
@@ -435,25 +386,11 @@ ThongTin_KH As screen:
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Size: =13
-                Text: ="Giá xuất"
-                Width: =104
-                X: =719
+                Text: ="Số điện thoại"
+                Width: =120
+                X: =780
                 Y: =15
                 ZIndex: =6
-
-            Label10_44 As label:
-                Align: =Align.Center
-                BorderColor: =App.Theme.Colors.Darker40
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                Size: =13
-                Text: ="Hình ảnh"
-                Width: =104
-                X: =877
-                Y: =15
-                ZIndex: =7
 
         Container8_6 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -509,99 +446,31 @@ ThongTin_KH As screen:
                         Y: =16
                         ZIndex: =1
 
-                    Button2_6 As button:
-                        BorderColor: =App.Theme.Colors.Primary
-                        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                    Label18_8 As label:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =DisplayMode.View
-                        Fill: |-
-                            =//RGBA(221, 79, 14, 0.75)
-                            If(
-                                ThisItem.category.Value = "Điện thoại",
-                                RGBA(
-                                    221,
-                                    79,
-                                    14,
-                                    0.75
-                                ),
-                                If(
-                                    ThisItem.category.Value = "Laptop",
-                                    RGBA(
-                                        127,
-                                        178,
-                                        57,
-                                        0.75
-                                    ),RGBA(0, 121, 187, 0.75)
-                                )
-                            )
                         Font: =App.Theme.Font
-                        FontWeight: =FontWeight.Semibold
-                        HoverBorderColor: =App.Theme.Colors.Darker10
-                        HoverColor: =RGBA(255, 255, 255, 1)
-                        HoverFill: =App.Theme.Colors.Darker10
-                        PressedBorderColor: =App.Theme.Colors.Darker40
-                        PressedColor: =Self.Color
-                        PressedFill: =App.Theme.Colors.Darker40
-                        RadiusBottomLeft: =20
-                        RadiusBottomRight: =20
-                        RadiusTopLeft: =20
-                        RadiusTopRight: =20
-                        Size: =12
-                        Text: =ThisItem.category.Value
-                        Width: =100
+                        Height: =55
+                        Size: =13
+                        Text: ="128 Trần Quang Khải, Phường Tân Định, Quận 1, Thành phố Hồ Chí Minh"
+                        Width: =411
                         X: =343
-                        Y: =21
-                        ZIndex: =2
+                        Y: =11
+                        ZIndex: =4
 
-                    Label17_4 As label:
+                    Label18_9 As label:
                         Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
                         Size: =13
-                        Text: =ThisItem.quantity
-                        Width: =50
-                        X: =468
-                        Y: =18
-                        ZIndex: =3
-
-                    Label18_8 As label:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(0, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Size: =13
-                        Text: |-
-                            =Concatenate(Text(ThisItem.priceImport,"###,###")," VNĐ")
-                        Width: =157
-                        X: =537
-                        Y: =21
-                        ZIndex: =4
-
-                    Label18_9 As label:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(0, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Size: =13
-                        Text: |-
-                            =Concatenate(Text(ThisItem.priceExport,"###,###")," VNĐ")
+                        Text: ="06578954125"
                         Width: =155
-                        X: =706
-                        Y: =21
+                        X: =769
+                        Y: =18
                         ZIndex: =5
-
-                    Image7_2 As image:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        Height: =75
-                        Image: =ThisItem.image
-                        X: =873
-                        Y: =3
-                        ZIndex: =6
 
                     Container15_4 As groupContainer.manualLayoutContainer:
                         Height: =80
