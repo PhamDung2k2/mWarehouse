@@ -79,7 +79,7 @@ DuyetDon As screen:
             DelayItemLoading: =true
             Height: =420
             Items: |-
-                =Table({ID: 1,Title:"Trang chủ",Name:TrangChu},{ID: 2,Title:"Sản phẩm",Name: SanPham},{ID: 3,Title:"Báo giá",Name:YeuCau},{ID: 4,Title:"Thống kê",Name:ThongKe},{ID: 5,Title:"Duyệt đơn",Name:DuyetDon})
+                =Table({ID: 1,Title:"Trang chủ",Name:TrangChu},{ID: 2,Title:"Sản phẩm",Name: ThongTin},{ID: 3,Title:"Báo giá",Name:YeuCau},{ID: 4,Title:"Thống kê",Name:ThongKe},{ID: 5,Title:"Duyệt đơn",Name:DuyetDon})
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: |-
@@ -173,71 +173,11 @@ DuyetDon As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =35
                 Size: =16
-                Text: ="📑 Danh sách yêu cầu"
-                Width: =267
+                Text: ="📑 Danh sách đơn cần duyệt"
+                Width: =300
                 X: =15
                 Y: =15
                 ZIndex: =1
-
-            Button5_8 As button:
-                BorderColor: =App.Theme.Colors.Primary
-                DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =App.Theme.Colors.Primary
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =App.Theme.Colors.Darker10
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =App.Theme.Colors.Darker10
-                PressedBorderColor: =App.Theme.Colors.Darker40
-                PressedColor: =Self.Color
-                PressedFill: =App.Theme.Colors.Darker40
-                Size: =15
-                Text: ="Thêm NCC"
-                X: =988
-                Y: =15
-                ZIndex: =2
-
-            Button5_7 As button:
-                BorderColor: =App.Theme.Colors.Primary
-                DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =App.Theme.Colors.Primary
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =App.Theme.Colors.Darker10
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =App.Theme.Colors.Darker10
-                PressedBorderColor: =App.Theme.Colors.Darker40
-                PressedColor: =Self.Color
-                PressedFill: =App.Theme.Colors.Darker40
-                Size: =15
-                Text: ="Thêm SP"
-                X: =790
-                Y: =15
-                ZIndex: =3
-
-            Button5_6 As button:
-                BorderColor: =App.Theme.Colors.Primary
-                DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =App.Theme.Colors.Primary
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =App.Theme.Colors.Darker10
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =App.Theme.Colors.Darker10
-                PressedBorderColor: =App.Theme.Colors.Darker40
-                PressedColor: =Self.Color
-                PressedFill: =App.Theme.Colors.Darker40
-                Size: =15
-                Text: ="Tạo đơn nhập"
-                X: =593
-                Y: =15
-                ZIndex: =4
 
             Button4_3 As button:
                 BorderColor: =App.Theme.Colors.Primary
@@ -259,8 +199,8 @@ DuyetDon As screen:
                 Size: =12
                 Text: ="Tất cả"
                 Width: =100
-                X: =255
-                Y: =23
+                X: =342
+                Y: =25
                 ZIndex: =5
 
             Button4_4 As button:
@@ -283,8 +223,8 @@ DuyetDon As screen:
                 Size: =12
                 Text: ="Báo giá"
                 Width: =100
-                X: =369
-                Y: =23
+                X: =456
+                Y: =25
                 ZIndex: =6
 
             Button4_5 As button:
@@ -307,8 +247,8 @@ DuyetDon As screen:
                 Size: =12
                 Text: ="Đơn hàng"
                 Width: =100
-                X: =481
-                Y: =23
+                X: =571
+                Y: =25
                 ZIndex: =7
 
         Container5_2 As groupContainer.manualLayoutContainer:
@@ -375,6 +315,45 @@ DuyetDon As screen:
                 X: =430
                 Y: =10
                 ZIndex: =3
+
+            Label9_6 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                Height: =41
+                Size: =13
+                Text: ="Lọc loại đơn"
+                Width: =113
+                X: =552
+                Y: =10
+                ZIndex: =4
+
+            ComboBox2 As combobox:
+                BorderColor: =App.Theme.Colors.Darker40
+                ChevronBackground: =App.Theme.Colors.Primary
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =App.Theme.Colors.Darker10
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["ComplianceAssetId"]
+                Font: =App.Theme.Font
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =App.Theme.Colors.Lighter70
+                Items: ='mWarehouse.Exports'
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =App.Theme.Colors.Darker30
+                SearchFields: =["ComplianceAssetId"]
+                SearchItems: =Search('mWarehouse.Exports',ComboBox2.SearchText,ComplianceAssetId)
+                SelectionFill: =App.Theme.Colors.Primary
+                Size: =13
+                X: =665
+                Y: =11
+                ZIndex: =5
 
         Container7_2 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light

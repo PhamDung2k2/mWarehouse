@@ -79,7 +79,7 @@ ThongKe As screen:
             DelayItemLoading: =true
             Height: =420
             Items: |-
-                =Table({ID: 1,Title:"Trang chủ",Name:TrangChu},{ID: 2,Title:"Sản phẩm",Name: SanPham},{ID: 3,Title:"Báo giá",Name:YeuCau},{ID: 4,Title:"Thống kê",Name:ThongKe},{ID: 5,Title:"Duyệt đơn",Name:DuyetDon})
+                =Table({ID: 1,Title:"Trang chủ",Name:TrangChu},{ID: 2,Title:"Sản phẩm",Name: ThongTin},{ID: 3,Title:"Báo giá",Name:YeuCau},{ID: 4,Title:"Thống kê",Name:ThongKe},{ID: 5,Title:"Duyệt đơn",Name:DuyetDon})
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: |-
@@ -175,75 +175,21 @@ ThongKe As screen:
                 Size: =16
                 Text: ="Thống kê tổng quan "
                 Width: =267
-                X: =15
-                Y: =15
+                X: =79
+                Y: =20
                 ZIndex: =1
 
-            Button5_14 As button:
-                BorderColor: =App.Theme.Colors.Primary
-                DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =App.Theme.Colors.Primary
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =App.Theme.Colors.Darker10
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =App.Theme.Colors.Darker10
-                OnSelect: |-
-                    =UpdateContext({ShowThemNCC: true})
-                PressedBorderColor: =App.Theme.Colors.Darker40
-                PressedColor: =Self.Color
-                PressedFill: =App.Theme.Colors.Darker40
-                Size: =15
-                Text: ="Thêm NCC"
-                X: =988
-                Y: =15
+            Icon5 As icon.Trending:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =App.Theme.Colors.Darker30
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =55
+                Icon: =Icon.Trending
+                Width: =55
+                X: =15
+                Y: =6
                 ZIndex: =2
-
-            Button5_13 As button:
-                BorderColor: =App.Theme.Colors.Primary
-                DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =App.Theme.Colors.Primary
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =App.Theme.Colors.Darker10
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =App.Theme.Colors.Darker10
-                OnSelect: |-
-                    =UpdateContext({ShowThemSP:true})
-                PressedBorderColor: =App.Theme.Colors.Darker40
-                PressedColor: =Self.Color
-                PressedFill: =App.Theme.Colors.Darker40
-                Size: =15
-                Text: ="Thêm SP"
-                X: =790
-                Y: =15
-                ZIndex: =3
-
-            Button5_12 As button:
-                BorderColor: =App.Theme.Colors.Primary
-                DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =App.Theme.Colors.Primary
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =App.Theme.Colors.Darker10
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =App.Theme.Colors.Darker10
-                OnSelect: |-
-                    =UpdateContext({ShowThemDon:true})
-                PressedBorderColor: =App.Theme.Colors.Darker40
-                PressedColor: =Self.Color
-                PressedFill: =App.Theme.Colors.Darker40
-                Size: =15
-                Text: ="Tạo đơn nhập"
-                X: =593
-                Y: =15
-                ZIndex: =4
 
         Container5_4 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Semilight
@@ -265,50 +211,34 @@ ThongKe As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =41
                 Size: =13
-                Text: ="Tìm kiếm"
-                Width: =113
-                X: =15
-                Y: =10
+                Text: ="Chọn loại biểu đồ "
+                Width: =200
+                X: =16
+                Y: =24
                 ZIndex: =1
 
-            TextInput2_4 As text:
+            ComboBox1 As combobox:
                 BorderColor: =App.Theme.Colors.Darker40
-                BorderThickness: =2
-                Color: =RGBA(0, 0, 0, 1)
-                Default: ="Text input"
+                ChevronBackground: =App.Theme.Colors.Primary
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =App.Theme.Colors.Darker10
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                FocusedBorderThickness: =4
                 Font: =App.Theme.Font
-                HoverBorderColor: =App.Theme.Colors.Darker40
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =App.Theme.Colors.Lighter70
+                Items: =ComboBoxSample
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =App.Theme.Colors.Darker30
+                SearchItems: =Search(ComboBoxSample,ComboBox1.SearchText,Value1)
+                SelectionFill: =App.Theme.Colors.Primary
                 Size: =13
-                X: =110
-                Y: =11
-                ZIndex: =2
-
-            Button1_4 As button:
-                BorderColor: =App.Theme.Colors.Primary
-                DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =App.Theme.Colors.Primary
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =App.Theme.Colors.Darker10
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =App.Theme.Colors.Darker10
-                PressedBorderColor: =App.Theme.Colors.Darker40
-                PressedColor: =Self.Color
-                PressedFill: =App.Theme.Colors.Darker40
-                Size: =15
-                Text: ="🔍"
-                Width: =70
-                X: =430
-                Y: =10
-                ZIndex: =3
+                X: =193
+                Y: =25
+                ZIndex: =4
 
         Container10 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light

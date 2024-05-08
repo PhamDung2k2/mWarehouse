@@ -14,6 +14,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container5_2.ComboBox2.SearchItems"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container5_2.ComboBox2.SearchItems",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 49,
+                  "snippet": {
+                    "text": "ComplianceAssetId"
+                  }
+                }
+              },
+              "properties": {
+                "member": "SearchItems",
+                "module": "DuyetDon",
+                "type": "DuyetDon.Container4_2.Container5_2.ComboBox2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Search"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "DuyetDon.Container3_2.Gallery1_2.AccessibleLabel"
                 }
               ],
@@ -37,7 +77,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -67,7 +107,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -97,7 +137,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -127,7 +167,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -157,7 +197,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -187,7 +227,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -217,7 +257,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -247,7 +287,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -277,7 +317,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -307,7 +347,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -337,7 +377,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -367,7 +407,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -397,7 +437,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -427,7 +467,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -457,7 +497,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -487,7 +527,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -517,7 +557,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -547,7 +587,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -577,7 +617,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -607,7 +647,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -637,7 +677,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -667,7 +707,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -697,7 +737,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -727,7 +767,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -757,7 +797,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -787,7 +827,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -817,7 +857,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -847,7 +887,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -877,7 +917,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -907,7 +947,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -937,7 +977,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -967,7 +1007,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -997,7 +1037,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1027,7 +1067,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1057,7 +1097,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1087,26 +1127,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ThongKe.Container4_4.Container5_4.TextInput2_4.AccessibleLabel"
+                  "fullyQualifiedName": "ThongKe.Container4_4.Container5_4.ComboBox1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ThongKe.Container4_4.Container5_4.TextInput2_4.AccessibleLabel",
+                  "fullyQualifiedName": "ThongKe.Container4_4.Container5_4.ComboBox1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ThongKe",
-                "type": "ThongKe.Container4_4.Container5_4.TextInput2_4"
+                "type": "ThongKe.Container4_4.Container5_4.ComboBox1"
               }
             }
           ],
@@ -1117,26 +1157,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Rectangle1.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Rectangle1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Rectangle1.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Rectangle1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Rectangle1"
+                "module": "ThongTin",
+                "type": "ThongTin.Rectangle1"
               }
             }
           ],
@@ -1147,26 +1187,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Rectangle1.TabIndex"
+                  "fullyQualifiedName": "ThongTin.Rectangle1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Rectangle1.TabIndex",
+                  "fullyQualifiedName": "ThongTin.Rectangle1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "SanPham",
-                "type": "SanPham.Rectangle1"
+                "module": "ThongTin",
+                "type": "ThongTin.Rectangle1"
               }
             }
           ],
@@ -1177,26 +1217,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Rectangle1_1.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Rectangle1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Rectangle1_1.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Rectangle1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Rectangle1_1"
+                "module": "ThongTin",
+                "type": "ThongTin.Rectangle1_1"
               }
             }
           ],
@@ -1207,26 +1247,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Rectangle1_1.TabIndex"
+                  "fullyQualifiedName": "ThongTin.Rectangle1_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Rectangle1_1.TabIndex",
+                  "fullyQualifiedName": "ThongTin.Rectangle1_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "SanPham",
-                "type": "SanPham.Rectangle1_1"
+                "module": "ThongTin",
+                "type": "ThongTin.Rectangle1_1"
               }
             }
           ],
@@ -1237,26 +1277,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Rectangle1_2.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Rectangle1_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Rectangle1_2.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Rectangle1_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Rectangle1_2"
+                "module": "ThongTin",
+                "type": "ThongTin.Rectangle1_2"
               }
             }
           ],
@@ -1267,26 +1307,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Rectangle1_2.TabIndex"
+                  "fullyQualifiedName": "ThongTin.Rectangle1_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Rectangle1_2.TabIndex",
+                  "fullyQualifiedName": "ThongTin.Rectangle1_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "SanPham",
-                "type": "SanPham.Rectangle1_2"
+                "module": "ThongTin",
+                "type": "ThongTin.Rectangle1_2"
               }
             }
           ],
@@ -1297,26 +1337,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container3.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container3.Gallery1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container3.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container3.Gallery1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container3.Gallery1"
+                "module": "ThongTin",
+                "type": "ThongTin.Container3.Gallery1"
               }
             }
           ],
@@ -1327,26 +1367,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container3.Gallery1.TabIndex"
+                  "fullyQualifiedName": "ThongTin.Container3.Gallery1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container3.Gallery1.TabIndex",
+                  "fullyQualifiedName": "ThongTin.Container3.Gallery1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "SanPham",
-                "type": "SanPham.Container3.Gallery1"
+                "module": "ThongTin",
+                "type": "ThongTin.Container3.Gallery1"
               }
             }
           ],
@@ -1357,26 +1397,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container3.Image4.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container3.Image4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container3.Image4.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container3.Image4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container3.Image4"
+                "module": "ThongTin",
+                "type": "ThongTin.Container3.Image4"
               }
             }
           ],
@@ -1387,26 +1427,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container3.Image4.TabIndex"
+                  "fullyQualifiedName": "ThongTin.Container3.Image4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container3.Image4.TabIndex",
+                  "fullyQualifiedName": "ThongTin.Container3.Image4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "SanPham",
-                "type": "SanPham.Container3.Image4"
+                "module": "ThongTin",
+                "type": "ThongTin.Container3.Image4"
               }
             }
           ],
@@ -1417,26 +1457,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container3.Label7.FocusedBorderThickness"
+                  "fullyQualifiedName": "ThongTin.Container3.Label7.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container3.Label7.FocusedBorderThickness",
+                  "fullyQualifiedName": "ThongTin.Container3.Label7.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "SanPham",
-                "type": "SanPham.Container3.Label7"
+                "module": "ThongTin",
+                "type": "ThongTin.Container3.Label7"
               }
             }
           ],
@@ -1447,6 +1487,36 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ThongTin.Container3.Label7.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ThongTin.Container3.Label7.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ThongTin",
+                "type": "ThongTin.Container3.Label7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 2
         },
         {
@@ -1454,49 +1524,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container3.Label7.TabIndex"
+                  "fullyQualifiedName": "ThongTin.Container4.Container5.TextInput2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container3.Label7.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "SanPham",
-                "type": "SanPham.Container3.Label7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SanPham.Container4.Container5.TextInput2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SanPham.Container4.Container5.TextInput2.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container4.Container5.TextInput2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container4.Container5.TextInput2"
+                "module": "ThongTin",
+                "type": "ThongTin.Container4.Container5.TextInput2"
               }
             }
           ],
@@ -1507,26 +1547,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container4.Container8.Gallery3.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container4.Container8.Gallery3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container4.Container8.Gallery3.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container4.Container8.Gallery3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container4.Container8.Gallery3"
+                "module": "ThongTin",
+                "type": "ThongTin.Container4.Container8.Gallery3"
               }
             }
           ],
@@ -1537,26 +1577,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container4.Container8.Gallery3.TabIndex"
+                  "fullyQualifiedName": "ThongTin.Container4.Container8.Gallery3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container4.Container8.Gallery3.TabIndex",
+                  "fullyQualifiedName": "ThongTin.Container4.Container8.Gallery3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "SanPham",
-                "type": "SanPham.Container4.Container8.Gallery3"
+                "module": "ThongTin",
+                "type": "ThongTin.Container4.Container8.Gallery3"
               }
             }
           ],
@@ -1567,7 +1607,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1597,7 +1637,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1627,7 +1667,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1657,7 +1697,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1687,7 +1727,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1717,7 +1757,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1747,7 +1787,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1777,7 +1817,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1807,7 +1847,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1837,7 +1877,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1867,7 +1907,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1897,7 +1937,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1927,26 +1967,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9_2.Icon1.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9_2.Icon1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9_2.Icon1.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9_2.Icon1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9_2.Icon1"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9_2.Icon1"
               }
             }
           ],
@@ -1957,26 +1997,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9_2.Icon1.TabIndex"
+                  "fullyQualifiedName": "ThongTin.Container9_2.Icon1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9_2.Icon1.TabIndex",
+                  "fullyQualifiedName": "ThongTin.Container9_2.Icon1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "SanPham",
-                "type": "SanPham.Container9_2.Icon1"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9_2.Icon1"
               }
             }
           ],
@@ -1987,6 +2027,36 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container17.TextInput3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container17.TextInput3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ThongTin",
+                "type": "ThongTin.Container9_2.Container17.TextInput3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 1
         },
         {
@@ -1994,19 +2064,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9_2.Container17.TextInput3.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container13.Gallery2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9_2.Container17.TextInput3.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container13.Gallery2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9_2.Container17.TextInput3"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9_2.Container13.Gallery2"
               }
             }
           ],
@@ -2017,56 +2087,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9_2.Container13.Gallery2.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container13.Gallery2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9_2.Container13.Gallery2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9_2.Container13.Gallery2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SanPham.Container9_2.Container13.Gallery2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SanPham.Container9_2.Container13.Gallery2.TabIndex",
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container13.Gallery2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "SanPham",
-                "type": "SanPham.Container9_2.Container13.Gallery2"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9_2.Container13.Gallery2"
               }
             }
           ],
@@ -2077,6 +2117,36 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.Title_DataCard2.DataCardValue9.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.Title_DataCard2.DataCardValue9.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form2.Title_DataCard2.DataCardValue9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 1
         },
         {
@@ -2084,19 +2154,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.Title_DataCard2.DataCardValue9.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Form3.address_DataCard1.DataCardValue21.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.Title_DataCard2.DataCardValue9.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Form3.address_DataCard1.DataCardValue21.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Form2.Title_DataCard2.DataCardValue9"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form3.address_DataCard1.DataCardValue21"
               }
             }
           ],
@@ -2107,26 +2177,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Form3.address_DataCard1.DataCardValue21.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.productCode_DataCard2.DataCardValue11.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Form3.address_DataCard1.DataCardValue21.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.productCode_DataCard2.DataCardValue11.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Form3.address_DataCard1.DataCardValue21"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form2.productCode_DataCard2.DataCardValue11"
               }
             }
           ],
@@ -2137,26 +2207,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.productCode_DataCard2.DataCardValue11.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.category_DataCard1.DataCardValue12.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.productCode_DataCard2.DataCardValue11.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.category_DataCard1.DataCardValue12.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Form2.productCode_DataCard2.DataCardValue11"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form2.category_DataCard1.DataCardValue12"
               }
             }
           ],
@@ -2167,26 +2237,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.category_DataCard1.DataCardValue12.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Form3.Title_DataCard3.DataCardValue20.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.category_DataCard1.DataCardValue12.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Form3.Title_DataCard3.DataCardValue20.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Form2.category_DataCard1.DataCardValue12"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form3.Title_DataCard3.DataCardValue20"
               }
             }
           ],
@@ -2197,26 +2267,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Form3.Title_DataCard3.DataCardValue20.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.priceImport_DataCard2.DataCardValue14.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Form3.Title_DataCard3.DataCardValue20.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.priceImport_DataCard2.DataCardValue14.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Form3.Title_DataCard3.DataCardValue20"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form2.priceImport_DataCard2.DataCardValue14"
               }
             }
           ],
@@ -2227,26 +2297,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.priceImport_DataCard2.DataCardValue14.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.priceExport_DataCard1.DataCardValue15.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.priceImport_DataCard2.DataCardValue14.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.priceExport_DataCard1.DataCardValue15.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Form2.priceImport_DataCard2.DataCardValue14"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form2.priceExport_DataCard1.DataCardValue15"
               }
             }
           ],
@@ -2257,26 +2327,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.priceExport_DataCard1.DataCardValue15.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.brand_DataCard1.DataCardValue16.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.priceExport_DataCard1.DataCardValue15.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.brand_DataCard1.DataCardValue16.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Form2.priceExport_DataCard1.DataCardValue15"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form2.brand_DataCard1.DataCardValue16"
               }
             }
           ],
@@ -2287,26 +2357,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.brand_DataCard1.DataCardValue16.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.quantity_DataCard2.DataCardValue17.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.brand_DataCard1.DataCardValue16.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.quantity_DataCard2.DataCardValue17.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Form2.brand_DataCard1.DataCardValue16"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form2.quantity_DataCard2.DataCardValue17"
               }
             }
           ],
@@ -2317,26 +2387,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.quantity_DataCard2.DataCardValue17.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.year_DataCard1.DataCardValue18.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.quantity_DataCard2.DataCardValue17.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.year_DataCard1.DataCardValue18.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Form2.quantity_DataCard2.DataCardValue17"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form2.year_DataCard1.DataCardValue18"
               }
             }
           ],
@@ -2347,26 +2417,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.year_DataCard1.DataCardValue18.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.image_DataCard1.AddPicture1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.year_DataCard1.DataCardValue18.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Form2.image_DataCard1.AddPicture1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Form2.year_DataCard1.DataCardValue18"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form2.image_DataCard1.AddPicture1"
               }
             }
           ],
@@ -2377,26 +2447,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.image_DataCard1.AddPicture1.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Form3.representative_DataCard1.DataCardValue22.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Form2.image_DataCard1.AddPicture1.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Form3.representative_DataCard1.DataCardValue22.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Form2.image_DataCard1.AddPicture1"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form3.representative_DataCard1.DataCardValue22"
               }
             }
           ],
@@ -2407,26 +2477,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Form3.representative_DataCard1.DataCardValue22.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Form3.phone_DataCard1.DataCardValue23.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Form3.representative_DataCard1.DataCardValue22.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Form3.phone_DataCard1.DataCardValue23.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Form3.representative_DataCard1.DataCardValue22"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form3.phone_DataCard1.DataCardValue23"
               }
             }
           ],
@@ -2437,26 +2507,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Form3.phone_DataCard1.DataCardValue23.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Icon4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Form3.phone_DataCard1.DataCardValue23.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Icon4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Form3.phone_DataCard1.DataCardValue23"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Icon4"
               }
             }
           ],
@@ -2467,56 +2537,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container9.Icon4.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Icon4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Icon4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Icon4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "SanPham.Container9.Icon4.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SanPham.Container9.Icon4.TabIndex",
+                  "fullyQualifiedName": "ThongTin.Container9.Icon4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "SanPham",
-                "type": "SanPham.Container9.Icon4"
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Icon4"
               }
             }
           ],
@@ -2527,6 +2567,36 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container5_2.ComboBox2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container5_2.ComboBox2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DuyetDon",
+                "type": "DuyetDon.Container4_2.Container5_2.ComboBox2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 1
         },
         {
@@ -2557,7 +2627,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2587,7 +2657,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2617,7 +2687,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2647,7 +2717,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2677,7 +2747,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2707,7 +2777,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2737,7 +2807,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2767,7 +2837,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2797,7 +2867,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2827,7 +2897,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2857,7 +2927,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2887,26 +2957,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container1.Label5.Text"
+                  "fullyQualifiedName": "ThongTin.Container1.Label5.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container1.Label5.Text",
+                  "fullyQualifiedName": "ThongTin.Container1.Label5.Text",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Text",
-                "module": "SanPham",
-                "type": "SanPham.Container1.Label5"
+                "module": "ThongTin",
+                "type": "ThongTin.Container1.Label5"
               }
             }
           ],
@@ -2917,26 +2987,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SanPham.Container1.Label5_1.Text"
+                  "fullyQualifiedName": "ThongTin.Container1.Label5_1.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SanPham.Container1.Label5_1.Text",
+                  "fullyQualifiedName": "ThongTin.Container1.Label5_1.Text",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Text",
-                "module": "SanPham",
-                "type": "SanPham.Container1.Label5_1"
+                "module": "ThongTin",
+                "type": "ThongTin.Container1.Label5_1"
               }
             }
           ],
@@ -2947,7 +3017,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2977,7 +3047,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3007,7 +3077,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -3037,7 +3107,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleIndex": 5
         }
       ],
       "tool": {
@@ -3045,6 +3115,25 @@
           "fullName": "PowerApps app checker",
           "name": "PowerApps app checker",
           "rules": [
+            {
+              "id": "app-SuggestRemoteExecutionHint",
+              "messageStrings": {
+                "issue": {
+                  "text": "Delegation warning. The \"{0}\" part of this formula might not work correctly on large data sets."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "If your data set exceeds the 500 record limit but contains less than 2,000 records, try resetting the limit.",
+                  "Try simplifying the formula.",
+                  "Try moving your data to a different data source."
+                ],
+                "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
             {
               "id": "acc-AccessibleLabelNeeded",
               "messageStrings": {

@@ -1,4 +1,4 @@
-SanPham As screen:
+ThongTin As screen:
     Fill: =RGBA(241, 244, 249, 1)
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
@@ -79,7 +79,7 @@ SanPham As screen:
             DelayItemLoading: =true
             Height: =420
             Items: |-
-                =Table({ID: 1,Title:"Trang chủ",Name:TrangChu},{ID: 2,Title:"Sản phẩm",Name: SanPham},{ID: 3,Title:"Báo giá",Name:YeuCau},{ID: 4,Title:"Thống kê",Name:ThongKe},{ID: 5,Title:"Duyệt đơn",Name:DuyetDon})
+                =Table({ID: 1,Title:"Trang chủ",Name:TrangChu},{ID: 2,Title:"Sản phẩm",Name: ThongTin},{ID: 3,Title:"Báo giá",Name:YeuCau},{ID: 4,Title:"Thống kê",Name:ThongKe},{ID: 5,Title:"Duyệt đơn",Name:DuyetDon})
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: |-
@@ -173,7 +173,7 @@ SanPham As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =35
                 Size: =16
-                Text: ="📑 Danh sách sản phẩm "
+                Text: ="📑 Danh sách thông tin "
                 Width: =267
                 X: =15
                 Y: =15
@@ -245,8 +245,8 @@ SanPham As screen:
                 Size: =13
                 Text: ="Tìm kiếm"
                 Width: =113
-                X: =15
-                Y: =10
+                X: =32
+                Y: =28
                 ZIndex: =1
 
             TextInput2 As text:
@@ -263,8 +263,8 @@ SanPham As screen:
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =App.Theme.Colors.Lighter70
                 Size: =13
-                X: =110
-                Y: =11
+                X: =127
+                Y: =29
                 ZIndex: =2
 
             Button1 As button:
@@ -284,8 +284,8 @@ SanPham As screen:
                 Size: =15
                 Text: ="🔍"
                 Width: =70
-                X: =430
-                Y: =10
+                X: =447
+                Y: =28
                 ZIndex: =3
 
         Container7 As groupContainer.manualLayoutContainer:
@@ -2099,7 +2099,7 @@ SanPham As screen:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderThickness: =2
                     Color: =RGBA(0, 0, 0, 1)
-                    Default: ="Nhập 5 mặt hàng mới từ FPT"
+                    Default: ="Nhập 5 mặt hàng mới từ FPT chỉ nên tạo đơn nhập đối với 1 nhà cung cấp"
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
