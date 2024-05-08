@@ -1,8 +1,8 @@
-ThongTin As screen:
+ThongTin_1 As screen:
     Fill: =RGBA(241, 244, 249, 1)
     LoadingSpinnerColor: =App.Theme.Colors.Primary
 
-    Container1 As groupContainer.manualLayoutContainer:
+    Container1_5 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =100
@@ -13,7 +13,7 @@ ThongTin As screen:
         Width: =Parent.Width
         ZIndex: =1
 
-        Image2 As image:
+        Image2_5 As image:
             BorderColor: =App.Theme.Colors.Darker40
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -21,7 +21,7 @@ ThongTin As screen:
             Width: =256
             ZIndex: =1
 
-        Label5 As label:
+        Label5_10 As label:
             BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -35,7 +35,7 @@ ThongTin As screen:
             Y: =3
             ZIndex: =2
 
-        Label5_1 As label:
+        Label5_11 As label:
             BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(99, 139, 44, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -49,7 +49,7 @@ ThongTin As screen:
             Y: =50
             ZIndex: =3
 
-        Image3 As image:
+        Image3_5 As image:
             BorderColor: =App.Theme.Colors.Darker40
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -61,7 +61,7 @@ ThongTin As screen:
             X: =1007
             ZIndex: =4
 
-    Container3 As groupContainer.manualLayoutContainer:
+    Container3_5 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =Parent.Height-110
@@ -74,12 +74,12 @@ ThongTin As screen:
         Y: =110
         ZIndex: =2
 
-        "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        "Gallery1_5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             BorderColor: =App.Theme.Colors.Darker40
             DelayItemLoading: =true
             Height: =420
             Items: |-
-                =Table({ID: 1,Title:"Trang chủ",Name:TrangChu},{ID: 2,Title:"Thông tin",Name: ThongTin},{ID: 3,Title:"Báo giá",Name:YeuCau},{ID: 4,Title:"Thống kê",Name:ThongKe},{ID: 5,Title:"Duyệt đơn",Name:DuyetDon})
+                =Table({ID: 1,Title:"Trang chủ",Name:TrangChu},{ID: 2,Title:"Thông tin",Name: ThongTin_1},{ID: 3,Title:"Báo giá",Name:YeuCau},{ID: 4,Title:"Thống kê",Name:ThongKe},{ID: 5,Title:"Duyệt đơn",Name:DuyetDon})
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: |-
@@ -91,7 +91,7 @@ ThongTin As screen:
             Y: =12
             ZIndex: =1
 
-            Separator1 As rectangle:
+            Separator1_5 As rectangle:
                 BorderColor: =App.Theme.Colors.Darker40
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =7
@@ -100,7 +100,7 @@ ThongTin As screen:
                 Y: =39
                 ZIndex: =5
 
-            Label6 As label:
+            Label6_5 As label:
                 Align: =Align.Center
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(0, 0, 0, 1)
@@ -116,7 +116,7 @@ ThongTin As screen:
                 Y: =23
                 ZIndex: =7
 
-        Label7 As label:
+        Label7_5 As label:
             BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -130,7 +130,7 @@ ThongTin As screen:
             Y: =597
             ZIndex: =2
 
-        Image4 As image:
+        Image4_5 As image:
             BorderColor: =App.Theme.Colors.Darker40
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -142,7 +142,7 @@ ThongTin As screen:
             Y: =588
             ZIndex: =3
 
-    Container4 As groupContainer.manualLayoutContainer:
+    Container4_5 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =Parent.Height - 110
@@ -155,7 +155,7 @@ ThongTin As screen:
         Y: =110
         ZIndex: =3
 
-        Container2 As groupContainer.manualLayoutContainer:
+        Container2_5 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Semilight
             Height: =70
             RadiusBottomLeft: =4
@@ -165,7 +165,7 @@ ThongTin As screen:
             Width: =Parent.Width
             ZIndex: =1
 
-            Label8 As label:
+            Label8_5 As label:
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -179,7 +179,7 @@ ThongTin As screen:
                 Y: =15
                 ZIndex: =1
 
-            Button4_6 As button:
+            Button4_9 As button:
                 BorderColor: =App.Theme.Colors.Primary
                 BorderThickness: =0
                 Color: =RGBA(0, 0, 0, 1)
@@ -203,7 +203,7 @@ ThongTin As screen:
                 Y: =22
                 ZIndex: =5
 
-            Button4_7 As button:
+            Button4_10 As button:
                 BorderColor: =App.Theme.Colors.Primary
                 BorderThickness: =0
                 Color: =RGBA(0, 0, 0, 1)
@@ -227,7 +227,7 @@ ThongTin As screen:
                 Y: =22
                 ZIndex: =6
 
-            Button4_8 As button:
+            Button4_11 As button:
                 BorderColor: =App.Theme.Colors.Primary
                 BorderThickness: =0
                 Color: =RGBA(0, 0, 0, 1)
@@ -251,7 +251,7 @@ ThongTin As screen:
                 Y: =22
                 ZIndex: =7
 
-        Container5 As groupContainer.manualLayoutContainer:
+        Container5_5 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Semilight
             Height: |
                 =100
@@ -263,7 +263,7 @@ ThongTin As screen:
             Y: =70
             ZIndex: =2
 
-            Label9 As label:
+            Label9_8 As label:
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -277,7 +277,7 @@ ThongTin As screen:
                 Y: =28
                 ZIndex: =1
 
-            TextInput2 As text:
+            TextInput2_3 As text:
                 BorderColor: =App.Theme.Colors.Darker40
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
@@ -295,7 +295,7 @@ ThongTin As screen:
                 Y: =29
                 ZIndex: =2
 
-            Button1 As button:
+            Button1_3 As button:
                 BorderColor: =App.Theme.Colors.Primary
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -316,7 +316,7 @@ ThongTin As screen:
                 Y: =28
                 ZIndex: =3
 
-            Button5_1 As button:
+            Button5_8 As button:
                 BorderColor: =App.Theme.Colors.Primary
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -338,7 +338,7 @@ ThongTin As screen:
                 Y: =28
                 ZIndex: =4
 
-            Button5_2 As button:
+            Button5_7 As button:
                 BorderColor: =App.Theme.Colors.Primary
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -360,7 +360,7 @@ ThongTin As screen:
                 Y: =28
                 ZIndex: =5
 
-        Container7 As groupContainer.manualLayoutContainer:
+        Container7_4 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Height: =70
             RadiusBottomLeft: =4
@@ -371,7 +371,7 @@ ThongTin As screen:
             Y: =170
             ZIndex: =3
 
-            Label10_1 As label:
+            Label10_28 As label:
                 Align: =Align.Center
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(0, 0, 0, 1)
@@ -385,7 +385,7 @@ ThongTin As screen:
                 Y: =15
                 ZIndex: =2
 
-            Label10_2 As label:
+            Label10_29 As label:
                 Align: =Align.Center
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(0, 0, 0, 1)
@@ -399,7 +399,7 @@ ThongTin As screen:
                 Y: =15
                 ZIndex: =3
 
-            Label10_3 As label:
+            Label10_30 As label:
                 Align: =Align.Center
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(0, 0, 0, 1)
@@ -413,7 +413,7 @@ ThongTin As screen:
                 Y: =15
                 ZIndex: =4
 
-            Label10_4 As label:
+            Label10_31 As label:
                 Align: =Align.Center
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(0, 0, 0, 1)
@@ -427,7 +427,7 @@ ThongTin As screen:
                 Y: =15
                 ZIndex: =5
 
-            Label10_5 As label:
+            Label10_32 As label:
                 Align: =Align.Center
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(0, 0, 0, 1)
@@ -441,7 +441,7 @@ ThongTin As screen:
                 Y: =15
                 ZIndex: =6
 
-            Label10_6 As label:
+            Label10_33 As label:
                 Align: =Align.Center
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(0, 0, 0, 1)
@@ -455,7 +455,7 @@ ThongTin As screen:
                 Y: =15
                 ZIndex: =7
 
-        Container8 As groupContainer.manualLayoutContainer:
+        Container8_5 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Height: =415
             RadiusBottomLeft: =4
@@ -466,7 +466,7 @@ ThongTin As screen:
             Y: =240
             ZIndex: =4
 
-            "Gallery3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+            "Gallery3_5 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
                 Height: =Parent.Height
@@ -478,7 +478,7 @@ ThongTin As screen:
                 Width: =Parent.Width
                 ZIndex: =1
 
-                Separator4 As rectangle:
+                Separator4_5 As rectangle:
                     BorderColor: =App.Theme.Colors.Darker40
                     Fill: =RGBA(255, 255, 255, 1)
                     Height: =8
@@ -487,7 +487,7 @@ ThongTin As screen:
                     Y: =Parent.TemplateHeight - Self.Height
                     ZIndex: =3
 
-                Container14 As groupContainer.manualLayoutContainer:
+                Container14_5 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Regular
                     Height: =80
                     RadiusBottomLeft: =10
@@ -497,7 +497,7 @@ ThongTin As screen:
                     Width: =Parent.Width
                     ZIndex: =5
 
-                    Label15 As label:
+                    Label15_5 As label:
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -509,7 +509,7 @@ ThongTin As screen:
                         Y: =16
                         ZIndex: =1
 
-                    Button2 As button:
+                    Button2_5 As button:
                         BorderColor: =App.Theme.Colors.Primary
                         DisabledBorderColor: =RGBA(244, 244, 244, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -554,7 +554,7 @@ ThongTin As screen:
                         Y: =21
                         ZIndex: =2
 
-                    Label17 As label:
+                    Label17_3 As label:
                         Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
@@ -567,7 +567,7 @@ ThongTin As screen:
                         Y: =18
                         ZIndex: =3
 
-                    Label18 As label:
+                    Label18_6 As label:
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -580,7 +580,7 @@ ThongTin As screen:
                         Y: =21
                         ZIndex: =4
 
-                    Label18_1 As label:
+                    Label18_7 As label:
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -593,7 +593,7 @@ ThongTin As screen:
                         Y: =21
                         ZIndex: =5
 
-                    Image7 As image:
+                    Image7_1 As image:
                         BorderColor: =App.Theme.Colors.Darker40
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -603,7 +603,7 @@ ThongTin As screen:
                         Y: =3
                         ZIndex: =6
 
-                    Container15 As groupContainer.manualLayoutContainer:
+                    Container15_3 As groupContainer.manualLayoutContainer:
                         Height: =80
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -613,7 +613,7 @@ ThongTin As screen:
                         X: =1000
                         ZIndex: =7
 
-                        Label19 As label:
+                        Label19_3 As label:
                             Align: =Align.Center
                             BorderColor: =App.Theme.Colors.Darker40
                             Color: =RGBA(0, 0, 0, 1)
@@ -626,7 +626,7 @@ ThongTin As screen:
                             Y: =24
                             ZIndex: =1
 
-                        Label20 As label:
+                        Label20_3 As label:
                             Align: =Align.Center
                             BorderColor: =App.Theme.Colors.Darker40
                             Color: =RGBA(0, 0, 0, 1)
@@ -639,14 +639,14 @@ ThongTin As screen:
                             Y: =20
                             ZIndex: =2
 
-    ThemSp As group:
+    ThemSp_3 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =6
 
-        Rectangle1 As rectangle:
+        Rectangle1_9 As rectangle:
             BorderColor: =RGBA(202, 202, 202, 1)
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
@@ -656,7 +656,7 @@ ThongTin As screen:
             Width: =Parent.Width
             ZIndex: =4
 
-        Container9 As groupContainer.manualLayoutContainer:
+        Container9_9 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height/1.2
@@ -666,11 +666,11 @@ ThongTin As screen:
             RadiusTopRight: =4
             Visible: =ShowThemSP
             Width: =Parent.Width/1.2
-            X: =Rectangle1.Width/12
-            Y: =Rectangle1.Height/12
+            X: =Rectangle1_9.Width/12
+            Y: =Rectangle1_9.Height/12
             ZIndex: =5
 
-            Label1 As label:
+            Label1_9 As label:
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -683,7 +683,7 @@ ThongTin As screen:
                 Y: =10
                 ZIndex: =1
 
-            Icon4 As icon.Cancel:
+            Icon4_1 As icon.Cancel:
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =Color.Red
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -697,7 +697,7 @@ ThongTin As screen:
                 Y: =12
                 ZIndex: =2
 
-            Form2 As form:
+            Form2_1 As form:
                 BorderColor: =App.Theme.Colors.Darker40
                 DataSource: ='mWarehouse.Products'
                 Height: =357
@@ -705,7 +705,7 @@ ThongTin As screen:
                 Y: =281
                 ZIndex: =3
 
-                Title_DataCard2 As typedDataCard.textualEditCard:
+                Title_DataCard2_1 As typedDataCard.textualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Title"
@@ -716,13 +716,13 @@ ThongTin As screen:
                     Height: =50
                     MaxLength: =DataSourceInfo([@'mWarehouse.Products'], DataSourceInfo.MaxLength, Title)
                     Required: =false
-                    Update: =DataCardValue9.Text
+                    Update: =DataCardValue9_1.Text
                     Width: =379
                     X: =0
                     Y: =0
                     ZIndex: =4
 
-                    DataCardKey9 As label:
+                    DataCardKey9_1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -736,7 +736,7 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue9 As text:
+                    DataCardValue9_1 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -761,10 +761,10 @@ ThongTin As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                        Y: =DataCardKey9_1.Y + DataCardKey9_1.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage9 As label:
+                    ErrorMessage9_1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -780,24 +780,24 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue9.Y + DataCardValue9.Height
+                        Y: =DataCardValue9_1.Y + DataCardValue9_1.Height
                         ZIndex: =3
 
-                    StarVisible9 As label:
+                    StarVisible9_1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey9.Height
+                        Height: =DataCardKey9_1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey9.Y
+                        Y: =DataCardKey9_1.Y
                         ZIndex: =4
 
-                productCode_DataCard2 As typedDataCard.textualEditCard:
+                productCode_DataCard2_1 As typedDataCard.textualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="productCode"
@@ -808,13 +808,13 @@ ThongTin As screen:
                     Height: =50
                     MaxLength: =DataSourceInfo([@'mWarehouse.Products'], DataSourceInfo.MaxLength, productCode)
                     Required: =false
-                    Update: =DataCardValue11.Text
+                    Update: =DataCardValue11_1.Text
                     Width: =379
                     X: =1
                     Y: =0
                     ZIndex: =4
 
-                    DataCardKey11 As label:
+                    DataCardKey11_1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -828,7 +828,7 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue11 As text:
+                    DataCardValue11_1 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -853,10 +853,10 @@ ThongTin As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey11.Y + DataCardKey11.Height + 5
+                        Y: =DataCardKey11_1.Y + DataCardKey11_1.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage11 As label:
+                    ErrorMessage11_1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -872,24 +872,24 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue11.Y + DataCardValue11.Height
+                        Y: =DataCardValue11_1.Y + DataCardValue11_1.Height
                         ZIndex: =3
 
-                    StarVisible11 As label:
+                    StarVisible11_1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey11.Height
+                        Height: =DataCardKey11_1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey11.Y
+                        Y: =DataCardKey11_1.Y
                         ZIndex: =4
 
-                category_DataCard1 As typedDataCard.comboBoxEditCard:
+                category_DataCard1_1 As typedDataCard.comboBoxEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="category"
@@ -899,13 +899,13 @@ ThongTin As screen:
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =DataCardValue12.Selected
+                    Update: =DataCardValue12_1.Selected
                     Width: =379
                     X: =2
                     Y: =0
                     ZIndex: =4
 
-                    DataCardKey12 As label:
+                    DataCardKey12_1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -919,7 +919,7 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue12 As combobox:
+                    DataCardValue12_1 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         ChevronBackground: =App.Theme.Colors.Primary
                         ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -940,17 +940,17 @@ ThongTin As screen:
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =App.Theme.Colors.Darker30
                         SearchFields: =["Value"]
-                        SearchItems: =Choices('mWarehouse.Products'.category,DataCardValue12.SearchText)
+                        SearchItems: =Choices('mWarehouse.Products'.category,DataCardValue12_1.SearchText)
                         SelectionFill: =App.Theme.Colors.Primary
                         SelectMultiple: =false
                         Size: =13
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey12.Y + DataCardKey12.Height + 5
+                        Y: =DataCardKey12_1.Y + DataCardKey12_1.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage12 As label:
+                    ErrorMessage12_1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -966,24 +966,24 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue12.Y + DataCardValue12.Height
+                        Y: =DataCardValue12_1.Y + DataCardValue12_1.Height
                         ZIndex: =3
 
-                    StarVisible12 As label:
+                    StarVisible12_1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey12.Height
+                        Height: =DataCardKey12_1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey12.Y
+                        Y: =DataCardKey12_1.Y
                         ZIndex: =4
 
-                priceImport_DataCard2 As typedDataCard.numberEditCard:
+                priceImport_DataCard2_1 As typedDataCard.numberEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="priceImport"
@@ -993,13 +993,13 @@ ThongTin As screen:
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =Value(DataCardValue14.Text)
+                    Update: =Value(DataCardValue14_1.Text)
                     Width: =379
                     X: =0
                     Y: =1
                     ZIndex: =4
 
-                    DataCardKey14 As label:
+                    DataCardKey14_1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1013,7 +1013,7 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue14 As text:
+                    DataCardValue14_1 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -1038,10 +1038,10 @@ ThongTin As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey14.Y + DataCardKey14.Height + 5
+                        Y: =DataCardKey14_1.Y + DataCardKey14_1.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage14 As label:
+                    ErrorMessage14_1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1057,24 +1057,24 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue14.Y + DataCardValue14.Height
+                        Y: =DataCardValue14_1.Y + DataCardValue14_1.Height
                         ZIndex: =3
 
-                    StarVisible14 As label:
+                    StarVisible14_1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey14.Height
+                        Height: =DataCardKey14_1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey14.Y
+                        Y: =DataCardKey14_1.Y
                         ZIndex: =4
 
-                priceExport_DataCard1 As typedDataCard.numberEditCard:
+                priceExport_DataCard1_1 As typedDataCard.numberEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="priceExport"
@@ -1084,13 +1084,13 @@ ThongTin As screen:
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =Value(DataCardValue15.Text)
+                    Update: =Value(DataCardValue15_1.Text)
                     Width: =379
                     X: =1
                     Y: =1
                     ZIndex: =4
 
-                    DataCardKey15 As label:
+                    DataCardKey15_1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1104,7 +1104,7 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue15 As text:
+                    DataCardValue15_1 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -1129,10 +1129,10 @@ ThongTin As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey15.Y + DataCardKey15.Height + 5
+                        Y: =DataCardKey15_1.Y + DataCardKey15_1.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage15 As label:
+                    ErrorMessage15_1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1148,24 +1148,24 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue15.Y + DataCardValue15.Height
+                        Y: =DataCardValue15_1.Y + DataCardValue15_1.Height
                         ZIndex: =3
 
-                    StarVisible15 As label:
+                    StarVisible15_1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey15.Height
+                        Height: =DataCardKey15_1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey15.Y
+                        Y: =DataCardKey15_1.Y
                         ZIndex: =4
 
-                brand_DataCard1 As typedDataCard.textualEditCard:
+                brand_DataCard1_1 As typedDataCard.textualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="brand"
@@ -1176,13 +1176,13 @@ ThongTin As screen:
                     Height: =50
                     MaxLength: =DataSourceInfo([@'mWarehouse.Products'], DataSourceInfo.MaxLength, brand)
                     Required: =false
-                    Update: =DataCardValue16.Text
+                    Update: =DataCardValue16_1.Text
                     Width: =379
                     X: =2
                     Y: =1
                     ZIndex: =4
 
-                    DataCardKey16 As label:
+                    DataCardKey16_1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1196,7 +1196,7 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue16 As text:
+                    DataCardValue16_1 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -1221,10 +1221,10 @@ ThongTin As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey16.Y + DataCardKey16.Height + 5
+                        Y: =DataCardKey16_1.Y + DataCardKey16_1.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage16 As label:
+                    ErrorMessage16_1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1240,24 +1240,24 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue16.Y + DataCardValue16.Height
+                        Y: =DataCardValue16_1.Y + DataCardValue16_1.Height
                         ZIndex: =3
 
-                    StarVisible16 As label:
+                    StarVisible16_1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey16.Height
+                        Height: =DataCardKey16_1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey16.Y
+                        Y: =DataCardKey16_1.Y
                         ZIndex: =4
 
-                quantity_DataCard2 As typedDataCard.numberEditCard:
+                quantity_DataCard2_1 As typedDataCard.numberEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="quantity"
@@ -1267,13 +1267,13 @@ ThongTin As screen:
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =Value(DataCardValue17.Text)
+                    Update: =Value(DataCardValue17_1.Text)
                     Width: =379
                     X: =0
                     Y: =2
                     ZIndex: =4
 
-                    DataCardKey17 As label:
+                    DataCardKey17_1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1287,7 +1287,7 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue17 As text:
+                    DataCardValue17_1 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -1312,10 +1312,10 @@ ThongTin As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey17.Y + DataCardKey17.Height + 5
+                        Y: =DataCardKey17_1.Y + DataCardKey17_1.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage17 As label:
+                    ErrorMessage17_1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1331,24 +1331,24 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue17.Y + DataCardValue17.Height
+                        Y: =DataCardValue17_1.Y + DataCardValue17_1.Height
                         ZIndex: =3
 
-                    StarVisible17 As label:
+                    StarVisible17_1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey17.Height
+                        Height: =DataCardKey17_1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey17.Y
+                        Y: =DataCardKey17_1.Y
                         ZIndex: =4
 
-                year_DataCard1 As typedDataCard.numberEditCard:
+                year_DataCard1_1 As typedDataCard.numberEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="year"
@@ -1358,13 +1358,13 @@ ThongTin As screen:
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =Value(DataCardValue18.Text)
+                    Update: =Value(DataCardValue18_1.Text)
                     Width: =379
                     X: =1
                     Y: =2
                     ZIndex: =4
 
-                    DataCardKey18 As label:
+                    DataCardKey18_1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1378,7 +1378,7 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue18 As text:
+                    DataCardValue18_1 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -1403,10 +1403,10 @@ ThongTin As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey18.Y + DataCardKey18.Height + 5
+                        Y: =DataCardKey18_1.Y + DataCardKey18_1.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage18 As label:
+                    ErrorMessage18_1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1422,24 +1422,24 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue18.Y + DataCardValue18.Height
+                        Y: =DataCardValue18_1.Y + DataCardValue18_1.Height
                         ZIndex: =3
 
-                    StarVisible18 As label:
+                    StarVisible18_1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey18.Height
+                        Height: =DataCardKey18_1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey18.Y
+                        Y: =DataCardKey18_1.Y
                         ZIndex: =4
 
-                image_DataCard1 As typedDataCard.addLargePictureCard:
+                image_DataCard1_1 As typedDataCard.addLargePictureCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="image"
@@ -1449,13 +1449,13 @@ ThongTin As screen:
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =150
                     Required: =false
-                    Update: =Image5.Image
+                    Update: =Image5_1.Image
                     Width: =379
                     X: =2
                     Y: =2
                     ZIndex: =4
 
-                    DataCardKey19 As label:
+                    DataCardKey19_1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1469,30 +1469,30 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    Image5 As image:
+                    Image5_1 As image:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =Parent.DisplayMode
-                        Height: =AddPicture1.Height
-                        Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
+                        Height: =AddPicture1_1.Height
+                        Image: =If(IsBlank(AddPicture1_1.Media), Parent.Default, AddPicture1_1.Media)
                         Tooltip: =Parent.DisplayName
-                        Width: =AddPicture1.Width
-                        X: =AddPicture1.X
-                        Y: =AddPicture1.Y
+                        Width: =AddPicture1_1.Width
+                        X: =AddPicture1_1.X
+                        Y: =AddPicture1_1.Y
                         ZIndex: =2
 
-                    AddPicture1 As addMedia:
+                    AddPicture1_1 As addMedia:
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         Fill: =RGBA(255, 255, 255, 1)
                         Height: =100
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey19.Y + DataCardKey19.Height + 5
+                        Y: =DataCardKey19_1.Y + DataCardKey19_1.Height + 5
                         ZIndex: =3
 
-                    ErrorMessage19 As label:
+                    ErrorMessage19_1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1508,24 +1508,24 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =Image5.Y + Image5.Height
+                        Y: =Image5_1.Y + Image5_1.Height
                         ZIndex: =4
 
-                    StarVisible19 As label:
+                    StarVisible19_1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey19.Height
+                        Height: =DataCardKey19_1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey19.Y
+                        Y: =DataCardKey19_1.Y
                         ZIndex: =5
 
-            Form3 As form:
+            Form3_1 As form:
                 BorderColor: =App.Theme.Colors.Darker40
                 DataSource: ='mWarehouse.Suppliers'
                 Height: =200
@@ -1533,7 +1533,7 @@ ThongTin As screen:
                 Y: =81
                 ZIndex: =4
 
-                Title_DataCard3 As typedDataCard.textualEditCard:
+                Title_DataCard3_1 As typedDataCard.textualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Title"
@@ -1546,13 +1546,13 @@ ThongTin As screen:
                     Height: =50
                     MaxLength: =DataSourceInfo([@'mWarehouse.Suppliers'], DataSourceInfo.MaxLength, Title)
                     Required: =false
-                    Update: =DataCardValue20.Text
+                    Update: =DataCardValue20_1.Text
                     Width: =379
                     X: =0
                     Y: =0
                     ZIndex: =5
 
-                    DataCardKey21 As label:
+                    DataCardKey21_1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1566,7 +1566,7 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue20 As text:
+                    DataCardValue20_1 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -1591,10 +1591,10 @@ ThongTin As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey21.Y + DataCardKey21.Height + 5
+                        Y: =DataCardKey21_1.Y + DataCardKey21_1.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage21 As label:
+                    ErrorMessage21_1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1610,24 +1610,24 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue20.Y + DataCardValue20.Height
+                        Y: =DataCardValue20_1.Y + DataCardValue20_1.Height
                         ZIndex: =3
 
-                    StarVisible21 As label:
+                    StarVisible21_1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey21.Height
+                        Height: =DataCardKey21_1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey21.Y
+                        Y: =DataCardKey21_1.Y
                         ZIndex: =4
 
-                address_DataCard1 As typedDataCard.textualEditCard:
+                address_DataCard1_1 As typedDataCard.textualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="address"
@@ -1638,13 +1638,13 @@ ThongTin As screen:
                     Height: =50
                     MaxLength: =DataSourceInfo([@'mWarehouse.Suppliers'], DataSourceInfo.MaxLength, address)
                     Required: =false
-                    Update: =DataCardValue21.Text
+                    Update: =DataCardValue21_1.Text
                     Width: =379
                     X: =1
                     Y: =0
                     ZIndex: =5
 
-                    DataCardKey22 As label:
+                    DataCardKey22_1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1658,7 +1658,7 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue21 As text:
+                    DataCardValue21_1 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -1683,10 +1683,10 @@ ThongTin As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey22.Y + DataCardKey22.Height + 5
+                        Y: =DataCardKey22_1.Y + DataCardKey22_1.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage22 As label:
+                    ErrorMessage22_1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1702,24 +1702,24 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue21.Y + DataCardValue21.Height
+                        Y: =DataCardValue21_1.Y + DataCardValue21_1.Height
                         ZIndex: =3
 
-                    StarVisible22 As label:
+                    StarVisible22_1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey22.Height
+                        Height: =DataCardKey22_1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey22.Y
+                        Y: =DataCardKey22_1.Y
                         ZIndex: =4
 
-                representative_DataCard1 As typedDataCard.textualEditCard:
+                representative_DataCard1_1 As typedDataCard.textualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="representative"
@@ -1730,13 +1730,13 @@ ThongTin As screen:
                     Height: =50
                     MaxLength: =DataSourceInfo([@'mWarehouse.Suppliers'], DataSourceInfo.MaxLength, representative)
                     Required: =false
-                    Update: =DataCardValue22.Text
+                    Update: =DataCardValue22_1.Text
                     Width: =379
                     X: =2
                     Y: =0
                     ZIndex: =5
 
-                    DataCardKey23 As label:
+                    DataCardKey23_1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1750,7 +1750,7 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue22 As text:
+                    DataCardValue22_1 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -1775,10 +1775,10 @@ ThongTin As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey23.Y + DataCardKey23.Height + 5
+                        Y: =DataCardKey23_1.Y + DataCardKey23_1.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage23 As label:
+                    ErrorMessage23_1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1794,24 +1794,24 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue22.Y + DataCardValue22.Height
+                        Y: =DataCardValue22_1.Y + DataCardValue22_1.Height
                         ZIndex: =3
 
-                    StarVisible23 As label:
+                    StarVisible23_1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey23.Height
+                        Height: =DataCardKey23_1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey23.Y
+                        Y: =DataCardKey23_1.Y
                         ZIndex: =4
 
-                phone_DataCard1 As typedDataCard.numberEditCard:
+                phone_DataCard1_1 As typedDataCard.numberEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="phone"
@@ -1821,13 +1821,13 @@ ThongTin As screen:
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =Value(DataCardValue23.Text)
+                    Update: =Value(DataCardValue23_1.Text)
                     Width: =379
                     X: =0
                     Y: =1
                     ZIndex: =5
 
-                    DataCardKey24 As label:
+                    DataCardKey24_1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1841,7 +1841,7 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue23 As text:
+                    DataCardValue23_1 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -1866,10 +1866,10 @@ ThongTin As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey24.Y + DataCardKey24.Height + 5
+                        Y: =DataCardKey24_1.Y + DataCardKey24_1.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage24 As label:
+                    ErrorMessage24_1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1885,31 +1885,31 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue23.Y + DataCardValue23.Height
+                        Y: =DataCardValue23_1.Y + DataCardValue23_1.Height
                         ZIndex: =3
 
-                    StarVisible24 As label:
+                    StarVisible24_1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey24.Height
+                        Height: =DataCardKey24_1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey24.Y
+                        Y: =DataCardKey24_1.Y
                         ZIndex: =4
 
-    ThemNCC As group:
+    ThemNCC_3 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =8
 
-        Rectangle1_1 As rectangle:
+        Rectangle1_10 As rectangle:
             BorderColor: =RGBA(202, 202, 202, 1)
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
@@ -1919,7 +1919,7 @@ ThongTin As screen:
             Width: =Parent.Width
             ZIndex: =6
 
-        Container9_1 As groupContainer.manualLayoutContainer:
+        Container9_10 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height/1.2
@@ -1929,11 +1929,11 @@ ThongTin As screen:
             RadiusTopRight: =4
             Visible: =ShowThemNCC
             Width: =Parent.Width/1.2
-            X: =Rectangle1_1.Width/12
-            Y: =Rectangle1_1.Height/12
+            X: =Rectangle1_10.Width/12
+            Y: =Rectangle1_10.Height/12
             ZIndex: =7
 
-            Label1_1 As label:
+            Label1_10 As label:
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1944,14 +1944,14 @@ ThongTin As screen:
                 Y: =40
                 ZIndex: =1
 
-    ThemDon As group:
+    ThemDon_3 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =10
 
-        Rectangle1_2 As rectangle:
+        Rectangle1_11 As rectangle:
             BorderColor: =RGBA(202, 202, 202, 1)
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
@@ -1961,7 +1961,7 @@ ThongTin As screen:
             Width: =Parent.Width
             ZIndex: =8
 
-        Container9_2 As groupContainer.manualLayoutContainer:
+        Container9_11 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height/1.2
@@ -1971,11 +1971,11 @@ ThongTin As screen:
             RadiusTopRight: =4
             Visible: =ShowThemDon
             Width: =Parent.Width/1.2
-            X: =Rectangle1_2.Width/12
-            Y: =Rectangle1_2.Height/12
+            X: =Rectangle1_11.Width/12
+            Y: =Rectangle1_11.Height/12
             ZIndex: =9
 
-            Label1_2 As label:
+            Label1_11 As label:
                 Align: =Align.Center
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =RGBA(0, 0, 0, 1)
@@ -1989,7 +1989,7 @@ ThongTin As screen:
                 Y: =16
                 ZIndex: =1
 
-            Icon1 As icon.Cancel:
+            Icon1_1 As icon.Cancel:
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =Color.Red
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -2003,7 +2003,7 @@ ThongTin As screen:
                 Y: =16
                 ZIndex: =2
 
-            Container13 As groupContainer.manualLayoutContainer:
+            Container13_1 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =337
                 RadiusBottomLeft: =4
@@ -2014,7 +2014,7 @@ ThongTin As screen:
                 Y: =300
                 ZIndex: =3
 
-                Gallery2 As gallery.galleryVertical:
+                Gallery2_1 As gallery.galleryVertical:
                     BorderColor: =App.Theme.Colors.Darker40
                     DelayItemLoading: =true
                     Height: =337
@@ -2025,7 +2025,7 @@ ThongTin As screen:
                     Width: =Parent.Width
                     ZIndex: =1
 
-                    Container18 As groupContainer.manualLayoutContainer:
+                    Container18_1 As groupContainer.manualLayoutContainer:
                         DropShadow: =DropShadow.Regular
                         Height: =70
                         RadiusBottomLeft: =4
@@ -2035,7 +2035,7 @@ ThongTin As screen:
                         Width: =1130
                         ZIndex: =1
 
-                        Label14 As label:
+                        Label14_1 As label:
                             BorderColor: =App.Theme.Colors.Darker40
                             Color: =RGBA(0, 0, 0, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -2047,7 +2047,7 @@ ThongTin As screen:
                             Y: =15
                             ZIndex: =1
 
-                        Button5 As button:
+                        Button5_6 As button:
                             BorderColor: =App.Theme.Colors.Primary
                             DisabledBorderColor: =RGBA(244, 244, 244, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -2069,7 +2069,7 @@ ThongTin As screen:
                             Y: =20
                             ZIndex: =2
 
-                        Icon3_2 As icon.Add:
+                        Icon3_3 As icon.Add:
                             BorderColor: =App.Theme.Colors.Darker40
                             Color: =Color.Red
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -2081,7 +2081,7 @@ ThongTin As screen:
                             Y: =17
                             ZIndex: =3
 
-                        Label13_2 As label:
+                        Label13_3 As label:
                             Align: =Align.Center
                             BorderColor: =App.Theme.Colors.Darker40
                             Color: =RGBA(0, 0, 0, 1)
@@ -2094,7 +2094,7 @@ ThongTin As screen:
                             Y: =12
                             ZIndex: =4
 
-                        Label12_2 As label:
+                        Label12_3 As label:
                             Align: =Align.Center
                             BorderColor: =App.Theme.Colors.Darker40
                             Color: =RGBA(0, 0, 0, 1)
@@ -2107,7 +2107,7 @@ ThongTin As screen:
                             Y: =12
                             ZIndex: =5
 
-            Container16 As groupContainer.manualLayoutContainer:
+            Container16_1 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Semibold
                 Height: =70
                 RadiusBottomLeft: =4
@@ -2118,7 +2118,7 @@ ThongTin As screen:
                 Y: =152
                 ZIndex: =4
 
-                Icon3 As icon.Add:
+                Icon3_1 As icon.Add:
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =App.Theme.Colors.Darker30
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -2130,7 +2130,7 @@ ThongTin As screen:
                     Y: =16
                     ZIndex: =1
 
-                Label10 As label:
+                Label10_19 As label:
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
@@ -2143,7 +2143,7 @@ ThongTin As screen:
                     Y: =11
                     ZIndex: =2
 
-            Container17 As groupContainer.manualLayoutContainer:
+            Container17_1 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Semibold
                 Height: =80
                 RadiusBottomLeft: =4
@@ -2154,7 +2154,7 @@ ThongTin As screen:
                 Y: =62
                 ZIndex: =5
 
-                Label11 As label:
+                Label11_1 As label:
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
@@ -2167,7 +2167,7 @@ ThongTin As screen:
                     Y: =20
                     ZIndex: =1
 
-                TextInput3 As text:
+                TextInput3_1 As text:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderThickness: =2
                     Color: =RGBA(0, 0, 0, 1)
@@ -2187,7 +2187,7 @@ ThongTin As screen:
                     Y: =20
                     ZIndex: =2
 
-                Label12 As label:
+                Label12_4 As label:
                     Align: =Align.Center
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
@@ -2202,7 +2202,7 @@ ThongTin As screen:
                     Y: =20
                     ZIndex: =3
 
-                Label12_1 As label:
+                Label12_5 As label:
                     Align: =Align.Center
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
@@ -2215,7 +2215,7 @@ ThongTin As screen:
                     Y: =20
                     ZIndex: =4
 
-                Label13 As label:
+                Label13_4 As label:
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
@@ -2229,7 +2229,7 @@ ThongTin As screen:
                     Y: =20
                     ZIndex: =5
 
-                Label13_1 As label:
+                Label13_5 As label:
                     Align: =Align.Center
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
@@ -2242,7 +2242,7 @@ ThongTin As screen:
                     Y: =20
                     ZIndex: =6
 
-            Container16_2 As groupContainer.manualLayoutContainer:
+            Container16_3 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Regular
                 Height: =70
                 RadiusBottomLeft: =4
@@ -2253,7 +2253,7 @@ ThongTin As screen:
                 Y: =227
                 ZIndex: =6
 
-                Label10_20 As label:
+                Label10_25 As label:
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
@@ -2266,7 +2266,7 @@ ThongTin As screen:
                     Y: =16
                     ZIndex: =2
 
-                Label10_21 As label:
+                Label10_24 As label:
                     Align: =Align.Center
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
@@ -2279,7 +2279,7 @@ ThongTin As screen:
                     Y: =16
                     ZIndex: =3
 
-                Label10_22 As label:
+                Label10_26 As label:
                     Align: =Align.Center
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
@@ -2292,7 +2292,7 @@ ThongTin As screen:
                     Y: =16
                     ZIndex: =4
 
-                Label10_23 As label:
+                Label10_27 As label:
                     Align: =Align.Center
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
