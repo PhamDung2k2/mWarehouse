@@ -188,7 +188,7 @@ ThongTin_KH As screen:
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: |-
                     =//RGBA(255, 255, 255, 1)
-                    clsp
+                    If (Color = clsp,clsp)
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =25
@@ -196,14 +196,17 @@ ThongTin_KH As screen:
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
                 OnSelect: |-
-                    =UpdateContext({clsp:RGBA(109, 49, 162, 1),clncc:RGBA(255, 255, 255, 1),clkh:RGBA(255, 255, 255, 1)})
+                    =//UpdateContext({clsp:RGBA(109, 49, 162, 1),clncc:RGBA(255, 255, 255, 1),clkh:RGBA(255, 255, 255, 1)})
+                    Set(clsp,RGBA(109, 49, 162, 1));
+                    Set(clncc,RGBA(255, 255, 255, 1));
+                    Set(clkh,RGBA(255, 255, 255, 1));
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
                 Size: =12
                 Text: ="Sản phẩm"
                 Width: =120
-                X: =282
+                X: =289
                 Y: =22
                 ZIndex: =5
 
@@ -224,7 +227,9 @@ ThongTin_KH As screen:
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
                 OnSelect: |-
-                    =UpdateContext({clsp:RGBA(109, 49, 162, 1),clncc:RGBA(255, 255, 255, 1),clkh:RGBA(255, 255, 255, 1)})
+                    =Set(clsp,RGBA(109, 49, 162, 1));
+                    Set(clncc,RGBA(255, 255, 255, 1));
+                    Set(clkh,RGBA(255, 255, 255, 1));
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
@@ -252,7 +257,9 @@ ThongTin_KH As screen:
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
                 OnSelect: |-
-                    =UpdateContext({clsp:RGBA(109, 49, 162, 1),clncc:RGBA(255, 255, 255, 1),clkh:RGBA(255, 255, 255, 1)})
+                    =Set(clsp,RGBA(109, 49, 162, 1));
+                    Set(clncc,RGBA(255, 255, 255, 1));
+                    Set(clkh,RGBA(255, 255, 255, 1));
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
