@@ -14,6 +14,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ThongTin.Container9.Form3.Title_DataCard3.ComboBox3.SearchItems"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ThongTin.Container9.Form3.Title_DataCard3.ComboBox3.SearchItems",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 51,
+                  "snippet": {
+                    "text": "ComplianceAssetId"
+                  }
+                }
+              },
+              "properties": {
+                "member": "SearchItems",
+                "module": "ThongTin",
+                "type": "ThongTin.Container9.Form3.Title_DataCard3.ComboBox3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Search"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "DuyetDon.Container4_2.Container5_2.ComboBox2.SearchItems"
                 }
               ],
@@ -684,19 +724,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ThongTin.Container9.Form3.Title_DataCard3.DataCardValue20.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9.Form3.Title_DataCard3.ComboBox3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ThongTin.Container9.Form3.Title_DataCard3.DataCardValue20.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9.Form3.Title_DataCard3.ComboBox3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ThongTin",
-                "type": "ThongTin.Container9.Form3.Title_DataCard3.DataCardValue20"
+                "type": "ThongTin.Container9.Form3.Title_DataCard3.ComboBox3"
               }
             }
           ],

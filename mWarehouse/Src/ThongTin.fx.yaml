@@ -1577,7 +1577,7 @@ ThongTin As screen:
                     Height: =50
                     MaxLength: =DataSourceInfo([@'mWarehouse.Suppliers'], DataSourceInfo.MaxLength, Title)
                     Required: =false
-                    Update: =DataCardValue20.Text
+                    Update: =ComboBox3.Selected.ID
                     Width: =379
                     X: =0
                     Y: =0
@@ -1597,34 +1597,6 @@ ThongTin As screen:
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue20 As text:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        BorderThickness: =2
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =Parent.Default
-                        DelayOutput: =true
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
-                        HoverBorderColor: =App.Theme.Colors.Darker40
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        MaxLength: =Parent.MaxLength
-                        PaddingLeft: =5
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Tooltip: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey21.Y + DataCardKey21.Height + 5
-                        ZIndex: =2
-
                     ErrorMessage21 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
@@ -1641,7 +1613,7 @@ ThongTin As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue20.Y + DataCardValue20.Height
+                        Y: =
                         ZIndex: =3
 
                     StarVisible21 As label:
@@ -1657,6 +1629,31 @@ ThongTin As screen:
                         Wrap: =false
                         Y: =DataCardKey21.Y
                         ZIndex: =4
+
+                    ComboBox3 As combobox:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        ChevronBackground: =App.Theme.Colors.Primary
+                        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                        ChevronHoverBackground: =App.Theme.Colors.Darker10
+                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayFields: =["Title"]
+                        Font: =App.Theme.Font
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =App.Theme.Colors.Lighter70
+                        Items: ='mWarehouse.Suppliers'
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =App.Theme.Colors.Darker30
+                        SearchFields: =["ComplianceAssetId"]
+                        SearchItems: =Search('mWarehouse.Suppliers',ComboBox3.SearchText,ComplianceAssetId)
+                        SelectionFill: =App.Theme.Colors.Primary
+                        Size: =13
+                        X: =30
+                        Y: =43
+                        ZIndex: =5
 
                 address_DataCard1 As typedDataCard.textualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
@@ -1941,9 +1938,9 @@ ThongTin As screen:
                 Fill: =RGBA(152, 208, 70, 1)
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverBorderColor: =RGBA(127, 178, 57, 1)
                 HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =App.Theme.Colors.Darker10
+                HoverFill: =RGBA(127, 178, 57, 1)
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
