@@ -188,7 +188,7 @@ ThongTin_KH As screen:
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: |-
                     =//RGBA(255, 255, 255, 1)
-                    If (   = clsp,clsp)
+                    If ( clicked  = "Click",RGBA(109, 49, 162, 1),RGBA(255, 255, 255, 1))
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =25
@@ -197,9 +197,7 @@ ThongTin_KH As screen:
                 HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
                 OnSelect: |-
                     =//UpdateContext({clsp:RGBA(109, 49, 162, 1),clncc:RGBA(255, 255, 255, 1),clkh:RGBA(255, 255, 255, 1)})
-                    Set(clsp,RGBA(109, 49, 162, 1));
-                    Set(clncc,RGBA(255, 255, 255, 1));
-                    Set(clkh,RGBA(255, 255, 255, 1));
+                    Set(clicked,"Click");
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
