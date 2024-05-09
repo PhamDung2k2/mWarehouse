@@ -1933,6 +1933,26 @@ ThongTin As screen:
                         Y: =DataCardKey24.Y
                         ZIndex: =4
 
+            Button6 As button:
+                BorderColor: =
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(152, 208, 70, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
+                Text: ="Thêm mới"
+                X: =489
+                Y: =558
+                ZIndex: =5
+
     ThemNCC As group:
         Height: =5
         Width: =5
