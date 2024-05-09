@@ -84,6 +84,9 @@ ThongTin_KH As screen:
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: |-
                 =Set(ShowFill,ThisItem.ID);
+                If(ThisItem.IsSelected ,Set(clicksp,"Click");
+                Set(clickkh,"uClick");
+                Set(clicknc,"uClick"););
                 Navigate(ThisItem.Name,ScreenTransition.Fade)
             TemplatePadding: =0
             TemplateSize: =83

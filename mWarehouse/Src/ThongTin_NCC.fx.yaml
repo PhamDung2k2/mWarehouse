@@ -84,7 +84,7 @@ ThongTin_NCC As screen:
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: |-
                 =Set(ShowFill,ThisItem.ID);
-                If(ThisItem.Title = "Thông tin",Set(clicksp,"Click");
+                If(ThisItem.IsSelected ,Set(clicksp,"Click");
                 Set(clickkh,"uClick");
                 Set(clicknc,"uClick"););
                 Navigate(ThisItem.Name,ScreenTransition.Fade)
