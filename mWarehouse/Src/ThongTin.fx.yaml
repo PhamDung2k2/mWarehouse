@@ -733,7 +733,7 @@ ThongTin As screen:
                 DataSource: ='mWarehouse.Products'
                 Height: =357
                 Width: =Parent.Width
-                Y: =281
+                Y: =220
                 ZIndex: =3
 
                 Title_DataCard2 As typedDataCard.textualEditCard:
@@ -1561,7 +1561,7 @@ ThongTin As screen:
                 DataSource: ='mWarehouse.Suppliers'
                 Height: =200
                 Width: =Parent.Width
-                Y: =81
+                Y: =40
                 ZIndex: =4
 
                 Title_DataCard3 As typedDataCard.textualEditCard:
