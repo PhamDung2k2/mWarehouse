@@ -179,6 +179,95 @@ ThongTin As screen:
                 Y: =15
                 ZIndex: =1
 
+            Button4_15 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                BorderThickness: =0
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: |-
+                    =//RGBA(255, 255, 255, 1)
+                    If ( clicksp  = "Click",RGBA(109, 49, 162, 1),RGBA(255, 255, 255, 1))
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+                OnSelect: |-
+                    =//UpdateContext({clsp:RGBA(109, 49, 162, 1),clncc:RGBA(255, 255, 255, 1),clkh:RGBA(255, 255, 255, 1)})
+                    Set(clicksp,"Click");
+                    Set(clickkh,"uClick");
+                    Set(clicknc,"uClick");
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =12
+                Text: ="Sản phẩm"
+                Width: =120
+                X: =270
+                Y: =22
+                ZIndex: =2
+
+            Button4_16 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                BorderThickness: =0
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: |-
+                    =//RGBA(255, 255, 255, 1)
+                    If ( clicknc  = "Click",RGBA(109, 49, 162, 1),RGBA(255, 255, 255, 1))
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+                OnSelect: |-
+                    =Set(clicksp,"uClick");
+                    Set(clickkh,"uClick");
+                    Set(clicknc,"Click");
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =12
+                Text: ="Nhà cung cấp"
+                Width: =120
+                X: =393
+                Y: =22
+                ZIndex: =3
+
+            Button4_17 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                BorderThickness: =0
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =If ( clickkh  = "Click",RGBA(109, 49, 162, 1),RGBA(255, 255, 255, 1))
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+                OnSelect: |-
+                    =Set(clicksp,"uClick");
+                    Set(clicknc,"uClick");
+                    Set(clickkh,"Click");
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =12
+                Text: ="Khách hàng"
+                Width: =120
+                X: =523
+                Y: =22
+                ZIndex: =4
+
         Container5 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Semilight
             Height: |
