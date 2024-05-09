@@ -84,7 +84,10 @@ ThongTin As screen:
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: |-
                 =Set(ShowFill,ThisItem.ID);
-                Navigate(ThisItem.Name,ScreenTransition.Fade)
+                Navigate(ThisItem.Name,ScreenTransition.Fade);
+                If(ThisItem.ID = 2,Set(clicksp,"Click");
+                Set(clickkh,"uClick");
+                Set(clicknc,"uClick");)
             TemplatePadding: =0
             TemplateSize: =83
             Width: =200
@@ -203,7 +206,7 @@ ThongTin As screen:
                     Navigate(ThongTin,ScreenTransition.Fade)
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
-                PressedFill: =App.Theme.Colors.Darker40
+                PressedFill: =RGBA(255,255,255,1)
                 Size: =12
                 Text: ="Sản phẩm"
                 Width: =120
