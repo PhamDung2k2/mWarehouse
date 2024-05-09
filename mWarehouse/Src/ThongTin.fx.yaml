@@ -82,12 +82,10 @@ ThongTin As screen:
                 =Table({ID: 1,Title:"Trang chủ",Name:TrangChu},{ID: 2,Title:"Thông tin",Name: ThongTin},{ID: 3,Title:"Báo giá",Name:YeuCau},{ID: 4,Title:"Thống kê",Name:ThongKe},{ID: 5,Title:"Duyệt đơn",Name:DuyetDon})
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
-            OnSelect: |-
+            OnSelect: |
                 =Set(ShowFill,ThisItem.ID);
+                
                 Navigate(ThisItem.Name,ScreenTransition.Fade);
-                If(ThisItem.ID = 2,Set(clicksp,"Click");
-                Set(clickkh,"uClick");
-                Set(clicknc,"uClick");)
             TemplatePadding: =0
             TemplateSize: =83
             Width: =200
@@ -112,7 +110,11 @@ ThongTin As screen:
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =53
-                OnSelect: =Select(Parent)
+                OnSelect: |-
+                    =Select(Parent);
+                    If(ThisItem.Title = "Thông tin",Set(clicksp,"Click");
+                    Set(clickkh,"uClick");
+                    Set(clicknc,"uClick"););
                 Size: =13
                 Text: =ThisItem.Title
                 Width: =200
