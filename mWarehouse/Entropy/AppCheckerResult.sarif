@@ -4734,6 +4734,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.clickkh"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.clickkh",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "clickkh",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.clicknc"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.clicknc",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "clicknc",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.cyborg-isometric-3d-rendering-of-cyborgs-engaged-in-automated-work-at-warehouse_9631074"
                 }
               ],
