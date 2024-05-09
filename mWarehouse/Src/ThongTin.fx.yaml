@@ -200,6 +200,7 @@ ThongTin As screen:
                     Set(clicksp,"Click");
                     Set(clickkh,"uClick");
                     Set(clicknc,"uClick");
+                    Navigate(ThongTin,ScreenTransition.Fade)
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
@@ -230,6 +231,7 @@ ThongTin As screen:
                     =Set(clicksp,"uClick");
                     Set(clickkh,"uClick");
                     Set(clicknc,"Click");
+                    Navigate(ThongTin_NCC,ScreenTransition.Fade)
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
@@ -258,6 +260,7 @@ ThongTin As screen:
                     =Set(clicksp,"uClick");
                     Set(clicknc,"uClick");
                     Set(clickkh,"Click");
+                    Navigate(ThongTin_KH,ScreenTransition.Fade)
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
