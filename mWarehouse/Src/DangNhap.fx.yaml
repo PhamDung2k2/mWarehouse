@@ -126,7 +126,7 @@ DangNhap As screen:
                         ).Title
                     ),
                     Navigate(TrangChu);
-                    UpdateContext({ShowForgetMessage: false}),
+                    UpdateContext({ShowForgetMessage: false});Set(ShowFill,1);,
                     UpdateContext({ShowForgetMessage: true})
                 )
             PressedBorderColor: =App.Theme.Colors.Darker40
