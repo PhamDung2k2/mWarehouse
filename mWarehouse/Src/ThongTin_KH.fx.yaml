@@ -219,7 +219,7 @@ ThongTin_KH As screen:
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: |-
                     =//RGBA(255, 255, 255, 1)
-                    clncc
+                    If ( clicknc  = "Click",RGBA(109, 49, 162, 1),RGBA(255, 255, 255, 1))
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =25
@@ -227,9 +227,9 @@ ThongTin_KH As screen:
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
                 OnSelect: |-
-                    =Set(clsp,RGBA(109, 49, 162, 1));
-                    Set(clncc,RGBA(255, 255, 255, 1));
-                    Set(clkh,RGBA(255, 255, 255, 1));
+                    =Set(clicksp,"uClick");
+                    Set(clickkh,"uClick");
+                    Set(clicknc,"Click");
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
@@ -247,9 +247,7 @@ ThongTin_KH As screen:
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: |-
-                    =//RGBA(109, 49, 162, 1)
-                    clkh
+                Fill: =If ( clickkh  = "Click",RGBA(109, 49, 162, 1),RGBA(255, 255, 255, 1))
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =25
@@ -257,9 +255,9 @@ ThongTin_KH As screen:
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
                 OnSelect: |-
-                    =Set(clsp,RGBA(109, 49, 162, 1));
-                    Set(clncc,RGBA(255, 255, 255, 1));
-                    Set(clkh,RGBA(255, 255, 255, 1));
+                    =Set(clicksp,"uClick");
+                    Set(clicknc,"uClick");
+                    Set(clickkh,"Click");
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
