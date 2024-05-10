@@ -2240,7 +2240,9 @@ ThongTin As screen:
                     SearchFields: =["Title"]
                     SearchItems: =Search('mWarehouse.Products',ComboBox5.SearchText,Title)
                     SelectionFill: =App.Theme.Colors.Primary
+                    SelectMultiple: =false
                     Size: =13
+                    Width: =380
                     X: =419
                     Y: =16
                     ZIndex: =6
@@ -2262,9 +2264,21 @@ ThongTin As screen:
                     Size: =13
                     Tooltip: ="Số lượng"
                     Width: =100
-                    X: =764
+                    X: =820
                     Y: =16
                     ZIndex: =7
+
+                Icon6 As icon.Check:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(54, 176, 75, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =35
+                    Icon: =Icon.Check
+                    Width: =35
+                    X: =967
+                    Y: =16
+                    ZIndex: =8
 
             Container17 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Semibold
