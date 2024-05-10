@@ -191,7 +191,7 @@ ThongTin_NCC As screen:
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: |-
                     =//RGBA(255, 255, 255, 1)
-                    If ( clicksp  = "Click",RGBA(109, 49, 162, 1),RGBA(255, 255, 255, 1))
+                    If ( clicksp  = "Click",RGBA(109, 49, 162, 0.75),RGBA(255, 255, 255, 1))
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =25
@@ -223,7 +223,7 @@ ThongTin_NCC As screen:
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: |-
                     =//RGBA(255, 255, 255, 1)
-                    If ( clicknc  = "Click",RGBA(109, 49, 162, 1),RGBA(255, 255, 255, 1))
+                    If ( clicknc  = "Click",RGBA(109, 49, 162, 0.75),RGBA(255, 255, 255, 1))
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =25
@@ -252,7 +252,7 @@ ThongTin_NCC As screen:
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =If ( clickkh  = "Click",RGBA(109, 49, 162, 1),RGBA(255, 255, 255, 1))
+                Fill: =If ( clickkh  = "Click",RGBA(109, 49, 162, 0.75),RGBA(255, 255, 255, 1))
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =25
