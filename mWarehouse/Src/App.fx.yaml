@@ -1,5 +1,11 @@
 App As appinfo:
-    BackEnabled: =true
+    BackEnabled: |-
+        =//true
+        false
+    ConfirmExit: |-
+        =//false
+        true
+    ConfirmExitMessage: ="bạn có chắc chắc"
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

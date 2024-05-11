@@ -318,33 +318,12 @@ ThongTin_NCC As screen:
                 Y: =29
                 ZIndex: =2
 
-            Button1_3 As button:
-                BorderColor: =App.Theme.Colors.Primary
-                DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =App.Theme.Colors.Primary
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =App.Theme.Colors.Darker10
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =App.Theme.Colors.Darker10
-                PressedBorderColor: =App.Theme.Colors.Darker40
-                PressedColor: =Self.Color
-                PressedFill: =App.Theme.Colors.Darker40
-                Size: =15
-                Text: ="🔍"
-                Width: =70
-                X: =447
-                Y: =28
-                ZIndex: =3
-
             Button5_8 As button:
-                BorderColor: =App.Theme.Colors.Primary
+                BorderColor: =RGBA(52, 207, 116, 1)
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =App.Theme.Colors.Primary
+                Fill: =RGBA(52, 207, 116, 1)
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 HoverBorderColor: =App.Theme.Colors.Darker10
@@ -361,6 +340,29 @@ ThongTin_NCC As screen:
                 X: =942
                 Y: =28
                 ZIndex: =4
+
+            Button1_3 As button:
+                BorderColor: =RGBA(221, 79, 14, 1)
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(221, 79, 14, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                OnSelect: |-
+                    =UpdateContext({Barcode: Blank()})
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
+                Text: ="🔎 Reset"
+                Width: =100
+                X: =463
+                Y: =28
+                ZIndex: =5
 
         Container7_4 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
