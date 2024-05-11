@@ -333,6 +333,8 @@ ThongTin As screen:
                 HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
+                OnSelect: |-
+                    =UpdateContext({Barcode: Blank()})
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
@@ -530,7 +532,7 @@ ThongTin As screen:
                 Items: |-
                     =//'mWarehouse.Products'
                     //BarcodeReader1.Barcodes
-                    If(IsBlank( BarcodeReader1.Barcodes),'mWarehouse.Products',Filter('mWarehouse.Products',productCode = First(Barcode).Value))
+                    If(IsEmpty( Barcode),Search('mWarehouse.Products',TextInput2.Text,Name),Search(Filter('mWarehouse.Products',productCode = First(Barcode).Value),TextInput2.Text,Name))
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
