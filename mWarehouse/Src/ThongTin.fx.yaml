@@ -391,6 +391,32 @@ ThongTin As screen:
                 Y: =28
                 ZIndex: =5
 
+            "BarcodeReader1 As 'Barcode Reader'":
+                BarcodeType: ='BarcodeReader.BarcodeType'.QRCode
+                BorderFillColor: =RGBA(47, 81, 151, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledContentColor: =RGBA(166, 166, 166, 1)
+                DisabledFillColor: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.Edit
+                FillColor: =RGBA(56, 96, 178, 1)
+                FontSize: =15
+                Height: =50
+                HoverBorderColor: =RGBA(88, 115, 171, 1)
+                HoverContentColor: =RGBA(255, 255, 255, 1)
+                HoverFillColor: =RGBA(47, 81, 151, 1)
+                OnCancel: =false
+                OnScan: |-
+                    =UpdateContext({Barcode: BarcodeReader1.Barcodes})
+                PressedBorderColor: =RGBA(56, 96, 178, 1)
+                PressedContentColor: =RGBA(56, 96, 178, 1)
+                PressedFillColor: =RGBA(255, 255, 255, 1)
+                Text: ="Scan"
+                TextColor: =RGBA(255, 255, 255, 1)
+                Width: =100
+                X: =517
+                Y: =23
+                ZIndex: =6
+
         Container7 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Height: =70
@@ -501,7 +527,10 @@ ThongTin As screen:
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
                 Height: =Parent.Height
-                Items: ='mWarehouse.Products'
+                Items: |-
+                    =//'mWarehouse.Products'
+                    //BarcodeReader1.Barcodes
+                    If(IsBlank( BarcodeReader1.Barcodes),'mWarehouse.Products',Filter('mWarehouse.Products',productCode = First(Barcode).Value))
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
