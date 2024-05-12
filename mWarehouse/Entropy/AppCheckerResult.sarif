@@ -4024,19 +4024,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form3_1.Title_DataCard3_1.DataCardValue20_1.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form4.shortcut_DataCard1.DataCardValue8.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form3_1.Title_DataCard3_1.DataCardValue20_1.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form4.shortcut_DataCard1.DataCardValue8.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ThongTin_NCC",
-                "type": "ThongTin_NCC.Container9_9.Form3_1.Title_DataCard3_1.DataCardValue20_1"
+                "type": "ThongTin_NCC.Container9_9.Form4.shortcut_DataCard1.DataCardValue8"
               }
             }
           ],
@@ -4054,19 +4054,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form3_1.address_DataCard1_1.DataCardValue21_1.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form4.phone_DataCard3.DataCardValue7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form3_1.address_DataCard1_1.DataCardValue21_1.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form4.phone_DataCard3.DataCardValue7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ThongTin_NCC",
-                "type": "ThongTin_NCC.Container9_9.Form3_1.address_DataCard1_1.DataCardValue21_1"
+                "type": "ThongTin_NCC.Container9_9.Form4.phone_DataCard3.DataCardValue7"
               }
             }
           ],
@@ -4084,19 +4084,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form3_1.representative_DataCard1_1.DataCardValue22_1.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form4.representative_DataCard2.DataCardValue6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form3_1.representative_DataCard1_1.DataCardValue22_1.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form4.representative_DataCard2.DataCardValue6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ThongTin_NCC",
-                "type": "ThongTin_NCC.Container9_9.Form3_1.representative_DataCard1_1.DataCardValue22_1"
+                "type": "ThongTin_NCC.Container9_9.Form4.representative_DataCard2.DataCardValue6"
               }
             }
           ],
@@ -4114,19 +4114,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form3_1.phone_DataCard1_1.DataCardValue23_1.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form4.address_DataCard3.DataCardValue5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form3_1.phone_DataCard1_1.DataCardValue23_1.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form4.address_DataCard3.DataCardValue5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ThongTin_NCC",
-                "type": "ThongTin_NCC.Container9_9.Form3_1.phone_DataCard1_1.DataCardValue23_1"
+                "type": "ThongTin_NCC.Container9_9.Form4.address_DataCard3.DataCardValue5"
               }
             }
           ],
@@ -4144,259 +4144,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.Title_DataCard2_1.DataCardValue9_1.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form4.Title_DataCard4.DataCardValue4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.Title_DataCard2_1.DataCardValue9_1.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form4.Title_DataCard4.DataCardValue4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ThongTin_NCC",
-                "type": "ThongTin_NCC.Container9_9.Form2_1.Title_DataCard2_1.DataCardValue9_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.productCode_DataCard2_1.DataCardValue11_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.productCode_DataCard2_1.DataCardValue11_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ThongTin_NCC",
-                "type": "ThongTin_NCC.Container9_9.Form2_1.productCode_DataCard2_1.DataCardValue11_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.category_DataCard1_1.DataCardValue12_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.category_DataCard1_1.DataCardValue12_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ThongTin_NCC",
-                "type": "ThongTin_NCC.Container9_9.Form2_1.category_DataCard1_1.DataCardValue12_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.priceImport_DataCard2_1.DataCardValue14_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.priceImport_DataCard2_1.DataCardValue14_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ThongTin_NCC",
-                "type": "ThongTin_NCC.Container9_9.Form2_1.priceImport_DataCard2_1.DataCardValue14_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.priceExport_DataCard1_1.DataCardValue15_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.priceExport_DataCard1_1.DataCardValue15_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ThongTin_NCC",
-                "type": "ThongTin_NCC.Container9_9.Form2_1.priceExport_DataCard1_1.DataCardValue15_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.brand_DataCard1_1.DataCardValue16_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.brand_DataCard1_1.DataCardValue16_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ThongTin_NCC",
-                "type": "ThongTin_NCC.Container9_9.Form2_1.brand_DataCard1_1.DataCardValue16_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.quantity_DataCard2_1.DataCardValue17_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.quantity_DataCard2_1.DataCardValue17_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ThongTin_NCC",
-                "type": "ThongTin_NCC.Container9_9.Form2_1.quantity_DataCard2_1.DataCardValue17_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.year_DataCard1_1.DataCardValue18_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.year_DataCard1_1.DataCardValue18_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ThongTin_NCC",
-                "type": "ThongTin_NCC.Container9_9.Form2_1.year_DataCard1_1.DataCardValue18_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.image_DataCard1_1.AddPicture1_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ThongTin_NCC.Container9_9.Form2_1.image_DataCard1_1.AddPicture1_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ThongTin_NCC",
-                "type": "ThongTin_NCC.Container9_9.Form2_1.image_DataCard1_1.AddPicture1_1"
+                "type": "ThongTin_NCC.Container9_9.Form4.Title_DataCard4.DataCardValue4"
               }
             }
           ],
@@ -5387,6 +5147,36 @@
                 "member": "ShowPass",
                 "module": "DangNhap",
                 "type": "DangNhap"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ThongTin_NCC.ShowThemSP"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ThongTin_NCC.ShowThemSP",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ShowThemSP",
+                "module": "ThongTin_NCC",
+                "type": "ThongTin_NCC"
               }
             }
           ],

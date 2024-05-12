@@ -881,7 +881,7 @@ ThongTin_KH As screen:
                 Y: =533
                 ZIndex: =4
 
-    ThemKH_1 As group:
+    ThongTinKH As group:
         Height: =5
         Width: =5
         X: =40
