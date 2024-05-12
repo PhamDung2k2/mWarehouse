@@ -35,6 +35,7 @@
       "OData__ColorTag": "Color Tag",
       "phone": "phone",
       "representative": "representative",
+      "shortcut": "shortcut",
       "Title": "Title"
     },
     "DatasetName": "https://bhktechcorp.sharepoint.com/sites/daotran",

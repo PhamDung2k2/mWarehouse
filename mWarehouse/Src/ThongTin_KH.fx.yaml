@@ -330,8 +330,10 @@ ThongTin_KH As screen:
                 HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
-                OnSelect: |-
-                    =UpdateContext({ShowThemSP:true})
+                OnSelect: |
+                    =UpdateContext({ShowThemSP:true});
+                    ResetForm(Form1);
+                    NewForm(Form1)
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
@@ -410,7 +412,7 @@ ThongTin_KH As screen:
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
                 Height: =Parent.Height
-                Items: ='mWarehouse.Products'
+                Items: =Search('mWarehouse.Customers',TextInput2_4.Text,Title)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -456,7 +458,7 @@ ThongTin_KH As screen:
                         Font: =App.Theme.Font
                         Height: =55
                         Size: =13
-                        Text: ="128 Trần Quang Khải, Phường Tân Định, Quận 1, Thành phố Hồ Chí Minh"
+                        Text: =ThisItem.address
                         Width: =411
                         X: =343
                         Y: =11
@@ -469,7 +471,7 @@ ThongTin_KH As screen:
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
                         Size: =13
-                        Text: ="06578954125"
+                        Text: =Concatenate("0",ThisItem.phone)
                         Width: =155
                         X: =769
                         Y: =18
@@ -549,7 +551,7 @@ ThongTin_KH As screen:
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Bold
                 Size: =13
-                Text: ="Thêm sản phẩm mới"
+                Text: ="Thêm mới khách hàng"
                 Width: =200
                 X: =10
                 Y: =10
@@ -569,46 +571,50 @@ ThongTin_KH As screen:
                 Y: =12
                 ZIndex: =2
 
-            Form2_2 As form:
+            Form1 As form:
                 BorderColor: =App.Theme.Colors.Darker40
-                DataSource: ='mWarehouse.Products'
-                Height: =357
-                Width: =Parent.Width
-                Y: =281
+                DataSource: ='mWarehouse.Customers'
+                Height: =535
+                NumberOfColumns: =1
+                Width: =1091
+                X: =27
+                Y: =86
                 ZIndex: =3
 
-                Title_DataCard2_2 As typedDataCard.textualEditCard:
+                Title_DataCard1 As typedDataCard.textualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="Title"
                     Default: =ThisItem.Title
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'mWarehouse.Products'],DataSourceInfo.DisplayName,Title)
+                    DisplayName: =DataSourceInfo([@'mWarehouse.Customers'],DataSourceInfo.DisplayName,Title)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@'mWarehouse.Products'], DataSourceInfo.MaxLength, Title)
+                    MaxLength: =DataSourceInfo([@'mWarehouse.Customers'], DataSourceInfo.MaxLength, Title)
                     Required: =false
-                    Update: =DataCardValue9_2.Text
-                    Width: =379
+                    Update: =DataCardValue1.Text
+                    Width: =1091
                     X: =0
                     Y: =0
                     ZIndex: =4
 
-                    DataCardKey9_2 As label:
+                    DataCardKey1 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
                         Height: =34
                         Size: =13
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Họ và tên khách hàng"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue9_2 As text:
+                    DataCardValue1 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -633,10 +639,10 @@ ThongTin_KH As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey9_2.Y + DataCardKey9_2.Height + 5
+                        Y: =DataCardKey1.Y + DataCardKey1.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage9_2 As label:
+                    ErrorMessage1 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -652,885 +658,57 @@ ThongTin_KH As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue9_2.Y + DataCardValue9_2.Height
+                        Y: =DataCardValue1.Y + DataCardValue1.Height
                         ZIndex: =3
 
-                    StarVisible9_2 As label:
+                    StarVisible1 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey9_2.Height
+                        Height: =DataCardKey1.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey9_2.Y
+                        Y: =DataCardKey1.Y
                         ZIndex: =4
 
-                productCode_DataCard2_2 As typedDataCard.textualEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="productCode"
-                    Default: =ThisItem.productCode
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'mWarehouse.Products'],DataSourceInfo.DisplayName,productCode)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    MaxLength: =DataSourceInfo([@'mWarehouse.Products'], DataSourceInfo.MaxLength, productCode)
-                    Required: =false
-                    Update: =DataCardValue11_2.Text
-                    Width: =379
-                    X: =1
-                    Y: =0
-                    ZIndex: =4
-
-                    DataCardKey11_2 As label:
-                        AutoHeight: =true
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =34
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue11_2 As text:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        BorderThickness: =2
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =Parent.Default
-                        DelayOutput: =true
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
-                        HoverBorderColor: =App.Theme.Colors.Darker40
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        MaxLength: =Parent.MaxLength
-                        PaddingLeft: =5
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Tooltip: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey11_2.Y + DataCardKey11_2.Height + 5
-                        ZIndex: =2
-
-                    ErrorMessage11_2 As label:
-                        AutoHeight: =true
-                        Color: =RGBA(168, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        FontWeight: =FontWeight.Semibold
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardValue11_2.Y + DataCardValue11_2.Height
-                        ZIndex: =3
-
-                    StarVisible11_2 As label:
-                        Align: =Align.Center
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =DataCardKey11_2.Height
-                        Size: =13
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey11_2.Y
-                        ZIndex: =4
-
-                category_DataCard1_2 As typedDataCard.comboBoxEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="category"
-                    Default: =ThisItem.category
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'mWarehouse.Products'],DataSourceInfo.DisplayName,category)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    Required: =false
-                    Update: =DataCardValue12_2.Selected
-                    Width: =379
-                    X: =2
-                    Y: =0
-                    ZIndex: =4
-
-                    DataCardKey12_2 As label:
-                        AutoHeight: =true
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =34
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue12_2 As combobox:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        ChevronBackground: =App.Theme.Colors.Primary
-                        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-                        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-                        ChevronHoverBackground: =App.Theme.Colors.Darker10
-                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                        DefaultSelectedItems: =Parent.Default
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayFields: =["Value"]
-                        DisplayMode: =Parent.DisplayMode
-                        Font: =App.Theme.Font
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        Items: =Choices([@'mWarehouse.Products'].category)
-                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                        PressedColor: =RGBA(255, 255, 255, 1)
-                        PressedFill: =App.Theme.Colors.Darker30
-                        SearchFields: =["Value"]
-                        SearchItems: =Choices('mWarehouse.Products'.category,DataCardValue12_2.SearchText)
-                        SelectionFill: =App.Theme.Colors.Primary
-                        SelectMultiple: =false
-                        Size: =13
-                        Tooltip: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey12_2.Y + DataCardKey12_2.Height + 5
-                        ZIndex: =2
-
-                    ErrorMessage12_2 As label:
-                        AutoHeight: =true
-                        Color: =RGBA(168, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        FontWeight: =FontWeight.Semibold
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardValue12_2.Y + DataCardValue12_2.Height
-                        ZIndex: =3
-
-                    StarVisible12_2 As label:
-                        Align: =Align.Center
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =DataCardKey12_2.Height
-                        Size: =13
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey12_2.Y
-                        ZIndex: =4
-
-                priceImport_DataCard2_2 As typedDataCard.numberEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="priceImport"
-                    Default: =ThisItem.priceImport
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'mWarehouse.Products'],DataSourceInfo.DisplayName,priceImport)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    Required: =false
-                    Update: =Value(DataCardValue14_2.Text)
-                    Width: =379
-                    X: =0
-                    Y: =1
-                    ZIndex: =4
-
-                    DataCardKey14_2 As label:
-                        AutoHeight: =true
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =34
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue14_2 As text:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        BorderThickness: =2
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =Parent.Default
-                        DelayOutput: =true
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
-                        Format: =TextFormat.Number
-                        HoverBorderColor: =App.Theme.Colors.Darker40
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        PaddingLeft: =5
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Tooltip: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey14_2.Y + DataCardKey14_2.Height + 5
-                        ZIndex: =2
-
-                    ErrorMessage14_2 As label:
-                        AutoHeight: =true
-                        Color: =RGBA(168, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        FontWeight: =FontWeight.Semibold
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardValue14_2.Y + DataCardValue14_2.Height
-                        ZIndex: =3
-
-                    StarVisible14_2 As label:
-                        Align: =Align.Center
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =DataCardKey14_2.Height
-                        Size: =13
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey14_2.Y
-                        ZIndex: =4
-
-                priceExport_DataCard1_2 As typedDataCard.numberEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="priceExport"
-                    Default: =ThisItem.priceExport
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'mWarehouse.Products'],DataSourceInfo.DisplayName,priceExport)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    Required: =false
-                    Update: =Value(DataCardValue15_2.Text)
-                    Width: =379
-                    X: =1
-                    Y: =1
-                    ZIndex: =4
-
-                    DataCardKey15_2 As label:
-                        AutoHeight: =true
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =34
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue15_2 As text:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        BorderThickness: =2
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =Parent.Default
-                        DelayOutput: =true
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
-                        Format: =TextFormat.Number
-                        HoverBorderColor: =App.Theme.Colors.Darker40
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        PaddingLeft: =5
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Tooltip: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey15_2.Y + DataCardKey15_2.Height + 5
-                        ZIndex: =2
-
-                    ErrorMessage15_2 As label:
-                        AutoHeight: =true
-                        Color: =RGBA(168, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        FontWeight: =FontWeight.Semibold
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardValue15_2.Y + DataCardValue15_2.Height
-                        ZIndex: =3
-
-                    StarVisible15_2 As label:
-                        Align: =Align.Center
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =DataCardKey15_2.Height
-                        Size: =13
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey15_2.Y
-                        ZIndex: =4
-
-                brand_DataCard1_2 As typedDataCard.textualEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="brand"
-                    Default: =ThisItem.brand
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'mWarehouse.Products'],DataSourceInfo.DisplayName,brand)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    MaxLength: =DataSourceInfo([@'mWarehouse.Products'], DataSourceInfo.MaxLength, brand)
-                    Required: =false
-                    Update: =DataCardValue16_2.Text
-                    Width: =379
-                    X: =2
-                    Y: =1
-                    ZIndex: =4
-
-                    DataCardKey16_2 As label:
-                        AutoHeight: =true
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =34
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue16_2 As text:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        BorderThickness: =2
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =Parent.Default
-                        DelayOutput: =true
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
-                        HoverBorderColor: =App.Theme.Colors.Darker40
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        MaxLength: =Parent.MaxLength
-                        PaddingLeft: =5
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Tooltip: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey16_2.Y + DataCardKey16_2.Height + 5
-                        ZIndex: =2
-
-                    ErrorMessage16_2 As label:
-                        AutoHeight: =true
-                        Color: =RGBA(168, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        FontWeight: =FontWeight.Semibold
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardValue16_2.Y + DataCardValue16_2.Height
-                        ZIndex: =3
-
-                    StarVisible16_2 As label:
-                        Align: =Align.Center
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =DataCardKey16_2.Height
-                        Size: =13
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey16_2.Y
-                        ZIndex: =4
-
-                quantity_DataCard2_2 As typedDataCard.numberEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="quantity"
-                    Default: =ThisItem.quantity
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'mWarehouse.Products'],DataSourceInfo.DisplayName,quantity)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    Required: =false
-                    Update: =Value(DataCardValue17_2.Text)
-                    Width: =379
-                    X: =0
-                    Y: =2
-                    ZIndex: =4
-
-                    DataCardKey17_2 As label:
-                        AutoHeight: =true
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =34
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue17_2 As text:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        BorderThickness: =2
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =Parent.Default
-                        DelayOutput: =true
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
-                        Format: =TextFormat.Number
-                        HoverBorderColor: =App.Theme.Colors.Darker40
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        PaddingLeft: =5
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Tooltip: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey17_2.Y + DataCardKey17_2.Height + 5
-                        ZIndex: =2
-
-                    ErrorMessage17_2 As label:
-                        AutoHeight: =true
-                        Color: =RGBA(168, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        FontWeight: =FontWeight.Semibold
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardValue17_2.Y + DataCardValue17_2.Height
-                        ZIndex: =3
-
-                    StarVisible17_2 As label:
-                        Align: =Align.Center
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =DataCardKey17_2.Height
-                        Size: =13
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey17_2.Y
-                        ZIndex: =4
-
-                year_DataCard1_2 As typedDataCard.numberEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="year"
-                    Default: =ThisItem.year
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'mWarehouse.Products'],DataSourceInfo.DisplayName,year)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    Required: =false
-                    Update: =Value(DataCardValue18_2.Text)
-                    Width: =379
-                    X: =1
-                    Y: =2
-                    ZIndex: =4
-
-                    DataCardKey18_2 As label:
-                        AutoHeight: =true
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =34
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue18_2 As text:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        BorderThickness: =2
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =Parent.Default
-                        DelayOutput: =true
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
-                        Format: =TextFormat.Number
-                        HoverBorderColor: =App.Theme.Colors.Darker40
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        PaddingLeft: =5
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Tooltip: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey18_2.Y + DataCardKey18_2.Height + 5
-                        ZIndex: =2
-
-                    ErrorMessage18_2 As label:
-                        AutoHeight: =true
-                        Color: =RGBA(168, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        FontWeight: =FontWeight.Semibold
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardValue18_2.Y + DataCardValue18_2.Height
-                        ZIndex: =3
-
-                    StarVisible18_2 As label:
-                        Align: =Align.Center
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =DataCardKey18_2.Height
-                        Size: =13
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey18_2.Y
-                        ZIndex: =4
-
-                image_DataCard1_2 As typedDataCard.addLargePictureCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="image"
-                    Default: =ThisItem.image
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'mWarehouse.Products'],DataSourceInfo.DisplayName,image)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =150
-                    Required: =false
-                    Update: =Image5_2.Image
-                    Width: =379
-                    X: =2
-                    Y: =2
-                    ZIndex: =4
-
-                    DataCardKey19_2 As label:
-                        AutoHeight: =true
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =34
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    Image5_2 As image:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =AddPicture1_2.Height
-                        Image: =If(IsBlank(AddPicture1_2.Media), Parent.Default, AddPicture1_2.Media)
-                        Tooltip: =Parent.DisplayName
-                        Width: =AddPicture1_2.Width
-                        X: =AddPicture1_2.X
-                        Y: =AddPicture1_2.Y
-                        ZIndex: =2
-
-                    AddPicture1_2 As addMedia:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(0, 0, 0, 1)
-                        Fill: =RGBA(255, 255, 255, 1)
-                        Height: =100
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey19_2.Y + DataCardKey19_2.Height + 5
-                        ZIndex: =3
-
-                    ErrorMessage19_2 As label:
-                        AutoHeight: =true
-                        Color: =RGBA(168, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        FontWeight: =FontWeight.Semibold
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =Image5_2.Y + Image5_2.Height
-                        ZIndex: =4
-
-                    StarVisible19_2 As label:
-                        Align: =Align.Center
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =DataCardKey19_2.Height
-                        Size: =13
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey19_2.Y
-                        ZIndex: =5
-
-            Form3_2 As form:
-                BorderColor: =App.Theme.Colors.Darker40
-                DataSource: ='mWarehouse.Suppliers'
-                Height: =200
-                Width: =Parent.Width
-                Y: =81
-                ZIndex: =4
-
-                Title_DataCard3_2 As typedDataCard.textualEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="Title"
-                    Default: |-
-                        =//ThisItem.Title
-                        "Để là combobox chọn nhà cung cấp"
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'mWarehouse.Suppliers'],DataSourceInfo.DisplayName,Title)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    MaxLength: =DataSourceInfo([@'mWarehouse.Suppliers'], DataSourceInfo.MaxLength, Title)
-                    Required: =false
-                    Update: =DataCardValue20_2.Text
-                    Width: =379
-                    X: =0
-                    Y: =0
-                    ZIndex: =5
-
-                    DataCardKey21_2 As label:
-                        AutoHeight: =true
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =34
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue20_2 As text:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        BorderThickness: =2
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =Parent.Default
-                        DelayOutput: =true
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
-                        HoverBorderColor: =App.Theme.Colors.Darker40
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        MaxLength: =Parent.MaxLength
-                        PaddingLeft: =5
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Tooltip: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey21_2.Y + DataCardKey21_2.Height + 5
-                        ZIndex: =2
-
-                    ErrorMessage21_2 As label:
-                        AutoHeight: =true
-                        Color: =RGBA(168, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        FontWeight: =FontWeight.Semibold
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardValue20_2.Y + DataCardValue20_2.Height
-                        ZIndex: =3
-
-                    StarVisible21_2 As label:
-                        Align: =Align.Center
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =DataCardKey21_2.Height
-                        Size: =13
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey21_2.Y
-                        ZIndex: =4
-
-                address_DataCard1_2 As typedDataCard.textualEditCard:
+                address_DataCard2 As typedDataCard.textualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="address"
                     Default: =ThisItem.address
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'mWarehouse.Suppliers'],DataSourceInfo.DisplayName,address)
+                    DisplayName: =DataSourceInfo([@'mWarehouse.Customers'],DataSourceInfo.DisplayName,address)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@'mWarehouse.Suppliers'], DataSourceInfo.MaxLength, address)
+                    MaxLength: =DataSourceInfo([@'mWarehouse.Customers'], DataSourceInfo.MaxLength, address)
                     Required: =false
-                    Update: =DataCardValue21_2.Text
-                    Width: =379
-                    X: =1
-                    Y: =0
-                    ZIndex: =5
+                    Update: =DataCardValue2.Text
+                    Width: =1091
+                    X: =0
+                    Y: =1
+                    ZIndex: =4
 
-                    DataCardKey22_2 As label:
+                    DataCardKey2 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
                         Height: =34
                         Size: =13
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Địa chỉ khách hàng"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue21_2 As text:
+                    DataCardValue2 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -1555,10 +733,10 @@ ThongTin_KH As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey22_2.Y + DataCardKey22_2.Height + 5
+                        Y: =DataCardKey2.Y + DataCardKey2.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage22_2 As label:
+                    ErrorMessage2 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1574,146 +752,56 @@ ThongTin_KH As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue21_2.Y + DataCardValue21_2.Height
+                        Y: =DataCardValue2.Y + DataCardValue2.Height
                         ZIndex: =3
 
-                    StarVisible22_2 As label:
+                    StarVisible2 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey22_2.Height
+                        Height: =DataCardKey2.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey22_2.Y
+                        Y: =DataCardKey2.Y
                         ZIndex: =4
 
-                representative_DataCard1_2 As typedDataCard.textualEditCard:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="representative"
-                    Default: =ThisItem.representative
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'mWarehouse.Suppliers'],DataSourceInfo.DisplayName,representative)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    MaxLength: =DataSourceInfo([@'mWarehouse.Suppliers'], DataSourceInfo.MaxLength, representative)
-                    Required: =false
-                    Update: =DataCardValue22_2.Text
-                    Width: =379
-                    X: =2
-                    Y: =0
-                    ZIndex: =5
-
-                    DataCardKey23_2 As label:
-                        AutoHeight: =true
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =34
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue22_2 As text:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        BorderThickness: =2
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =Parent.Default
-                        DelayOutput: =true
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
-                        HoverBorderColor: =App.Theme.Colors.Darker40
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        MaxLength: =Parent.MaxLength
-                        PaddingLeft: =5
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Tooltip: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey23_2.Y + DataCardKey23_2.Height + 5
-                        ZIndex: =2
-
-                    ErrorMessage23_2 As label:
-                        AutoHeight: =true
-                        Color: =RGBA(168, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        FontWeight: =FontWeight.Semibold
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardValue22_2.Y + DataCardValue22_2.Height
-                        ZIndex: =3
-
-                    StarVisible23_2 As label:
-                        Align: =Align.Center
-                        Color: =App.Theme.Colors.Darker30
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Height: =DataCardKey23_2.Height
-                        Size: =13
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey23_2.Y
-                        ZIndex: =4
-
-                phone_DataCard1_2 As typedDataCard.numberEditCard:
+                phone_DataCard2 As typedDataCard.numberEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="phone"
                     Default: =ThisItem.phone
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'mWarehouse.Suppliers'],DataSourceInfo.DisplayName,phone)
+                    DisplayName: =DataSourceInfo([@'mWarehouse.Customers'],DataSourceInfo.DisplayName,phone)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
-                    Update: =Value(DataCardValue23_2.Text)
-                    Width: =379
+                    Update: =Value(DataCardValue3.Text)
+                    Width: =1091
                     X: =0
-                    Y: =1
-                    ZIndex: =5
+                    Y: =2
+                    ZIndex: =4
 
-                    DataCardKey24_2 As label:
+                    DataCardKey3 As label:
                         AutoHeight: =true
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
                         Height: =34
                         Size: =13
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Số điện thoại"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
                         Y: =10
                         ZIndex: =1
 
-                    DataCardValue23_2 As text:
+                    DataCardValue3 As text:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
@@ -1738,10 +826,10 @@ ThongTin_KH As screen:
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardKey24_2.Y + DataCardKey24_2.Height + 5
+                        Y: =DataCardKey3.Y + DataCardKey3.Height + 5
                         ZIndex: =2
 
-                    ErrorMessage24_2 As label:
+                    ErrorMessage3 As label:
                         AutoHeight: =true
                         Color: =RGBA(168, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1757,21 +845,21 @@ ThongTin_KH As screen:
                         Visible: =Parent.DisplayMode=DisplayMode.Edit
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =DataCardValue23_2.Y + DataCardValue23_2.Height
+                        Y: =DataCardValue3.Y + DataCardValue3.Height
                         ZIndex: =3
 
-                    StarVisible24_2 As label:
+                    StarVisible3 As label:
                         Align: =Align.Center
                         Color: =App.Theme.Colors.Darker30
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =DataCardKey24_2.Height
+                        Height: =DataCardKey3.Height
                         Size: =13
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                         Width: =30
                         Wrap: =false
-                        Y: =DataCardKey24_2.Y
+                        Y: =DataCardKey3.Y
                         ZIndex: =4
 
     ThemNCC_4 As group:
