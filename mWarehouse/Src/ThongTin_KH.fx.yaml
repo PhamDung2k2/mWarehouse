@@ -931,7 +931,7 @@ ThongTin_KH As screen:
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Bold
                 Size: =15
-                Text: ="Thêm mới khách hàng"
+                Text: ="Thông tin khách hàng"
                 Width: =250
                 X: =10
                 Y: =10
@@ -1267,7 +1267,7 @@ ThongTin_KH As screen:
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
                 Size: =15
-                Text: ="Tạo mới"
+                Text: ="Cập nhật"
                 X: =492
                 Y: =533
                 ZIndex: =4
