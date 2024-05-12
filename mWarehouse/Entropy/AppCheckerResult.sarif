@@ -214,6 +214,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ThongTin_NCC.Container4_5.Container8_5.Gallery3_5.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ThongTin_NCC.Container4_5.Container8_5.Gallery3_5.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 48,
+                  "snippet": {
+                    "text": "Title"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ThongTin_NCC",
+                "type": "ThongTin_NCC.Container4_5.Container8_5.Gallery3_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Search"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "DuyetDon.Container4_2.Container5_2.ComboBox2.SearchItems"
                 }
               ],

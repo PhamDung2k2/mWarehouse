@@ -304,12 +304,13 @@ ThongTin_KH As screen:
                 BorderColor: =App.Theme.Colors.Darker40
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: ="Text input"
+                Default: =""
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 FocusedBorderThickness: =4
                 Font: =App.Theme.Font
+                HintText: ="Tìm kiếm tên khách hàng"
                 HoverBorderColor: =App.Theme.Colors.Darker40
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =App.Theme.Colors.Lighter70
@@ -340,29 +341,6 @@ ThongTin_KH As screen:
                 X: =967
                 Y: =28
                 ZIndex: =4
-
-            Button1_4 As button:
-                BorderColor: =RGBA(221, 79, 14, 1)
-                DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(221, 79, 14, 1)
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =App.Theme.Colors.Darker10
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =App.Theme.Colors.Darker10
-                OnSelect: |-
-                    =UpdateContext({Barcode: Blank()})
-                PressedBorderColor: =App.Theme.Colors.Darker40
-                PressedColor: =Self.Color
-                PressedFill: =App.Theme.Colors.Darker40
-                Size: =15
-                Text: ="🔎 Reset"
-                Width: =100
-                X: =463
-                Y: =28
-                ZIndex: =5
 
         Container7_5 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
