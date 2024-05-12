@@ -878,9 +878,9 @@ ThongTin_KH As screen:
                 HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
-                OnSelect: |-
+                OnSelect: |
                     =SubmitForm(Form1);
-                    UpdateContext({})
+                    UpdateContext({ShowThemKH:false})
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
