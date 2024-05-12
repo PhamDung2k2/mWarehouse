@@ -565,7 +565,7 @@ ThongTin_KH As screen:
                 Height: =35
                 Icon: =Icon.Cancel
                 OnSelect: |-
-                    =UpdateContext({ShowThemSP: false})
+                    =UpdateContext({ShowThemKH: false})
                 Width: =35
                 X: =1091
                 Y: =12
@@ -880,7 +880,8 @@ ThongTin_KH As screen:
                 HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: |
                     =SubmitForm(Form1);
-                    UpdateContext({ShowThemKH:false})
+                    UpdateContext({ShowThemKH:false});
+                    Notify("Thêm mới thành công")
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
