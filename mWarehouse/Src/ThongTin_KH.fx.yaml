@@ -499,21 +499,9 @@ ThongTin_KH As screen:
                             Size: =20
                             Text: ="✏️"
                             Width: =60
+                            X: =44
                             Y: =24
                             ZIndex: =1
-
-                        Label20_4 As label:
-                            Align: =Align.Center
-                            BorderColor: =App.Theme.Colors.Darker40
-                            Color: =RGBA(0, 0, 0, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            Font: =App.Theme.Font
-                            Size: =25
-                            Text: ="📋"
-                            Width: =60
-                            X: =60
-                            Y: =20
-                            ZIndex: =2
 
     ThemKH As group:
         Height: =5
