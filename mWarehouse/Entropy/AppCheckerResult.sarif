@@ -5284,6 +5284,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ThongTin_KH.ShowThemSP"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ThongTin_KH.ShowThemSP",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ShowThemSP",
+                "module": "ThongTin_KH",
+                "type": "ThongTin_KH"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "ThongTin_KH.Container1_6.Label5_12.Text"
                 }
               ],
