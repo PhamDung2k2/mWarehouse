@@ -1190,7 +1190,8 @@ ThongTin_KH As screen:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
-                        Default: =Parent.Default
+                        Default: |
+                            =Concatenate("0",Parent.Default)
                         DelayOutput: =true
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
