@@ -494,6 +494,8 @@ ThongTin_KH As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Font: =App.Theme.Font
                             Height: =36
+                            OnSelect: |-
+                                =UpdateContext({ShowThongTinKH:true})
                             Size: =20
                             Text: ="✏️"
                             Width: =60
@@ -513,7 +515,7 @@ ThongTin_KH As screen:
                             Y: =20
                             ZIndex: =2
 
-    ThemSp_4 As group:
+    ThemKH As group:
         Height: =5
         Width: =5
         X: =40
@@ -891,7 +893,7 @@ ThongTin_KH As screen:
                 Y: =533
                 ZIndex: =4
 
-    ThemNCC_4 As group:
+    ThemKH_1 As group:
         Height: =5
         Width: =5
         X: =40
@@ -903,8 +905,8 @@ ThongTin_KH As screen:
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
             OnSelect: |-
-                =UpdateContext({ShowThemNCC: false})
-            Visible: =ShowThemNCC
+                =UpdateContext({ShowThemKH: false})
+            Visible: =ShowThongTinKH
             Width: =Parent.Width
             ZIndex: =6
 
@@ -916,7 +918,7 @@ ThongTin_KH As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Visible: =ShowThemNCC
+            Visible: =ShowThongTinKH
             Width: =Parent.Width/1.2
             X: =Rectangle1_13.Width/12
             Y: =Rectangle1_13.Height/12
@@ -927,58 +929,15 @@ ThongTin_KH As screen:
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =App.Theme.Font
-                Size: =13
-                Text: ="Thêm Nhà cung cấp"
-                X: =40
-                Y: =40
-                ZIndex: =1
-
-    ThemDon_4 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =10
-
-        Rectangle1_14 As rectangle:
-            BorderColor: =RGBA(202, 202, 202, 1)
-            Fill: =RGBA(202, 202, 202, 0.5)
-            Height: =Parent.Height
-            OnSelect: |-
-                =UpdateContext({ShowThemDon: false})
-            Visible: =ShowThemDon
-            Width: =Parent.Width
-            ZIndex: =8
-
-        Container9_14 As groupContainer.manualLayoutContainer:
-            DropShadow: =DropShadow.Light
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =Parent.Height/1.2
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Visible: =ShowThemDon
-            Width: =Parent.Width/1.2
-            X: =Rectangle1_14.Width/12
-            Y: =Rectangle1_14.Height/12
-            ZIndex: =9
-
-            Label1_14 As label:
-                Align: =Align.Center
-                BorderColor: =App.Theme.Colors.Darker40
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =App.Theme.Font
                 FontWeight: =FontWeight.Bold
-                Size: =13
-                Text: ="Đơn nhập sản phẩm"
-                Width: =200
-                X: =20
-                Y: =16
+                Size: =15
+                Text: ="Thêm mới khách hàng"
+                Width: =250
+                X: =10
+                Y: =10
                 ZIndex: =1
 
-            Icon1_2 As icon.Cancel:
+            Icon4_3 As icon.Cancel:
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =Color.Red
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -986,311 +945,330 @@ ThongTin_KH As screen:
                 Height: =35
                 Icon: =Icon.Cancel
                 OnSelect: |-
-                    =UpdateContext({ShowThemDon: false})
+                    =UpdateContext({ShowThongTinKH: false})
                 Width: =35
-                X: =1086
-                Y: =16
+                X: =1091
+                Y: =12
                 ZIndex: =2
 
-            Container13_2 As groupContainer.manualLayoutContainer:
-                DropShadow: =DropShadow.Light
-                Height: =337
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Width: =1138
-                Y: =300
+            Form1_1 As form:
+                BorderColor: =App.Theme.Colors.Darker40
+                DataSource: ='mWarehouse.Customers'
+                Height: =401
+                Item: =Gallery3_6.Selected
+                NumberOfColumns: =1
+                Width: =1091
+                X: =27
+                Y: =86
                 ZIndex: =3
 
-                Gallery2_2 As gallery.galleryVertical:
+                Title_DataCard1_1 As typedDataCard.textualEditCard:
                     BorderColor: =App.Theme.Colors.Darker40
-                    DelayItemLoading: =true
-                    Height: =337
-                    Items: ='mWarehouse.Products'
-                    Layout: =Layout.Vertical
-                    LoadingSpinner: =LoadingSpinner.Data
-                    TemplateSize: =70
-                    Width: =Parent.Width
-                    ZIndex: =1
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Title"
+                    Default: =ThisItem.Title
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'mWarehouse.Customers'],DataSourceInfo.DisplayName,Title)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    MaxLength: =DataSourceInfo([@'mWarehouse.Customers'], DataSourceInfo.MaxLength, Title)
+                    Required: =false
+                    Update: =DataCardValue1_1.Text
+                    Width: =1091
+                    X: =0
+                    Y: =0
+                    ZIndex: =4
 
-                    Container18_2 As groupContainer.manualLayoutContainer:
-                        DropShadow: =DropShadow.Regular
-                        Height: =70
-                        RadiusBottomLeft: =4
-                        RadiusBottomRight: =4
-                        RadiusTopLeft: =4
-                        RadiusTopRight: =4
-                        Width: =1130
+                    DataCardKey1_1 As label:
+                        AutoHeight: =true
+                        Color: =App.Theme.Colors.Darker30
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =34
+                        Size: =15
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Họ và tên khách hàng"
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
                         ZIndex: =1
 
-                        Label14_2 As label:
-                            BorderColor: =App.Theme.Colors.Darker40
-                            Color: =RGBA(0, 0, 0, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            Font: =App.Theme.Font
-                            Size: =13
-                            Text: ="Samsung Galaxy A71 5G 128GB"
-                            Width: =300
-                            X: =10
-                            Y: =15
-                            ZIndex: =1
+                    DataCardValue1_1 As text:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderThickness: =2
+                        Color: =RGBA(0, 0, 0, 1)
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =App.Theme.Font
+                        Height: =50
+                        HoverBorderColor: =App.Theme.Colors.Darker40
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =App.Theme.Colors.Lighter70
+                        MaxLength: =Parent.MaxLength
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey1_1.Y + DataCardKey1_1.Height + 5
+                        ZIndex: =2
 
-                        Button5_9 As button:
-                            BorderColor: =App.Theme.Colors.Primary
-                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            DisabledFill: =RGBA(244, 244, 244, 1)
-                            DisplayMode: =DisplayMode.View
-                            Fill: =RGBA(221, 79, 14, 0.75)
-                            Font: =App.Theme.Font
-                            FontWeight: =FontWeight.Semibold
-                            Height: =30
-                            HoverBorderColor: =App.Theme.Colors.Darker10
-                            HoverColor: =RGBA(255, 255, 255, 1)
-                            HoverFill: =App.Theme.Colors.Darker10
-                            PressedBorderColor: =App.Theme.Colors.Darker40
-                            PressedColor: =Self.Color
-                            PressedFill: =App.Theme.Colors.Darker40
-                            Text: ="Button"
-                            Width: =100
-                            X: =341
-                            Y: =20
-                            ZIndex: =2
+                    ErrorMessage1_1 As label:
+                        AutoHeight: =true
+                        Color: =RGBA(168, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue1_1.Y + DataCardValue1_1.Height
+                        ZIndex: =3
 
-                        Icon3_4 As icon.Add:
-                            BorderColor: =App.Theme.Colors.Darker40
-                            Color: =Color.Red
-                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                            DisabledColor: =RGBA(244, 244, 244, 1)
-                            Height: =35
-                            Icon: =Icon.HorizontalLine
-                            Width: =35
-                            X: =1084
-                            Y: =17
-                            ZIndex: =3
+                    StarVisible1_1 As label:
+                        Align: =Align.Center
+                        Color: =App.Theme.Colors.Darker30
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =DataCardKey1_1.Height
+                        Size: =13
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey1_1.Y
+                        ZIndex: =4
 
-                        Label13_6 As label:
-                            Align: =Align.Center
-                            BorderColor: =App.Theme.Colors.Darker40
-                            Color: =RGBA(0, 0, 0, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            Font: =App.Theme.Font
-                            Size: =13
-                            Text: ="100,000,000 VNĐ"
-                            Width: =200
-                            X: =512
-                            Y: =12
-                            ZIndex: =4
+                address_DataCard2_1 As typedDataCard.textualEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="address"
+                    Default: =ThisItem.address
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'mWarehouse.Customers'],DataSourceInfo.DisplayName,address)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    MaxLength: =DataSourceInfo([@'mWarehouse.Customers'], DataSourceInfo.MaxLength, address)
+                    Required: =false
+                    Update: =DataCardValue2_1.Text
+                    Width: =1091
+                    X: =0
+                    Y: =1
+                    ZIndex: =4
 
-                        Label12_6 As label:
-                            Align: =Align.Center
-                            BorderColor: =App.Theme.Colors.Darker40
-                            Color: =RGBA(0, 0, 0, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            Font: =App.Theme.Font
-                            Size: =13
-                            Text: ="20"
-                            Width: =80
-                            X: =756
-                            Y: =12
-                            ZIndex: =5
+                    DataCardKey2_1 As label:
+                        AutoHeight: =true
+                        Color: =App.Theme.Colors.Darker30
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =34
+                        Size: =15
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Địa chỉ khách hàng"
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
 
-            Container16_4 As groupContainer.manualLayoutContainer:
-                DropShadow: =DropShadow.Semibold
-                Height: =70
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Width: =1138
-                Y: =152
+                    DataCardValue2_1 As text:
+                        Align: =Align.Justify
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderThickness: =2
+                        Color: =RGBA(0, 0, 0, 1)
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =App.Theme.Font
+                        Height: =100
+                        HoverBorderColor: =App.Theme.Colors.Darker40
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =App.Theme.Colors.Lighter70
+                        MaxLength: =Parent.MaxLength
+                        Mode: =TextMode.MultiLine
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey2_1.Y + DataCardKey2_1.Height + 5
+                        ZIndex: =2
+
+                    ErrorMessage2_1 As label:
+                        AutoHeight: =true
+                        Color: =RGBA(168, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue2_1.Y + DataCardValue2_1.Height
+                        ZIndex: =3
+
+                    StarVisible2_1 As label:
+                        Align: =Align.Center
+                        Color: =App.Theme.Colors.Darker30
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =DataCardKey2_1.Height
+                        Size: =13
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey2_1.Y
+                        ZIndex: =4
+
+                phone_DataCard2_1 As typedDataCard.numberEditCard:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="phone"
+                    Default: =ThisItem.phone
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'mWarehouse.Customers'],DataSourceInfo.DisplayName,phone)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    Required: =false
+                    Update: =Value(DataCardValue3_1.Text)
+                    Width: =1091
+                    X: =0
+                    Y: =2
+                    ZIndex: =4
+
+                    DataCardKey3_1 As label:
+                        AutoHeight: =true
+                        Color: =App.Theme.Colors.Darker30
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =34
+                        Size: =15
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Số điện thoại"
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue3_1 As text:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderThickness: =2
+                        Color: =RGBA(0, 0, 0, 1)
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =App.Theme.Font
+                        Format: =TextFormat.Number
+                        Height: =50
+                        HoverBorderColor: =App.Theme.Colors.Darker40
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =App.Theme.Colors.Lighter70
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey3_1.Y + DataCardKey3_1.Height + 5
+                        ZIndex: =2
+
+                    ErrorMessage3_1 As label:
+                        AutoHeight: =true
+                        Color: =RGBA(168, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue3_1.Y + DataCardValue3_1.Height
+                        ZIndex: =3
+
+                    StarVisible3_1 As label:
+                        Align: =Align.Center
+                        Color: =App.Theme.Colors.Darker30
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =DataCardKey3_1.Height
+                        Size: =13
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey3_1.Y
+                        ZIndex: =4
+
+            Button8_1 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                OnSelect: |
+                    =SubmitForm(Form1_1);
+                    UpdateContext({ShowThongTinKH:false});
+                    Notify("Cập nhật thành công")
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
+                Text: ="Tạo mới"
+                X: =492
+                Y: =533
                 ZIndex: =4
-
-                Icon3_5 As icon.Add:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =App.Theme.Colors.Darker30
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(244, 244, 244, 1)
-                    Height: =35
-                    Icon: =Icon.Add
-                    Width: =35
-                    X: =1084
-                    Y: =16
-                    ZIndex: =1
-
-                Label10_34 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    FontWeight: =FontWeight.Semibold
-                    Size: =13
-                    Text: ="Chọn sản phẩm cần thêm vào kho"
-                    Width: =300
-                    X: =16
-                    Y: =11
-                    ZIndex: =2
-
-            Container17_2 As groupContainer.manualLayoutContainer:
-                DropShadow: =DropShadow.Semibold
-                Height: =80
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Width: =1138
-                Y: =62
-                ZIndex: =5
-
-                Label11_2 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    FontWeight: =FontWeight.Semibold
-                    Size: =13
-                    Text: ="Nội dung đơn nhập"
-                    Width: =200
-                    X: =20
-                    Y: =20
-                    ZIndex: =1
-
-                TextInput3_2 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: ="Nhập 5 mặt hàng mới từ FPT chỉ nên tạo đơn nhập đối với 1 nhà cung cấp"
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    HintText: ="Nhập nội dung đơn nhập"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =420
-                    X: =200
-                    Y: =20
-                    ZIndex: =2
-
-                Label12_7 As label:
-                    Align: =Align.Center
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    FontWeight: =FontWeight.Semibold
-                    Size: =13
-                    Text: |-
-                        ="Số lượng:"
-                    Width: =100
-                    X: =620
-                    Y: =20
-                    ZIndex: =3
-
-                Label12_8 As label:
-                    Align: =Align.Center
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="20"
-                    Width: =80
-                    X: =700
-                    Y: =20
-                    ZIndex: =4
-
-                Label13_7 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    FontWeight: =FontWeight.Semibold
-                    Size: =13
-                    Text: |-
-                        ="Tổng giá:"
-                    Width: =100
-                    X: =780
-                    Y: =20
-                    ZIndex: =5
-
-                Label13_8 As label:
-                    Align: =Align.Center
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="100,000,000 VNĐ"
-                    Width: =200
-                    X: =880
-                    Y: =20
-                    ZIndex: =6
-
-            Container16_5 As groupContainer.manualLayoutContainer:
-                DropShadow: =DropShadow.Regular
-                Height: =70
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Width: =1138
-                Y: =227
-                ZIndex: =6
-
-                Label10_36 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    FontWeight: =FontWeight.Semibold
-                    Size: =13
-                    Text: ="Tên sản phẩm"
-                    Width: =300
-                    X: =20
-                    Y: =16
-                    ZIndex: =2
-
-                Label10_35 As label:
-                    Align: =Align.Center
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    FontWeight: =FontWeight.Semibold
-                    Size: =13
-                    Text: ="Loại"
-                    X: =320
-                    Y: =16
-                    ZIndex: =3
-
-                Label10_37 As label:
-                    Align: =Align.Center
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    FontWeight: =FontWeight.Semibold
-                    Size: =13
-                    Text: ="Giá nhập"
-                    X: =546
-                    Y: =16
-                    ZIndex: =4
-
-                Label10_38 As label:
-                    Align: =Align.Center
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    FontWeight: =FontWeight.Semibold
-                    Size: =13
-                    Text: ="Số lượng"
-                    X: =730
-                    Y: =16
-                    ZIndex: =5
 
