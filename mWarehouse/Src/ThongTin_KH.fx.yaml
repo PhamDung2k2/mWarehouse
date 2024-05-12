@@ -365,7 +365,7 @@ ThongTin_KH As screen:
                 Size: =13
                 Text: ="Tên khách hàng"
                 Width: =323
-                X: =15
+                X: =8
                 Y: =15
                 ZIndex: =2
 
@@ -379,7 +379,7 @@ ThongTin_KH As screen:
                 Size: =13
                 Text: ="Địa chỉ"
                 Width: =104
-                X: =438
+                X: =466
                 Y: =15
                 ZIndex: =5
 
@@ -393,7 +393,7 @@ ThongTin_KH As screen:
                 Size: =13
                 Text: ="Số điện thoại"
                 Width: =120
-                X: =780
+                X: =871
                 Y: =15
                 ZIndex: =6
 
@@ -448,10 +448,12 @@ ThongTin_KH As screen:
                         Size: =13
                         Text: =ThisItem.Name
                         Width: =330
+                        X: =7
                         Y: =16
                         ZIndex: =1
 
                     Label18_8 As label:
+                        Align: =Align.Justify
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -459,7 +461,7 @@ ThongTin_KH As screen:
                         Height: =55
                         Size: =13
                         Text: =ThisItem.address
-                        Width: =411
+                        Width: =420
                         X: =343
                         Y: =11
                         ZIndex: =4
@@ -473,7 +475,7 @@ ThongTin_KH As screen:
                         Size: =13
                         Text: =Concatenate("0",ThisItem.phone)
                         Width: =155
-                        X: =769
+                        X: =853
                         Y: =18
                         ZIndex: =5
 

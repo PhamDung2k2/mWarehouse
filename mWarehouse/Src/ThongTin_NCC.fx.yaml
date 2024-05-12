@@ -465,7 +465,7 @@ ThongTin_NCC As screen:
                         ZIndex: =1
 
                     Label17_3 As label:
-                        Align: =Align.Center
+                        Align: =Align.Justify
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -474,7 +474,7 @@ ThongTin_NCC As screen:
                         Size: =13
                         Text: =ThisItem.address
                         Width: =420
-                        X: =293
+                        X: =300
                         Y: =7
                         ZIndex: =3
 
@@ -1655,7 +1655,7 @@ ThongTin_NCC As screen:
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
                 Size: =15
-                Text: ="Tạo mới"
+                Text: ="Cập nhật"
                 X: =488
                 Y: =580
                 ZIndex: =4
