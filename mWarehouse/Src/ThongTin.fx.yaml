@@ -1,6 +1,10 @@
 ThongTin As screen:
     Fill: =RGBA(241, 244, 249, 1)
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |-
+        =Set(clicksp,"Click");
+        Set(clickkh,"uClick");
+        Set(clicknc,"uClick");
 
     Container1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
