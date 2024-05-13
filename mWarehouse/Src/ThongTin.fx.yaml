@@ -902,7 +902,7 @@ ThongTin As screen:
                         Default: |-
                             =//Parent.Default
                             //Concatenate(Loai_Nam_VT_001)
-                            Concatenate(If(DataCardValue12.Selected.Value = "Điện thoại","DT"),If(DataCardValue12.Selected.Value = "Tablet","TL"),If(DataCardValue12.Selected.Value = "Laptop","LT"),"_",Right(DataCardValue18.Text,2),"_",DataCardValue13.Text,"_",Right(Last('mWarehouse.Products').productCode,3)+1)
+                            Concatenate(If(DataCardValue12.Selected.Value = "Điện thoại","DT"),If(DataCardValue12.Selected.Value = "Tablet","TL"),If(DataCardValue12.Selected.Value = "Laptop","LT"),"_",Right(DataCardValue18.Text,2),"_",DataCardValue13.Text,"_",Text( Right(Last('mWarehouse.Products').productCode,3)+1,"000"))
                         DelayOutput: =true
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
