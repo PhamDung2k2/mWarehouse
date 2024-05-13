@@ -1,5 +1,6 @@
 YeuCau As screen:
     Fill: =RGBA(241, 244, 249, 1)
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
 
     Container1_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
@@ -13,11 +14,18 @@ YeuCau As screen:
         ZIndex: =1
 
         Image2_1 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Image: =BHKlogo
             Width: =256
             ZIndex: =1
 
         Label5_2 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             FontWeight: =FontWeight.Bold
             Height: =47
             Size: =15
@@ -28,9 +36,13 @@ YeuCau As screen:
             ZIndex: =2
 
         Label5_3 As label:
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(99, 139, 44, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             FontWeight: =FontWeight.Bold
             Height: =47
+            Size: =13
             Text: =LookUp('mWarehouse.Users',account = TextInput1.Text).role.Value
             Width: =259
             X: =1107
@@ -38,6 +50,9 @@ YeuCau As screen:
             ZIndex: =3
 
         Image3_1 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Image: ='kisspng-user-computer-icons-gravatar-blog-happy-woman-5aca6d038826d9.7357010215232156195577'
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
@@ -60,15 +75,16 @@ YeuCau As screen:
         ZIndex: =2
 
         "Gallery1_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            BorderColor: =App.Theme.Colors.Darker40
             DelayItemLoading: =true
             Height: =420
             Items: |-
-                =Table({ID: 1,Title:"Trang chủ",Name:TrangChu},{ID: 2,Title:"Sản phẩm",Name: SanPham},{ID: 3,Title:"Báo giá",Name:YeuCau},{ID: 4,Title:"Thống kê",Name:ThongKe},{ID: 5,Title:"Duyệt đơn",Name:DuyetDon})
+                =Table({ID: 1,Title:"Trang chủ",Name:TrangChu},{ID: 2,Title:"Thông tin",Name: ThongTin},{ID: 3,Title:"Yêu cầu",Name:YeuCau},{ID: 4,Title:"Thống kê",Name:ThongKe},{ID: 5,Title:"Duyệt đơn",Name:DuyetDon})
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: |-
                 =Set(ShowFill,ThisItem.ID);
-                Navigate(ThisItem.Name)
+                Navigate(ThisItem.Name,ScreenTransition.Fade)
             TemplatePadding: =0
             TemplateSize: =83
             Width: =200
@@ -76,6 +92,8 @@ YeuCau As screen:
             ZIndex: =1
 
             Separator1_1 As rectangle:
+                BorderColor: =App.Theme.Colors.Darker40
+                Fill: =RGBA(255, 255, 255, 1)
                 Height: =7
                 OnSelect: =Select(Parent)
                 Width: =Parent.TemplateWidth
@@ -84,18 +102,28 @@ YeuCau As screen:
 
             Label6_1 As label:
                 Align: =Align.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
                 Fill: =If(ThisItem.ID = ShowFill,Color.Gray,RGBA(0,0,0,0))
+                Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =53
                 OnSelect: =Select(Parent)
+                Size: =13
                 Text: =ThisItem.Title
                 Width: =200
                 Y: =23
                 ZIndex: =7
 
         Label7_1 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             FontWeight: =FontWeight.Semibold
             OnSelect: =Navigate(DangNhap); Reset(TextInput1);Reset(TextInput1_1);
+            Size: =13
             Text: ="Đăng xuất"
             Width: =100
             X: =66
@@ -103,6 +131,9 @@ YeuCau As screen:
             ZIndex: =2
 
         Image4_1 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =59
             Image: ='icons8-logout-100'
             OnSelect: =Navigate(DangNhap); Reset(TextInput1);Reset(TextInput1_1);
@@ -127,10 +158,18 @@ YeuCau As screen:
         Container2_1 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Semilight
             Height: =70
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             Width: =Parent.Width
             ZIndex: =1
 
             Label8_1 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =35
                 Size: =16
@@ -141,30 +180,82 @@ YeuCau As screen:
                 ZIndex: =1
 
             Button5_3 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
                 Text: ="Thêm NCC"
                 X: =988
                 Y: =15
                 ZIndex: =2
 
             Button5_4 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
                 Text: ="Thêm SP"
                 X: =790
                 Y: =15
                 ZIndex: =3
 
             Button5_5 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
                 Text: ="Tạo đơn nhập"
                 X: =593
                 Y: =15
                 ZIndex: =4
 
             Button4 As button:
+                BorderColor: =App.Theme.Colors.Primary
                 BorderThickness: =0
                 Color: =RGBA(0, 0, 0, 1)
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: =RGBA(109, 49, 162, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
                 Height: =25
+                HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
                 Size: =12
                 Text: ="Tất cả"
                 Width: =100
@@ -173,12 +264,22 @@ YeuCau As screen:
                 ZIndex: =5
 
             Button4_1 As button:
+                BorderColor: =App.Theme.Colors.Primary
                 BorderThickness: =0
                 Color: =RGBA(0, 0, 0, 1)
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: =RGBA(255, 255, 255, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
                 Height: =25
+                HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
                 Size: =12
                 Text: ="Báo giá"
                 Width: =100
@@ -187,12 +288,22 @@ YeuCau As screen:
                 ZIndex: =6
 
             Button4_2 As button:
+                BorderColor: =App.Theme.Colors.Primary
                 BorderThickness: =0
                 Color: =RGBA(0, 0, 0, 1)
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: =RGBA(255, 255, 255, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
                 Height: =25
+                HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
                 Size: =12
                 Text: ="Đơn hàng"
                 Width: =100
@@ -204,13 +315,22 @@ YeuCau As screen:
             DropShadow: =DropShadow.Semilight
             Height: |
                 =100
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             Width: =Parent.Width
             Y: =70
             ZIndex: =2
 
             Label9_1 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Height: =41
+                Size: =13
                 Text: ="Tìm kiếm"
                 Width: =113
                 X: =15
@@ -218,12 +338,38 @@ YeuCau As screen:
                 ZIndex: =1
 
             TextInput2_1 As text:
+                BorderColor: =App.Theme.Colors.Darker40
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
                 Default: ="Text input"
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                FocusedBorderThickness: =4
+                Font: =App.Theme.Font
+                HoverBorderColor: =App.Theme.Colors.Darker40
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =App.Theme.Colors.Lighter70
+                Size: =13
                 X: =110
                 Y: =11
                 ZIndex: =2
 
             Button1_1 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
                 Text: ="🔍"
                 Width: =70
                 X: =430
@@ -231,14 +377,24 @@ YeuCau As screen:
                 ZIndex: =3
 
         Container7_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
             Height: =70
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             Width: =Parent.Width
             Y: =170
             ZIndex: =3
 
             Label10_7 As label:
                 Align: =Align.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
+                Size: =13
                 Text: ="Tên yêu cầu"
                 Width: =323
                 X: =15
@@ -247,7 +403,12 @@ YeuCau As screen:
 
             Label10_8 As label:
                 Align: =Align.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
+                Size: =13
                 Text: ="Ngày tạo"
                 Width: =109
                 X: =423
@@ -256,7 +417,12 @@ YeuCau As screen:
 
             Label10_9 As label:
                 Align: =Align.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
+                Size: =13
                 Text: ="Loại"
                 Width: =84
                 X: =647
@@ -265,7 +431,12 @@ YeuCau As screen:
 
             Label10_10 As label:
                 Align: =Align.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
+                Size: =13
                 Text: ="Tổng giá"
                 Width: =104
                 X: =816
@@ -273,12 +444,18 @@ YeuCau As screen:
                 ZIndex: =5
 
         Container8_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
             Height: =415
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             Width: =Parent.Width
             Y: =240
             ZIndex: =4
 
             "Gallery3_1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
                 Height: =Parent.Height
                 Items: ='mWarehouse.Exports'
@@ -290,6 +467,8 @@ YeuCau As screen:
                 ZIndex: =1
 
                 Separator4_1 As rectangle:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Fill: =RGBA(255, 255, 255, 1)
                     Height: =8
                     OnSelect: =Select(Parent)
                     Width: =Parent.TemplateWidth
@@ -307,7 +486,12 @@ YeuCau As screen:
                     ZIndex: =5
 
                     Label15_1 As label:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
                         Height: =45
+                        Size: =13
                         Text: =ThisItem.Title
                         Width: =377
                         Y: =16
@@ -315,6 +499,11 @@ YeuCau As screen:
 
                     Label17_1 As label:
                         Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Size: =13
                         Text: =ThisItem.Created
                         Width: =170
                         X: =395
@@ -322,6 +511,11 @@ YeuCau As screen:
                         ZIndex: =3
 
                     Label18_2 As label:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Size: =13
                         Text: =
                         Width: =157
                         X: =637
@@ -329,6 +523,11 @@ YeuCau As screen:
                         ZIndex: =4
 
                     Label18_3 As label:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Size: =13
                         Text: |-
                             =Concatenate(Text(ThisItem.totalPrice,"###,###")," VNĐ")
                         Width: =155
@@ -337,14 +536,21 @@ YeuCau As screen:
                         ZIndex: =5
 
                     Container15_1 As groupContainer.manualLayoutContainer:
-                        DropShadow: =DropShadow.None
                         Height: =80
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
                         Width: =150
                         X: =1000
                         ZIndex: =7
 
                         Label19_1 As label:
                             Align: =Align.Center
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
                             Height: =36
                             Size: =20
                             Text: ="✏️"
@@ -354,6 +560,10 @@ YeuCau As screen:
 
                         Label20_1 As label:
                             Align: =Align.Center
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
                             Size: =25
                             Text: ="📋"
                             Width: =60
@@ -362,6 +572,10 @@ YeuCau As screen:
                             ZIndex: =2
 
                     Button2_1 As button:
+                        BorderColor: =App.Theme.Colors.Primary
+                        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
                         DisplayMode: =DisplayMode.View
                         Fill: |-
                             =//RGBA(221, 79, 14, 0.75)
@@ -374,7 +588,7 @@ YeuCau As screen:
                                     0.75
                                 ),
                                 If(
-                                    ThisItem.status.Value = "Chờ duyệt",
+                                    ThisItem.status.Value = "Báo giá",
                                     RGBA(
                                         127,
                                         178,
@@ -383,6 +597,14 @@ YeuCau As screen:
                                     ),RGBA(0, 121, 187, 0.75)
                                 )
                             )
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Semibold
+                        HoverBorderColor: =App.Theme.Colors.Darker10
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =App.Theme.Colors.Darker10
+                        PressedBorderColor: =App.Theme.Colors.Darker40
+                        PressedColor: =Self.Color
+                        PressedFill: =App.Theme.Colors.Darker40
                         RadiusBottomLeft: =20
                         RadiusBottomRight: =20
                         RadiusTopLeft: =20

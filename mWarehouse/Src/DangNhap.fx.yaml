@@ -1,6 +1,11 @@
 DangNhap As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
 
     Image1 As image:
+        BorderColor: =App.Theme.Colors.Darker40
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Height: =Parent.Height
         Image: ='pngtree-3d-rendering-of-warehouse-inventory-stockpile-image_13575510'
         ImagePosition: =ImagePosition.Stretch
@@ -26,8 +31,11 @@ DangNhap As screen:
 
         Label3 As label:
             Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(26, 26, 26, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             DisplayMode: =DisplayMode.View
+            Font: =App.Theme.Font
             FontWeight: =FontWeight.Bold
             Height: =60
             Size: =30
@@ -42,13 +50,18 @@ DangNhap As screen:
             BorderThickness: =3
             Color: =RGBA(77, 77, 77, 1)
             Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 0.75)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
             FontWeight: =FontWeight.Bold
             Height: |
                 =Container6.Height/7
             HintText: ="Tài khoản"
             HoverBorderColor: =RGBA(0, 0, 0, 1)
+            HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(255, 255, 255,0.75)
             RadiusBottomLeft: =50
             RadiusBottomRight: =50
@@ -66,13 +79,18 @@ DangNhap As screen:
             BorderThickness: =3
             Color: =RGBA(77, 77, 77, 1)
             Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(255, 255, 255, 0.75)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
             FontWeight: =FontWeight.Bold
             Height: |
                 =Container6.Height/7
             HintText: ="Mật khẩu"
             HoverBorderColor: =RGBA(0, 0, 0, 1)
+            HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(255, 255, 255,0.75)
             Mode: =If(Button7.Pressed,TextMode.SingleLine,TextMode.Password)
             OnSelect: |-
@@ -88,8 +106,16 @@ DangNhap As screen:
             ZIndex: =3
 
         Button3 As button:
+            BorderColor: =App.Theme.Colors.Primary
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(51, 51, 51, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
             Height: =Container6.Height/9
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -20%)
             OnSelect: |-
                 =If(
@@ -99,14 +125,18 @@ DangNhap As screen:
                             account = TextInput1.Text And pass = TextInput1_1.Text
                         ).Title
                     ),
-                    Navigate(SanPham);
-                    UpdateContext({ShowForgetMessage: false}),
+                    Navigate(TrangChu);
+                    UpdateContext({ShowForgetMessage: false});Set(ShowFill,1);,
                     UpdateContext({ShowForgetMessage: true})
                 )
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
             RadiusBottomLeft: =45
             RadiusBottomRight: =45
             RadiusTopLeft: =45
             RadiusTopRight: =45
+            Size: =15
             Text: ="Đăng nhập"
             Width: =Container6.Width/3
             X: =Container6.Width/3
@@ -115,7 +145,10 @@ DangNhap As screen:
 
         Label4 As label:
             Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             FontWeight: =FontWeight.Bold
             Size: =15
             Text: ="Sai mật khẩu hoặc tài khoản. Hãy thử lại"
@@ -126,7 +159,10 @@ DangNhap As screen:
             ZIndex: =5
 
         Icon2 As icon.View:
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             Icon: =Icon.View
             OnSelect: =
             X: =492
@@ -137,13 +173,23 @@ DangNhap As screen:
             BorderColor: =
             BorderStyle: =BorderStyle.None
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(0, 0, 0, 0)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =App.Theme.Colors.Darker10
             HoverColor: =RGBA(0, 0, 0, 0)
             HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
             RadiusBottomLeft: =75
             RadiusBottomRight: =75
             RadiusTopLeft: =75
             RadiusTopRight: =75
+            Size: =15
             Text: =""
             Tooltip: ="Hiển thị mật khẩu"
             Width: =67
