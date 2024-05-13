@@ -868,6 +868,56 @@ ThongTin As screen:
                     Y: =47
                     ZIndex: =2
 
+            Container11_1 As groupContainer.manualLayoutContainer:
+                Height: |
+                    =Label16_1.Height+ComboBox3_1.Height+10
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =400
+                X: =7
+                Y: =187
+                ZIndex: =10
+
+                Label16_1 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    Size: =13
+                    Text: ="Tên nhà cung cấp"
+                    Width: =Parent.Width
+                    Y: =4
+                    ZIndex: =1
+
+                ComboBox3_1 As combobox:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    ChevronBackground: =App.Theme.Colors.Primary
+                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                    ChevronHoverBackground: =App.Theme.Colors.Darker10
+                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayFields: =["Title"]
+                    Font: =App.Theme.Font
+                    Height: =50
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =App.Theme.Colors.Lighter70
+                    Items: ='mWarehouse.Suppliers'
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =App.Theme.Colors.Darker30
+                    SearchFields: =["Title"]
+                    SearchItems: =Search('mWarehouse.Suppliers',ComboBox3_1.SearchText,Title)
+                    SelectionFill: =App.Theme.Colors.Primary
+                    SelectMultiple: =false
+                    Size: =13
+                    Width: =Parent.Width
+                    Y: =47
+                    ZIndex: =2
+
     ThemNCC As group:
         Height: =5
         Width: =5
