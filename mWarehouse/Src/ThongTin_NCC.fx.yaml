@@ -532,7 +532,7 @@ ThongTin_NCC As screen:
                             Y: =24
                             ZIndex: =1
 
-    ThemNCC_4 As group:
+    ThongTinNCC As group:
         Height: =5
         Width: =5
         X: =40
