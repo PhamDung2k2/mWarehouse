@@ -361,7 +361,7 @@ ThongTin As screen:
                 HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
-                OnSelect: |
+                OnSelect: |-
                     =UpdateContext({ShowThemSP:true});
                     Reset(TextInput5);
                     Reset(TextInput5_13);
@@ -377,7 +377,8 @@ ThongTin As screen:
                     Reset(TextInput5_24);
                     Reset(ComboBox3);
                     Reset(ComboBox3_2);
-                    Set(clearImage,true)
+                    Set(clearImage,true);
+                    Reset(AddMediaButton1_1)
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
