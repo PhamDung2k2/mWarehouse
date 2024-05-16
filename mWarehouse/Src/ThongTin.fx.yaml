@@ -377,7 +377,7 @@ ThongTin As screen:
                     Reset(TextInput5_24);
                     Reset(ComboBox3);
                     Reset(ComboBox3_2);
-                    UploadedImage1_1.Image = Blank();
+                    UpdateContext({clearImage:true})
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
