@@ -112,11 +112,11 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "c15d4c7b-7699-44fd-bc60-af97f9e87a49",
-    "Id": "c15d4c7b-7699-44fd-bc60-af97f9e87a49",
+    "Id": "dc3beb15-3a90-47eb-9d4e-94ae9cd5b48d",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "",
     "ManualOfflineProfileId": "",
-    "Name": "mWarehouse",
+    "Name": "mWarehouse.msapp",
     "OriginatingVersion": "1.341",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
