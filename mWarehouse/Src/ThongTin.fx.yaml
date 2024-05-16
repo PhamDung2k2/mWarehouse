@@ -1078,7 +1078,7 @@ ThongTin As screen:
                         HoverBorderColor: =App.Theme.Colors.Darker40
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =App.Theme.Colors.Lighter70
-                        Size: =13
+                        Size: =11
                         Width: =Parent.Width
                         Y: =44
                         ZIndex: =3
