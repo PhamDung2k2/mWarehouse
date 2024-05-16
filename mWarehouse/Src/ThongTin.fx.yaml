@@ -853,6 +853,7 @@ ThongTin As screen:
                         Height: =50
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =App.Theme.Colors.Lighter70
+                        InputTextPlaceholder: ="Chọn nhà cung cấp"
                         Items: ='mWarehouse.Suppliers'
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =App.Theme.Colors.Darker30
@@ -1223,6 +1224,7 @@ ThongTin As screen:
                         Height: =50
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =App.Theme.Colors.Lighter70
+                        InputTextPlaceholder: ="Chọn loại sản phẩm"
                         Items: =Choices([@'mWarehouse.Products'].category)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =App.Theme.Colors.Darker30
@@ -1464,57 +1466,65 @@ ThongTin As screen:
                     OnSelect: |-
                         =If(
                             Toggle1.Value = true,
-                            Patch(
-                                'mWarehouse.Suppliers',
-                                Defaults('mWarehouse.Suppliers'),
-                                {
-                                    Title: TextInput5.Text,
-                                    shortcut: TextInput5_16.Text,
-                                    representative: TextInput5_14.Text,
-                                    phone: Value(TextInput5_15.Text),
-                                    address: TextInput5_13.Text
-                                }
-                            );
-                            Patch(
-                                'mWarehouse.Products',
-                                Defaults('mWarehouse.Products'),
-                                {
-                                    Title: TextInput5_18.Text,
-                                    supplierID: Last('mWarehouse.Suppliers').ID,
-                                    productCode: TextInput5_17.Text,
-                                    category: {Value: ComboBox3_2.Selected.Value},
-                                    status: {Value: "Kinh doanh"},
-                                    priceImport: Value(TextInput5_21.Text),
-                                    priceExport: Value(TextInput5_22.Text),
-                                    brand: TextInput5_20.Text,
-                                    quantity: Value(TextInput5_24.Text),
-                                    year: Value(TextInput5_23.Text),
-                                    image: UploadedImage1_1.Image
-                                }
-                            );
-                            UpdateContext({ShowThemSP: false});
-                            Notify("Thêm mới thành công");
-                            ,
-                            Patch(
-                                'mWarehouse.Products',
-                                Defaults('mWarehouse.Products'),
-                                {
-                                    Title: TextInput5_18.Text,
-                                    supplierID: ComboBox3.Selected.ID,
-                                    productCode: TextInput5_17.Text,
-                                    category: {Value: ComboBox3_2.Selected.Value},
-                                    status: {Value: "Kinh doanh"},
-                                    priceImport: Value(TextInput5_21.Text),
-                                    priceExport: Value(TextInput5_22.Text),
-                                    brand: TextInput5_20.Text,
-                                    quantity: Value(TextInput5_24.Text),
-                                    year: Value(TextInput5_23.Text),
-                                    image: UploadedImage1_1.Image
-                                }
-                            );
-                            UpdateContext({ShowThemSP: false});
-                            Notify("Thêm mới thành công");
-                            
+                            If(
+                                IsBlank(TextInput5.Text) Or IsBlank(TextInput5_16.Text) Or IsBlank(TextInput5_14.Text) Or IsBlank(TextInput5_15.Text) Or IsBlank(TextInput5_13.Text) Or IsBlank(TextInput5_18.Text) Or IsBlank(TextInput5_17.Text) Or IsBlank(TextInput5_20.Text) Or IsBlank(TextInput5_21.Text) Or IsBlank(TextInput5_22.Text) Or IsBlank(TextInput5_23.Text) Or IsBlank(TextInput5_24.Text) Or IsBlank(ComboBox3_2.Selected.Value) Or IsBlank(UploadedImage1_1.Image),
+                                Notify("Không thể để trống các trường");
+                                ,
+                                Patch(
+                                    'mWarehouse.Suppliers',
+                                    Defaults('mWarehouse.Suppliers'),
+                                    {
+                                        Title: TextInput5.Text,
+                                        shortcut: TextInput5_16.Text,
+                                        representative: TextInput5_14.Text,
+                                        phone: Value(TextInput5_15.Text),
+                                        address: TextInput5_13.Text
+                                    }
+                                );
+                                Patch(
+                                    'mWarehouse.Products',
+                                    Defaults('mWarehouse.Products'),
+                                    {
+                                        Title: TextInput5_18.Text,
+                                        supplierID: Last('mWarehouse.Suppliers').ID,
+                                        productCode: TextInput5_17.Text,
+                                        category: {Value: ComboBox3_2.Selected.Value},
+                                        status: {Value: "Kinh doanh"},
+                                        priceImport: Value(TextInput5_21.Text),
+                                        priceExport: Value(TextInput5_22.Text),
+                                        brand: TextInput5_20.Text,
+                                        quantity: Value(TextInput5_24.Text),
+                                        year: Value(TextInput5_23.Text),
+                                        image: UploadedImage1_1.Image
+                                    }
+                                );
+                                UpdateContext({ShowThemSP: false});
+                                Notify("Thêm mới thành công");
+                            ),
+                            If(
+                                IsBlank(TextInput5_18.Text) Or IsBlank(TextInput5_17.Text) Or IsBlank(TextInput5_20.Text) Or IsBlank(TextInput5_21.Text) Or IsBlank(TextInput5_22.Text) Or IsBlank(TextInput5_23.Text) Or IsBlank(TextInput5_24.Text) Or IsBlank(ComboBox3_2.Selected.Value) Or IsBlank(UploadedImage1_1.Image) Or IsBlank(ComboBox3.Selected.ID),
+                                Notify("Không thể để trống các trường");
+                                ,
+                                Patch(
+                                    'mWarehouse.Products',
+                                    Defaults('mWarehouse.Products'),
+                                    {
+                                        Title: TextInput5_18.Text,
+                                        supplierID: ComboBox3.Selected.ID,
+                                        productCode: TextInput5_17.Text,
+                                        category: {Value: ComboBox3_2.Selected.Value},
+                                        status: {Value: "Kinh doanh"},
+                                        priceImport: Value(TextInput5_21.Text),
+                                        priceExport: Value(TextInput5_22.Text),
+                                        brand: TextInput5_20.Text,
+                                        quantity: Value(TextInput5_24.Text),
+                                        year: Value(TextInput5_23.Text),
+                                        image: UploadedImage1_1.Image
+                                    }
+                                );
+                                UpdateContext({ShowThemSP: false});
+                                Notify("Thêm mới thành công");
+                            )
                         )
                     PressedBorderColor: =App.Theme.Colors.Darker40
                     PressedColor: =Self.Color
