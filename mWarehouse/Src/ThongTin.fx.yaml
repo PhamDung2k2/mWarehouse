@@ -1907,6 +1907,9 @@ ThongTin As screen:
                     DisabledColor: =RGBA(244, 244, 244, 1)
                     Height: =35
                     Icon: =Icon.Check
+                    OnSelect: |-
+                        =//false
+                        If(IsBlank(LookUp('mWarehouse.Imports',importCode = Label1_1.Text).importCode) ,Patch('mWarehouse.Imports',Defaults('mWarehouse.Imports'),{}))
                     Width: =35
                     X: =967
                     Y: =16
@@ -1930,7 +1933,7 @@ ThongTin As screen:
                     Font: =App.Theme.Font
                     FontWeight: =FontWeight.Semibold
                     Size: =13
-                    Text: ="Nội dung đơn nhập"
+                    Text: ="Nội dung"
                     Width: =200
                     X: =20
                     Y: =20
@@ -1951,8 +1954,8 @@ ThongTin As screen:
                     HoverColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =App.Theme.Colors.Lighter70
                     Size: =13
-                    Width: =490
-                    X: =186
+                    Width: =571
+                    X: =105
                     Y: =20
                     ZIndex: =2
 
