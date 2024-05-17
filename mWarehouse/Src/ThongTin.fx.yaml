@@ -2886,7 +2886,7 @@ ThongTin As screen:
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             Height: =AddMediaButton1_4.Height
                             Image: |-
-                                =If(IsBlank(Gallery3.Selected.image),SampleImage, Gallery3.Selected.image )
+                                =If(IsBlank(AddMediaButton1_4.Media), Gallery3.Selected.image.Full,AddMediaButton1_4.Media )
                                 //Gallery3.Selected.image || AddMediaButton1_4.Media||SampleImage
                             ImagePosition: =ImagePosition.Fill
                             Width: =AddMediaButton1_4.Width
