@@ -348,7 +348,7 @@ DuyetDon As screen:
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =App.Theme.Colors.Darker30
                 SearchFields: =["ComplianceAssetId"]
-                SearchItems: =Search('mWarehouse.Exports',ComboBox2.SearchText,ComplianceAssetId)
+                SearchItems: =Search('mWarehouse.Exports',ComboBox2.SearchText,'Compliance Asset Id')
                 SelectionFill: =App.Theme.Colors.Primary
                 Size: =13
                 X: =665
