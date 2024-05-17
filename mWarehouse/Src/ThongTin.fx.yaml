@@ -1663,7 +1663,7 @@ ThongTin As screen:
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Bold
                 Size: =13
-                Text: ="Đơn nhập sản phẩm"
+                Text: ="Mã đơn nhập"
                 Width: =200
                 X: =20
                 Y: =16
@@ -2086,6 +2086,19 @@ ThongTin As screen:
                     X: =863
                     Y: =16
                     ZIndex: =6
+
+            Label1_11 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                Size: =13
+                Text: =Concatenate("DN_",Text( Right(Last('mWarehouse.Imports').importCode,3)+1,"000"))
+                Width: =200
+                X: =192
+                Y: =16
+                ZIndex: =7
 
     ThemSp_4 As group:
         Height: =5
