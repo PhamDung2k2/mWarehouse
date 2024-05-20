@@ -1698,7 +1698,7 @@ ThongTin As screen:
                     BorderColor: =App.Theme.Colors.Darker40
                     DelayItemLoading: =true
                     Height: =283
-                    Items: ='mWarehouse.Products'
+                    Items: =Filter('mWarehouse.ImportDetails',importID = LookUp('mWarehouse.Imports', importCode =  Label1_11.Text).ID)
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateSize: =70
@@ -1721,8 +1721,8 @@ ThongTin As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Font: =App.Theme.Font
                             Size: =13
-                            Text: ="Samsung Galaxy A71 5G 128GB"
-                            Width: =300
+                            Text: =ThisItem.Title
+                            Width: =350
                             X: =10
                             Y: =15
                             ZIndex: =1
@@ -1743,9 +1743,9 @@ ThongTin As screen:
                             PressedBorderColor: =App.Theme.Colors.Darker40
                             PressedColor: =Self.Color
                             PressedFill: =App.Theme.Colors.Darker40
-                            Text: ="Button"
+                            Text: =LookUp('mWarehouse.Products',ID = ThisItem.productID).category.Value
                             Width: =100
-                            X: =341
+                            X: =411
                             Y: =20
                             ZIndex: =2
 
@@ -1757,7 +1757,7 @@ ThongTin As screen:
                             Height: =35
                             Icon: =Icon.HorizontalLine
                             Width: =35
-                            X: =1084
+                            X: =1077
                             Y: =17
                             ZIndex: =3
 
@@ -1768,9 +1768,10 @@ ThongTin As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Font: =App.Theme.Font
                             Size: =13
-                            Text: ="100,000,000 VNĐ"
+                            Text: |-
+                                =Concatenate(Text(ThisItem.priceImport,"###,###")," VNĐ")
                             Width: =200
-                            X: =484
+                            X: =533
                             Y: =12
                             ZIndex: =4
 
@@ -1781,9 +1782,9 @@ ThongTin As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Font: =App.Theme.Font
                             Size: =13
-                            Text: ="20"
+                            Text: =ThisItem.quantity
                             Width: =80
-                            X: =721
+                            X: =749
                             Y: =12
                             ZIndex: =5
 
@@ -1794,9 +1795,10 @@ ThongTin As screen:
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             Font: =App.Theme.Font
                             Size: =13
-                            Text: ="100,000,000 VNĐ"
+                            Text: |-
+                                =Concatenate(Text(ThisItem.totalPrice,"###,###")," VNĐ")
                             Width: =200
-                            X: =828
+                            X: =849
                             Y: =12
                             ZIndex: =6
 
@@ -1834,6 +1836,7 @@ ThongTin As screen:
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     DisplayFields: =["Title"]
+                    DisplayMode: =If(IsEmpty(Gallery2.AllItems),DisplayMode.Edit,DisplayMode.Disabled)
                     Font: =App.Theme.Font
                     HoverColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =App.Theme.Colors.Lighter70
@@ -2077,6 +2080,7 @@ ThongTin As screen:
                 ZIndex: =6
 
                 Label10_20 As label:
+                    Align: =Align.Center
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
@@ -2098,7 +2102,7 @@ ThongTin As screen:
                     FontWeight: =FontWeight.Semibold
                     Size: =13
                     Text: ="Loại"
-                    X: =320
+                    X: =390
                     Y: =16
                     ZIndex: =3
 
@@ -2111,7 +2115,7 @@ ThongTin As screen:
                     FontWeight: =FontWeight.Semibold
                     Size: =13
                     Text: ="Giá nhập"
-                    X: =518
+                    X: =567
                     Y: =16
                     ZIndex: =4
 
@@ -2124,7 +2128,7 @@ ThongTin As screen:
                     FontWeight: =FontWeight.Semibold
                     Size: =13
                     Text: ="Số lượng"
-                    X: =695
+                    X: =723
                     Y: =16
                     ZIndex: =5
 
@@ -2137,7 +2141,7 @@ ThongTin As screen:
                     FontWeight: =FontWeight.Semibold
                     Size: =13
                     Text: ="Tổng trị giá"
-                    X: =863
+                    X: =884
                     Y: =16
                     ZIndex: =6
 
@@ -2148,7 +2152,7 @@ ThongTin As screen:
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Size: =13
-                Text: =Concatenate("DN_",Text( Right(Last('mWarehouse.Imports').importCode,3)+1,"000"))
+                Text: =Concatenate("DN_",Text( Right(Last('mWarehouse.Imports').importCode,3),"000"))
                 Width: =200
                 X: =192
                 Y: =9
