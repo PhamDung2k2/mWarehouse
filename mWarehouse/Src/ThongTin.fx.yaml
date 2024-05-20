@@ -1994,13 +1994,13 @@ ThongTin As screen:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderThickness: =2
                     Color: =RGBA(0, 0, 0, 1)
-                    Default: ="Nhập 5 mặt hàng mới từ FPT chỉ nên tạo đơn nhập đối với 1 nhà cung cấp"
+                    Default: =
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     FocusedBorderThickness: =4
                     Font: =App.Theme.Font
-                    HintText: ="Nhập nội dung đơn nhập"
+                    HintText: ="Nhập nội dung đơn nhập hàng"
                     HoverBorderColor: =App.Theme.Colors.Darker40
                     HoverColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =App.Theme.Colors.Lighter70
