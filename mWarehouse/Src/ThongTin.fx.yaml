@@ -1666,7 +1666,7 @@ ThongTin As screen:
                 Text: ="Mã đơn nhập"
                 Width: =200
                 X: =20
-                Y: =16
+                Y: =9
                 ZIndex: =1
 
             Icon1 As icon.Cancel:
@@ -1685,19 +1685,19 @@ ThongTin As screen:
 
             Container13 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =337
+                Height: =283
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
                 Width: =1138
-                Y: =300
+                Y: =279
                 ZIndex: =3
 
                 Gallery2 As gallery.galleryVertical:
                     BorderColor: =App.Theme.Colors.Darker40
                     DelayItemLoading: =true
-                    Height: =337
+                    Height: =283
                     Items: ='mWarehouse.Products'
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
@@ -1808,7 +1808,7 @@ ThongTin As screen:
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
                 Width: =1138
-                Y: =152
+                Y: =138
                 ZIndex: =4
 
                 Icon3 As icon.Add:
@@ -1974,7 +1974,7 @@ ThongTin As screen:
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
                 Width: =1138
-                Y: =62
+                Y: =55
                 ZIndex: =5
 
                 Label11 As label:
@@ -2073,7 +2073,7 @@ ThongTin As screen:
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
                 Width: =1138
-                Y: =227
+                Y: =206
                 ZIndex: =6
 
                 Label10_20 As label:
@@ -2151,8 +2151,48 @@ ThongTin As screen:
                 Text: =Concatenate("DN_",Text( Right(Last('mWarehouse.Imports').importCode,3)+1,"000"))
                 Width: =200
                 X: =192
-                Y: =16
+                Y: =9
                 ZIndex: =7
+
+            Button10 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
+                Text: ="Xác nhận"
+                X: =859
+                Y: =579
+                ZIndex: =8
+
+            Button10_1 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
+                Text: ="Hủy bỏ"
+                X: =672
+                Y: =579
+                ZIndex: =9
 
     ThemSp_4 As group:
         Height: =5
