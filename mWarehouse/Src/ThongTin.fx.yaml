@@ -1921,7 +1921,7 @@ ThongTin As screen:
                                 {
                                     Title: ComboBox5.Selected.Title,
                                     productCode: ComboBox5.Selected.productCode,
-                                    importID: Last('mWarehouse.Imports').ID,
+                                    importID: Label1_11.Text,
                                     productID: ComboBox5.Selected.ID,
                                     quantity: Value(TextInput4.Text),
                                     priceImport: Value(ComboBox5.Selected.priceImport),
