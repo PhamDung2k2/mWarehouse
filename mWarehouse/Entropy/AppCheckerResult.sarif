@@ -263,10 +263,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 17,
+                  "charLength": 5,
                   "charOffset": 94,
                   "snippet": {
-                    "text": "ComplianceAssetId"
+                    "text": "Title"
                   }
                 }
               },
@@ -280,6 +280,46 @@
           "message": {
             "arguments": [
               "Search"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.ComboBox5.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.ComboBox5.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 64,
+                  "snippet": {
+                    "text": "And"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ThongTin",
+                "type": "ThongTin.Container9_2.Container16.ComboBox5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
             ],
             "id": "issue"
           },
@@ -383,10 +423,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 76,
-                  "charOffset": 397,
+                  "charLength": 206,
+                  "charOffset": 541,
                   "snippet": {
-                    "text": "Sum(Filter('mWarehouse.ImportDetails',importID = Label1_11.Text),totalPrice)"
+                    "text": "Sum(\n                    Filter(\n                        'mWarehouse.ImportDetails',\n                        importID = Label1_11.Text\n                    ),\n                    totalPrice\n                )"
                   }
                 }
               },
