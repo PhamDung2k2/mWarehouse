@@ -2989,7 +2989,7 @@ ThongTin As screen:
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: =App.Theme.Colors.Primary
                 Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
+                FontWeight: =FontWeight.Bold
                 HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
@@ -2997,6 +2997,7 @@ ThongTin As screen:
                     =RemoveIf('mWarehouse.ImportDetails',importID = Label1_11.Text);
                     Notify("Hủy đơn nhập thành công!");
                     UpdateContext({ShowThemDon:false});
+                    UpdateContext({ShowHuyBo:false});
                     Reset(TextInput3);
                     Reset(ComboBox4);
                     
@@ -3082,7 +3083,7 @@ ThongTin As screen:
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: =App.Theme.Colors.Primary
                 Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
+                FontWeight: =FontWeight.Bold
                 HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
@@ -3115,7 +3116,8 @@ ThongTin As screen:
                             }
                         );
                         Notify("Hoàn thành đơn nhập !");
-                        UpdateContext({ShowThemDon: false})
+                        UpdateContext({ShowThemDon: false});
+                        UpdateContext({ShowXacNhan: false});
                     )
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
