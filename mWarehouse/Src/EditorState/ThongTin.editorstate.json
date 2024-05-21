@@ -2996,7 +2996,7 @@
         {
           "Category": "Data",
           "PropertyName": "Text",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -5277,7 +5277,7 @@
         {
           "Category": "Design",
           "PropertyName": "DisplayMode",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -17432,7 +17432,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultIconStyle",
@@ -18668,7 +18668,7 @@
         {
           "Category": "Data",
           "PropertyName": "Text",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -23717,7 +23717,7 @@
         {
           "Category": "Data",
           "PropertyName": "Text",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -24562,7 +24562,7 @@
         {
           "Category": "Data",
           "PropertyName": "Text",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -24846,7 +24846,7 @@
         {
           "Category": "Data",
           "PropertyName": "Text",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -25116,7 +25116,7 @@
         {
           "Category": "Data",
           "PropertyName": "Text",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",

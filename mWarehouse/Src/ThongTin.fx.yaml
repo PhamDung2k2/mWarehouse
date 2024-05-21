@@ -1698,7 +1698,7 @@ ThongTin As screen:
                     BorderColor: =App.Theme.Colors.Darker40
                     DelayItemLoading: =true
                     Height: =283
-                    Items: =Filter('mWarehouse.ImportDetails',importID = LookUp('mWarehouse.Imports', importCode =  Label1_11.Text).ID)
+                    Items: =Filter('mWarehouse.ImportDetails',importID = Label1_11.Text)
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateSize: =70
@@ -2035,7 +2035,7 @@ ThongTin As screen:
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Font: =App.Theme.Font
                     Size: =13
-                    Text: ="20"
+                    Text: =Sum(Filter('mWarehouse.ImportDetails',importID = Label1_11.Text),quantity)
                     Width: =80
                     X: =749
                     Y: =20
@@ -2056,13 +2056,13 @@ ThongTin As screen:
                     ZIndex: =5
 
                 Label13_1 As label:
-                    Align: =Align.Center
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Font: =App.Theme.Font
                     Size: =13
-                    Text: ="100,000,000 VNĐ"
+                    Text: |-
+                        =Concatenate(Text(Sum(Filter('mWarehouse.ImportDetails',importID = Label1_11.Text),totalPrice),"###,###")," VNĐ")
                     Width: =200
                     X: =922
                     Y: =20
