@@ -1875,9 +1875,7 @@ ThongTin As screen:
                     PressedColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =App.Theme.Colors.Darker30
                     SearchFields: =["ComplianceAssetId"]
-                    SearchItems: |-
-                        =Search(Filter('mWarehouse.Products',supplierID = ComboBox4.Selected.ID)
-                        ,ComboBox5.SearchText,ComplianceAssetId)
+                    SearchItems: =Search(Filter('mWarehouse.Products',supplierID = ComboBox4.Selected.ID ),ComboBox5.SearchText,ComplianceAssetId)
                     SelectionFill: =App.Theme.Colors.Primary
                     SelectMultiple: =false
                     Size: =13
