@@ -1915,54 +1915,20 @@ ThongTin As screen:
                         If(
                             IsBlank(ComboBox4.Selected.ID) Or IsBlank(ComboBox5.Selected.ID) Or IsBlank(TextInput4.Text) Or IsBlank(TextInput3.Text),
                             Notify("Hãy điền đủ thông tin !"),
-                            If(
-                                IsBlank(
-                                    LookUp(
-                                        'mWarehouse.Imports',
-                                        importCode = Label1_1.Text
-                                    ).importCode
-                                ),
-                                Patch(
-                                    'mWarehouse.Imports',
-                                    Defaults('mWarehouse.Imports'),
-                                    {
-                                        Title: TextInput3.Text,
-                                        importCode: Label1_11.Text,
-                                        userID: LookUp(
-                                            'mWarehouse.Users',
-                                            account = TextInput1.Text
-                                        ).ID
-                                    }
-                                );
-                                Patch(
-                                    'mWarehouse.ImportDetails',
-                                    Defaults('mWarehouse.ImportDetails'),
-                                    {
-                                        Title: ComboBox5.Selected.Title,
-                                        productCode: ComboBox5.Selected.productCode,
-                                        importID: Last('mWarehouse.Imports').ID,
-                                        productID: ComboBox5.Selected.ID,
-                                        quantity: Value(TextInput4.Text),
-                                        priceImport: Value(ComboBox5.Selected.priceImport),
-                                        totalPrice: Value(ComboBox5.Selected.priceImport * TextInput4.Text)
-                                    }
-                                );
-                                Notify("Thêm thành công!"),
-                                Patch(
-                                    'mWarehouse.ImportDetails',
-                                    Defaults('mWarehouse.ImportDetails'),
-                                    {
-                                        Title: ComboBox5.Selected.Title,
-                                        productCode: ComboBox5.Selected.productCode,
-                                        importID: Last('mWarehouse.Imports').ID,
-                                        productID: ComboBox5.Selected.ID,
-                                        quantity: Value(TextInput4.Text),
-                                        priceImport: Value(ComboBox5.Selected.priceImport),
-                                        totalPrice: Value(ComboBox5.Selected.priceImport * TextInput4.Text)
-                                    }
-                                );
-                                Notify("Thêm thành công!")
-                            )
+                            Patch(
+                                'mWarehouse.ImportDetails',
+                                Defaults('mWarehouse.ImportDetails'),
+                                {
+                                    Title: ComboBox5.Selected.Title,
+                                    productCode: ComboBox5.Selected.productCode,
+                                    importID: Last('mWarehouse.Imports').ID,
+                                    productID: ComboBox5.Selected.ID,
+                                    quantity: Value(TextInput4.Text),
+                                    priceImport: Value(ComboBox5.Selected.priceImport),
+                                    totalPrice: Value(ComboBox5.Selected.priceImport * TextInput4.Text)
+                                }
+                            );
+                            Notify("Thêm thành công!")
                         )
                     Width: =35
                     X: =967
