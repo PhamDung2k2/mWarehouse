@@ -3089,7 +3089,7 @@ ThongTin As screen:
                 HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: |-
                     =If(
-                        IsBlank(TextInput3.Text),
+                        IsBlank(TextInput3.Text) Or IsEmpty(Gallery2.AllItems),
                         Notify("Không được để trống !"),
                         Patch(
                             'mWarehouse.Imports',
