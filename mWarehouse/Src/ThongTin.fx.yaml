@@ -891,6 +891,7 @@ ThongTin As screen:
                         DisplayMode: =If(Toggle1.Value = false,DisplayMode.Disabled,DisplayMode.Edit)
                         FocusedBorderThickness: =4
                         Font: =App.Theme.Font
+                        Format: =TextFormat.Number
                         Height: =50
                         HintText: ="Số điện thoại"
                         HoverBorderColor: =App.Theme.Colors.Darker40
@@ -1822,7 +1823,19 @@ ThongTin As screen:
                     Height: =35
                     Icon: =Icon.Add
                     OnSelect: |-
-                        =UpdateContext({ShowThemSPdemo:true})
+                        =If(
+                            IsBlank(ComboBox4.Selected.ID),
+                            Notify ("Hãy chọn nhà cung cấp!"),
+                            UpdateContext({ShowThemSPdemo: true});
+                            Reset(ComboBox3_4);
+                            Reset(TextInput5_66);
+                            Reset(TextInput5_67);
+                            Reset(TextInput5_68);
+                            Reset(TextInput5_69);
+                            Reset(TextInput5_70);
+                            Reset(AddMediaButton1_5);
+                            
+                        )
                     Width: =35
                     X: =1084
                     Y: =16
@@ -1845,6 +1858,9 @@ ThongTin As screen:
                     HoverFill: =App.Theme.Colors.Lighter70
                     InputTextPlaceholder: ="Chọn nhà cung cấp"
                     Items: ='mWarehouse.Suppliers'
+                    OnChange: |-
+                        =Reset(ComboBox5);
+                        Reset(TextInput4);
                     PressedColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =App.Theme.Colors.Darker30
                     SearchFields: =["Title"]
@@ -3121,6 +3137,8 @@ ThongTin As screen:
                         Notify("Hoàn thành đơn nhập !");
                         UpdateContext({ShowThemDon: false});
                         UpdateContext({ShowXacNhan: false});
+                        Reset(ComboBox4);
+                        Reset(TextInput3)
                     )
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
