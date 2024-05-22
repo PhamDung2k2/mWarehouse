@@ -1305,6 +1305,7 @@ ThongTin As screen:
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         FocusedBorderThickness: =4
                         Font: =App.Theme.Font
+                        Format: =TextFormat.Number
                         Height: =50
                         HintText: ="Giá xuất"
                         HoverBorderColor: =App.Theme.Colors.Darker40
@@ -1348,6 +1349,7 @@ ThongTin As screen:
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         FocusedBorderThickness: =4
                         Font: =App.Theme.Font
+                        Format: =TextFormat.Number
                         Height: =50
                         HintText: ="Giá nhập"
                         HoverBorderColor: =App.Theme.Colors.Darker40
@@ -1391,6 +1393,7 @@ ThongTin As screen:
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         FocusedBorderThickness: =4
                         Font: =App.Theme.Font
+                        Format: =TextFormat.Number
                         Height: =50
                         HintText: ="Năm ra mắt"
                         HoverBorderColor: =App.Theme.Colors.Darker40
@@ -1434,6 +1437,7 @@ ThongTin As screen:
                         DisabledFill: =RGBA(244, 244, 244, 1)
                         FocusedBorderThickness: =4
                         Font: =App.Theme.Font
+                        Format: =TextFormat.Number
                         Height: =50
                         HintText: ="Số lượng"
                         HoverBorderColor: =App.Theme.Colors.Darker40
