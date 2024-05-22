@@ -545,6 +545,8 @@ ThongTin As screen:
             "Gallery3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
+                Fill: |
+                    =RGBA(0, 0, 0, 0)
                 Height: =Parent.Height
                 Items: |-
                     =//'mWarehouse.Products'
@@ -568,6 +570,32 @@ ThongTin As screen:
 
                 Container14 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Regular
+                    Fill: |-
+                        =//RGBA(0, 0, 0, 0)
+                        If(
+                            ThisItem.status.Value = "Kinh doanh",
+                            RGBA(
+                                0,
+                                0,
+                                0,
+                                0
+                            ),
+                            If(
+                                ThisItem.status.Value = "Đang chờ",
+                                RGBA(
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ),
+                                RGBA(
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                )
+                            )
+                        )
                     Height: =80
                     RadiusBottomLeft: =10
                     RadiusBottomRight: =10
