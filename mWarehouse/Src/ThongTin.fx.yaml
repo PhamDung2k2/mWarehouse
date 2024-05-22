@@ -3778,49 +3778,6 @@ ThongTin As screen:
                         Y: =44
                         ZIndex: =3
 
-                Container11_80 As groupContainer.manualLayoutContainer:
-                    Height: |
-                        =Label16_80.Height+TextInput5_71.Height+10
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =350
-                    X: =380
-                    Y: =300
-                    ZIndex: =8
-
-                    Label16_80 As label:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(0, 0, 0, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Font: =App.Theme.Font
-                        Size: =13
-                        Text: ="Số lượng"
-                        Width: =Parent.Width
-                        Y: =4
-                        ZIndex: =1
-
-                    TextInput5_71 As text:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        BorderThickness: =2
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =""
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
-                        Height: =50
-                        HintText: ="Số lượng"
-                        HoverBorderColor: =App.Theme.Colors.Darker40
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        Size: =13
-                        Width: =Parent.Width
-                        Y: =44
-                        ZIndex: =3
-
                 Button6_3 As button:
                     BorderColor: =RGBA(255, 255, 255, 1)
                     DisabledBorderColor: =RGBA(244, 244, 244, 1)
@@ -3828,50 +3785,13 @@ ThongTin As screen:
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     Fill: =RGBA(152, 208, 70, 1)
                     Font: =App.Theme.Font
-                    FontWeight: =FontWeight.Semibold
+                    FontWeight: =FontWeight.Bold
                     HoverBorderColor: =RGBA(127, 178, 57, 1)
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(127, 178, 57, 1)
                     OnSelect: |-
                         =If(
-                            Toggle1_2.Value = true,
-                            If(
-                                IsBlank(TextInput5_2.Text) Or IsBlank(TextInput5_61.Text) Or IsBlank(TextInput5_62.Text) Or IsBlank(TextInput5_63.Text) Or IsBlank(TextInput5_64.Text) Or IsBlank(TextInput5_66.Text) Or IsBlank(TextInput5_65.Text) Or IsBlank(TextInput5_67.Text) Or IsBlank(TextInput5_68.Text) Or IsBlank(TextInput5_69.Text) Or IsBlank(TextInput5_70.Text) Or IsBlank(TextInput5_71.Text) Or IsBlank(ComboBox3_4.Selected.Value) Or IsBlank(UploadedImage1_5.Image),
-                                Notify("Không thể để trống các trường");
-                                ,
-                                Patch(
-                                    'mWarehouse.Suppliers',
-                                    Defaults('mWarehouse.Suppliers'),
-                                    {
-                                        Title: TextInput5_2.Text,
-                                        shortcut: TextInput5_61.Text,
-                                        representative: TextInput5_62.Text,
-                                        phone: Value(TextInput5_63.Text),
-                                        address: TextInput5_64.Text
-                                    }
-                                );
-                                Patch(
-                                    'mWarehouse.Products',
-                                    Defaults('mWarehouse.Products'),
-                                    {
-                                        Title: TextInput5_66.Text,
-                                        supplierID: Last('mWarehouse.Suppliers').ID,
-                                        productCode: TextInput5_65.Text,
-                                        category: {Value: ComboBox3_4.Selected.Value},
-                                        status: {Value: "Kinh doanh"},
-                                        priceImport: Value(TextInput5_68.Text),
-                                        priceExport: Value(TextInput5_69.Text),
-                                        brand: TextInput5_67.Text,
-                                        quantity: Value(TextInput5_71.Text),
-                                        year: Value(TextInput5_70.Text),
-                                        image: UploadedImage1_5.Image
-                                    }
-                                );
-                                UpdateContext({ShowThemSP: false});
-                                Notify("Thêm mới thành công");
-                            ),
-                            If(
-                                IsBlank(TextInput5_66.Text) Or IsBlank(TextInput5_65.Text) Or IsBlank(TextInput5_67.Text) Or IsBlank(TextInput5_68.Text) Or IsBlank(TextInput5_69.Text) Or IsBlank(TextInput5_70.Text) Or IsBlank(TextInput5_71.Text) Or IsBlank(ComboBox3_4.Selected.Value) Or IsBlank(UploadedImage1_5.Image) Or IsBlank(ComboBox3_3.Selected.ID),
+                                IsBlank(TextInput5_66.Text) Or IsBlank(TextInput5_65.Text) Or IsBlank(TextInput5_67.Text) Or IsBlank(TextInput5_68.Text)  Or IsBlank(TextInput5_70.Text) Or IsBlank(ComboBox3_4.Selected.Value),
                                 Notify("Không thể để trống các trường");
                                 ,
                                 Patch(
@@ -3879,28 +3799,27 @@ ThongTin As screen:
                                     Defaults('mWarehouse.Products'),
                                     {
                                         Title: TextInput5_66.Text,
-                                        supplierID: ComboBox3_3.Selected.ID,
+                                        supplierID: ComboBox4.Selected.ID,
                                         productCode: TextInput5_65.Text,
                                         category: {Value: ComboBox3_4.Selected.Value},
-                                        status: {Value: "Kinh doanh"},
+                                        status: {Value: "Đang chờ"},
                                         priceImport: Value(TextInput5_68.Text),
                                         priceExport: Value(TextInput5_69.Text),
                                         brand: TextInput5_67.Text,
-                                        quantity: Value(TextInput5_71.Text),
+                                        quantity: Value(0),
                                         year: Value(TextInput5_70.Text),
                                         image: UploadedImage1_5.Image
                                     }
                                 );
-                                UpdateContext({ShowThemSP: false});
+                                UpdateContext({ShowThemSPdemo: false});
                                 Notify("Thêm mới thành công");
                             )
-                        )
                     PressedBorderColor: =App.Theme.Colors.Darker40
                     PressedColor: =Self.Color
                     PressedFill: =App.Theme.Colors.Darker40
                     Size: =15
                     Text: ="Thêm mới"
-                    X: =475
+                    X: =496
                     Y: =474
                     ZIndex: =9
 
@@ -3912,8 +3831,8 @@ ThongTin As screen:
                     RadiusTopLeft: =15
                     RadiusTopRight: =15
                     Width: =350
-                    X: =10
-                    Y: =401
+                    X: =14
+                    Y: =394
                     ZIndex: =10
 
                     Label16_81 As label:
