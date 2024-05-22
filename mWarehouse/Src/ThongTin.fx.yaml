@@ -3822,8 +3822,8 @@ ThongTin As screen:
                     PressedFill: =App.Theme.Colors.Darker40
                     Size: =15
                     Text: ="Thêm mới"
-                    X: =496
-                    Y: =474
+                    X: =489
+                    Y: =446
                     ZIndex: =9
 
                 Container11_81 As groupContainer.manualLayoutContainer:
