@@ -583,15 +583,15 @@ ThongTin As screen:
                             If(
                                 ThisItem.status.Value = "Đang chờ",
                                 RGBA(
-                                    0,
-                                    0,
-                                    0,
+                                    245,
+                                    40,
+                                    145,
                                     0
                                 ),
                                 RGBA(
-                                    0,
-                                    0,
-                                    0,
+                                    50,
+                                    69,
+                                    80,
                                     0
                                 )
                             )
