@@ -551,7 +551,7 @@ ThongTin As screen:
                 Items: |-
                     =//'mWarehouse.Products'
                     //BarcodeReader1.Barcodes
-                    If(IsBlank( Barcode),Search('mWarehouse.Products',TextInput2.Text,Title),Search(Filter('mWarehouse.Products',productCode = First(Barcode).Value),TextInput2.Text,Title))
+                    If(IsBlank( Barcode),Sort(Search('mWarehouse.Products',TextInput2.Text,Title),Modified,SortOrder.Descending),Sort(Search(Filter('mWarehouse.Products',productCode = First(Barcode).Value),TextInput2.Text,Title),Modified,SortOrder.Descending))
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
