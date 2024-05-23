@@ -2917,6 +2917,7 @@ ThongTin As screen:
                                     priceImport: Value(TextInput5_56.Text),
                                     priceExport: Value(TextInput5_57.Text),
                                     quantity: Value(TextInput5_59.Text),
+                                    status: {Value: ComboBox6.Selected.Value},
                                     image: UploadedImage1_4.Image
                                 }
                             );
@@ -2929,7 +2930,7 @@ ThongTin As screen:
                     Size: =15
                     Text: ="Cập nhật"
                     X: =475
-                    Y: =474
+                    Y: =516
                     ZIndex: =9
 
                 Container11_68 As groupContainer.manualLayoutContainer:
@@ -2988,6 +2989,58 @@ ThongTin As screen:
                             Y: |
                                 =44
                             ZIndex: =6
+
+                Container11_80 As groupContainer.manualLayoutContainer:
+                    Height: |
+                        =Label16_80.Height+ComboBox6.Height+10
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =350
+                    X: =380
+                    Y: =400
+                    ZIndex: =11
+
+                    Label16_80 As label:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Size: =13
+                        Text: ="Trạng thái"
+                        Width: =Parent.Width
+                        Y: =4
+                        ZIndex: =1
+
+                    ComboBox6 As combobox:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        ChevronBackground: =App.Theme.Colors.Primary
+                        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                        ChevronHoverBackground: =App.Theme.Colors.Darker10
+                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                        DefaultSelectedItems: =LookUp('mWarehouse.Products',ID = Gallery3.Selected.ID).status
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        DisplayFields: =["Value"]
+                        Font: =App.Theme.Font
+                        Height: =50
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =App.Theme.Colors.Lighter70
+                        InputTextPlaceholder: ="Trạng thái sản phẩm"
+                        Items: =Choices([@'mWarehouse.Products'].status)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =App.Theme.Colors.Darker30
+                        SearchFields: =["Value"]
+                        SearchItems: =Choices('mWarehouse.Products'.status,ComboBox6.SearchText)
+                        SelectionFill: =App.Theme.Colors.Primary
+                        SelectMultiple: =false
+                        Size: =13
+                        Width: =350
+                        Y: =44
+                        ZIndex: =4
 
     HuyBo As group:
         Height: =5
