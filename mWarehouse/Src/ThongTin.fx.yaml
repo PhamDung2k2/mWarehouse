@@ -2235,7 +2235,8 @@ ThongTin As screen:
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
             OnSelect: |-
-                =UpdateContext({ShowThongtinSP: false})
+                =//UpdateContext({ShowThongtinSP: false})
+                false
             Visible: =ShowThongtinSP
             Width: =Parent.Width
             ZIndex: =10
