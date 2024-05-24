@@ -4,7 +4,7 @@ YeuCau As screen:
     OnVisible: |-
         =ClearCollect(info,'mWarehouse.Imports');
         Collect(info,'mWarehouse.Exports');
-        TabList1.Selected.Value = "Tất cả"
+        TabList1.
 
     Container1_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
@@ -1475,7 +1475,7 @@ YeuCau As screen:
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
-                        Default: =Text(ComboBox4.Selected.phone,"0000000000")
+                        Default: =Text(ComboBox4_1.Selected.phone,"0000000000")
                         DisabledBorderColor: =RGBA(9, 33, 98, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
@@ -1519,7 +1519,7 @@ YeuCau As screen:
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
-                        Default: =ComboBox4.Selected.representative
+                        Default: =ComboBox4_1.Selected.representative
                         DisabledBorderColor: =RGBA(9, 33, 98, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
@@ -1563,7 +1563,7 @@ YeuCau As screen:
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
-                        Default: =ComboBox4.Selected.address
+                        Default: =ComboBox4_1.Selected.address
                         DisabledBorderColor: =RGBA(9, 33, 98, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
@@ -1608,7 +1608,7 @@ YeuCau As screen:
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
-                        Default: =ComboBox4.Selected.shortcut
+                        Default: =ComboBox4_1.Selected.shortcut
                         DisabledBorderColor: =RGBA(9, 33, 98, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
@@ -1651,7 +1651,7 @@ YeuCau As screen:
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
-                        Default: =ComboBox4.Selected.Title
+                        Default: =ComboBox4_1.Selected.Title
                         DisabledBorderColor: =RGBA(9, 33, 98, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(255, 255, 255, 1)
