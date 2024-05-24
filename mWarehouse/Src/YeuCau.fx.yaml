@@ -181,7 +181,7 @@ YeuCau As screen:
 
             "TabList1 As 'Tab list'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
-                FontWeight: =FontWeight.Lighter
+                FontWeight: =FontWeight.Semibold
                 Height: =55
                 Items: =["Tất cả", "Đơn nhập", "Đơn xuất"]
                 OnChange: |-
@@ -372,9 +372,9 @@ YeuCau As screen:
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Size: =13
-                Text: ="Loại"
-                Width: =84
-                X: =647
+                Text: ="Trạng thái"
+                Width: =100
+                X: =619
                 Y: =15
                 ZIndex: =4
 
@@ -388,9 +388,23 @@ YeuCau As screen:
                 Size: =13
                 Text: ="Tổng giá"
                 Width: =104
-                X: =823
+                X: =914
                 Y: =15
                 ZIndex: =5
+
+            Label10_40 As label:
+                Align: =Align.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                Size: =13
+                Text: ="Số lượng"
+                Width: =100
+                X: =752
+                Y: =15
+                ZIndex: =6
 
         Container8_1 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -441,11 +455,11 @@ YeuCau As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =45
+                        Height: =60
                         Size: =13
                         Text: =ThisItem.Title
                         Width: =377
-                        Y: =16
+                        Y: =9
                         ZIndex: =1
 
                     Label17_1 As label:
@@ -483,7 +497,7 @@ YeuCau As screen:
                         Text: |-
                             =Concatenate(Text(ThisItem.totalPrice,"###,###")," VNĐ")
                         Width: =155
-                        X: =794
+                        X: =885
                         Y: =18
                         ZIndex: =5
 
@@ -493,8 +507,8 @@ YeuCau As screen:
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =150
-                        X: =1000
+                        Width: =77
+                        X: =1072
                         ZIndex: =7
 
                         Label19_1 As label:
@@ -507,21 +521,9 @@ YeuCau As screen:
                             Size: =20
                             Text: ="✏️"
                             Width: =60
+                            X: =8
                             Y: =24
                             ZIndex: =1
-
-                        Label20_1 As label:
-                            Align: =Align.Center
-                            BorderColor: =App.Theme.Colors.Darker40
-                            Color: =RGBA(0, 0, 0, 1)
-                            DisabledColor: =RGBA(166, 166, 166, 1)
-                            Font: =App.Theme.Font
-                            Size: =25
-                            Text: ="📋"
-                            Width: =60
-                            X: =60
-                            Y: =20
-                            ZIndex: =2
 
                     Button2_1 As button:
                         BorderColor: =App.Theme.Colors.Primary
@@ -564,9 +566,22 @@ YeuCau As screen:
                         Size: =12
                         Text: =ThisItem.status.Value
                         Width: =100
-                        X: =637
+                        X: =616
                         Y: =18
                         ZIndex: =8
+
+                    Label18_10 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Size: =13
+                        Text: =ThisItem.amount
+                        Width: =50
+                        X: =776
+                        Y: =20
+                        ZIndex: =9
 
     ThemDon_3 As group:
         Height: =5

@@ -2481,3 +2481,24 @@ Screen1 As screen:
                             =44
                         ZIndex: =6
 
+    TextCanvas1 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Width: =96
+        X: =964
+        Y: =256
+        ZIndex: =4
+
+    Label20_3 As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Size: =25
+        Text: ="📋"
+        Width: =60
+        X: =982
+        Y: =157
+        ZIndex: =5
+
