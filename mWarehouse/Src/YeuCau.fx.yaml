@@ -1190,12 +1190,12 @@ YeuCau As screen:
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: |+
-                    =RemoveIf('mWarehouse.ImportDetails',importID = Label1_11.Text);
+                    =RemoveIf('mWarehouse.ImportDetails',importID = Label1_16.Text);
                     Notify("Hủy đơn nhập thành công!");
                     UpdateContext({ShowThemDonN:false});
                     UpdateContext({ShowHuyBo1:false});
-                    Reset(TextInput3);
-                    Reset(ComboBox4);
+                    Reset(TextInput3_1);
+                    Reset(ComboBox4_1);
                     
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
@@ -1285,26 +1285,26 @@ YeuCau As screen:
                 HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: |-
                     =If(
-                        IsBlank(TextInput3.Text) Or IsEmpty(Gallery2.AllItems),
+                        IsBlank(TextInput3_1.Text) Or IsEmpty(Gallery2_1.AllItems),
                         Notify("Không được để trống !"),
                         Patch(
                             'mWarehouse.Imports',
                             Defaults('mWarehouse.Imports'),
                             {
-                                Title: TextInput3.Text,
-                                importCode: Label1_11.Text,
-                                supplierID: ComboBox4.Selected.ID,
+                                Title: TextInput3_1.Text,
+                                importCode: Label1_16.Text,
+                                supplierID: ComboBox4_1.Selected.ID,
                                 userID: LookUp(
                                     'mWarehouse.Users',
                                     account = TextInput1.Text
                                 ).ID,
                                 status: {Value: "Chờ duyệt"},
-                                amount: Value(Label12_1.Text),
+                                amount: Value(Label12_4.Text),
                                 totalPrice: Value(
                                     Sum(
                                         Filter(
                                             'mWarehouse.ImportDetails',
-                                            importID = Label1_11.Text
+                                            importID = Label1_16.Text
                                         ),
                                         totalPrice
                                     )
@@ -1314,8 +1314,8 @@ YeuCau As screen:
                         Notify("Hoàn thành đơn nhập !");
                         UpdateContext({ShowThemDonN: false});
                         UpdateContext({ShowXacNhan1: false});
-                        Reset(ComboBox4);
-                        Reset(TextInput3)
+                        Reset(ComboBox4_1);
+                        Reset(TextInput3_1)
                     )
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
