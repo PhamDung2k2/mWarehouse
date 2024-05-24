@@ -4,7 +4,7 @@ YeuCau As screen:
     OnVisible: |-
         =ClearCollect(info,'mWarehouse.Imports');
         Collect(info,'mWarehouse.Exports');
-        TabList1.
+        Set(varTab,{Value:"Tất cả"})
 
     Container1_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
@@ -184,6 +184,7 @@ YeuCau As screen:
                 ZIndex: =1
 
             "TabList1 As 'Tab list'.pcfdataset":
+                DefaultSelectedItems: =varTab
                 DisplayMode: =DisplayMode.Edit
                 FontWeight: =FontWeight.Semibold
                 Height: =55
@@ -215,7 +216,7 @@ YeuCau As screen:
                             )
                         )
                     )
-                OnSelect: =
+                OnSelect: =Set(varTab,Self.Selected)
                 Width: =288
                 X: =250
                 Y: =5
