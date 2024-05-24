@@ -9423,6 +9423,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "YeuCau.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.OnVisible",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "YeuCau",
+                "type": "YeuCau"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "YeuCau.Container4_1.Container2_1.TabList1.OnChange"
                 }
               ],
@@ -9466,6 +9496,36 @@
                 "member": "OnChange",
                 "module": "YeuCau",
                 "type": "YeuCau.Container4_1.Container2_1.TabList1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.OnVisible",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "YeuCau",
+                "type": "YeuCau"
               }
             }
           ],

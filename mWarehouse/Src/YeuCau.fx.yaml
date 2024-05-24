@@ -1,6 +1,9 @@
 YeuCau As screen:
     Fill: =RGBA(241, 244, 249, 1)
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |-
+        =ClearCollect(info,'mWarehouse.Imports');
+        Collect(info,'mWarehouse.Exports')
 
     Container1_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
