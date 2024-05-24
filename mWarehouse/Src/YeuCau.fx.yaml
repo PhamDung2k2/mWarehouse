@@ -3,7 +3,8 @@ YeuCau As screen:
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
         =ClearCollect(info,'mWarehouse.Imports');
-        Collect(info,'mWarehouse.Exports')
+        Collect(info,'mWarehouse.Exports');
+        TabList1.Selected.Value = "Tất cả"
 
     Container1_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
