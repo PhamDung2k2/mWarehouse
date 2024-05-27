@@ -736,7 +736,7 @@ YeuCau As screen:
                             Font: =App.Theme.Font
                             Size: =13
                             Text: |-
-                                =Concatenate(Text(ThisItem.priceImport,"###,###")," VNĐ")
+                                =Concatenate(Text(ThisItem.priceExport,"###,###")," VNĐ")
                             Width: =200
                             X: =533
                             Y: =12
@@ -888,7 +888,9 @@ YeuCau As screen:
                                     productCode: ComboBox5_2.Selected.productCode,
                                     exportID: Label1_20.Text,
                                     productID: ComboBox5_2.Selected.ID,
-                                    priceExport: Value(ComboBox5_2.Selected.priceImport)
+                                    priceExport: Value(ComboBox5_2.Selected.priceImport),
+                                    quantity: 1,
+                                    totalPrice: Value(ComboBox5_2.Selected.priceImport)
                                 }
                             );
                             Reset(ComboBox5_2);
@@ -1044,7 +1046,7 @@ YeuCau As screen:
                     Font: =App.Theme.Font
                     FontWeight: =FontWeight.Semibold
                     Size: =13
-                    Text: ="Giá nhập"
+                    Text: ="Giá xuất"
                     X: =567
                     Y: =16
                     ZIndex: =4
