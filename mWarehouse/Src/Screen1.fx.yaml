@@ -2483,6 +2483,7 @@ Screen1 As screen:
 
     TextCanvas1 As Text:
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =32
         Width: =96
         X: =964
