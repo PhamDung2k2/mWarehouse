@@ -1,7 +1,15 @@
 DuyetDon As screen:
     Fill: =RGBA(241, 244, 249, 1)
     LoadingSpinnerColor: =App.Theme.Colors.Primary
-    OnVisible: =ClearCollect(yc,'mWarehouse.Imports')
+    OnVisible: |-
+        =ClearCollect(
+            yc,
+            'mWarehouse.Imports'
+        );
+        Collect(
+            yc,
+            'mWarehouse.Exports'
+        )
 
     Container1_2 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
@@ -182,6 +190,7 @@ DuyetDon As screen:
 
             "TabList2 As 'Tab list'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
+                FontWeight: =FontWeight.Normal
                 Height: =55
                 Items: =["Tất cả", "Chưa duyệt", "Đã duyệt","Từ chối"]
                 OnChange: |-
@@ -191,13 +200,24 @@ DuyetDon As screen:
                         ClearCollect(
                             yc,
                             'mWarehouse.Imports'
-                        );Collect(yc,'mWarehouse.Exports'),
+                        );
+                        Collect(
+                            yc,
+                            'mWarehouse.Exports'
+                        ),
                         If(
                             TabList2.Selected.Value = "Chưa duyệt",
                             ClearCollect(
                                 yc,
                                 Filter(
                                     'mWarehouse.Imports',
+                                    status.Value = "Chờ duyệt"
+                                )
+                            );
+                            Collect(
+                                yc,
+                                Filter(
+                                    'mWarehouse.Exports',
                                     status.Value = "Chờ duyệt"
                                 )
                             ),
@@ -209,11 +229,25 @@ DuyetDon As screen:
                                         'mWarehouse.Imports',
                                         status.Value = "Đơn hàng"
                                     )
+                                );
+                                Collect(
+                                    yc,
+                                    Filter(
+                                        'mWarehouse.Exports',
+                                        status.Value = "Đơn hàng"
+                                    )
                                 ),
                                 ClearCollect(
                                     yc,
                                     Filter(
                                         'mWarehouse.Imports',
+                                        status.Value = "Từ chối"
+                                    )
+                                );
+                                Collect(
+                                    yc,
+                                    Filter(
+                                        'mWarehouse.Exports',
                                         status.Value = "Từ chối"
                                     )
                                 )

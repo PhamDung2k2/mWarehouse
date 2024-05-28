@@ -11043,6 +11043,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "DuyetDon.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DuyetDon.OnVisible",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "DuyetDon",
+                "type": "DuyetDon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "YeuCau.OnVisible"
                 }
               ],
@@ -11133,19 +11163,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DuyetDon.OnVisible"
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container2_2.TabList2.OnChange"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DuyetDon.OnVisible",
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container2_2.TabList2.OnChange",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "OnVisible",
+                "member": "OnChange",
                 "module": "DuyetDon",
-                "type": "DuyetDon"
+                "type": "DuyetDon.Container4_2.Container2_2.TabList2"
               }
             }
           ],
@@ -11163,19 +11193,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DuyetDon.Container4_2.Container2_2.TabList2.OnChange"
+                  "fullyQualifiedName": "DuyetDon.OnVisible"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DuyetDon.Container4_2.Container2_2.TabList2.OnChange",
+                  "fullyQualifiedName": "DuyetDon.OnVisible",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "OnChange",
+                "member": "OnVisible",
                 "module": "DuyetDon",
-                "type": "DuyetDon.Container4_2.Container2_2.TabList2"
+                "type": "DuyetDon"
               }
             }
           ],
