@@ -199,22 +199,22 @@ DuyetDon As screen:
                                 Filter(
                                     'mWarehouse.Imports',
                                     status.Value = "Chờ duyệt"
+                                )
+                            ),
+                            If(
+                                TabList2.Selected.Value = "Đã duyệt",
+                                ClearCollect(
+                                    yc,
+                                    Filter(
+                                        'mWarehouse.Imports',
+                                        status.Value = "Đơn hàng"
+                                    )
                                 ),
-                                If(
-                                    TabList2.Selected.Value = "Đã duyệt",
-                                    ClearCollect(
-                                        yc,
-                                        Filter(
-                                            'mWarehouse.Imports',
-                                            status.Value = "Đơn hàng"
-                                        )
-                                    ),
-                                    ClearCollect(
-                                        yc,
-                                        Filter(
-                                            'mWarehouse.Imports',
-                                            status.Value = "Từ chối"
-                                        )
+                                ClearCollect(
+                                    yc,
+                                    Filter(
+                                        'mWarehouse.Imports',
+                                        status.Value = "Từ chối"
                                     )
                                 )
                             )
