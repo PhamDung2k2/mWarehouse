@@ -1,6 +1,7 @@
 DuyetDon As screen:
     Fill: =RGBA(241, 244, 249, 1)
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: =ClearCollect(yc,'mWarehouse.Imports')
 
     Container1_2 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
@@ -244,12 +245,13 @@ DuyetDon As screen:
                 BorderColor: =App.Theme.Colors.Darker40
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: ="Text input"
+                Default: =
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 FocusedBorderThickness: =4
                 Font: =App.Theme.Font
+                HintText: ="Tìm kiếm tên yêu cầu"
                 HoverBorderColor: =App.Theme.Colors.Darker40
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =App.Theme.Colors.Lighter70
@@ -400,7 +402,9 @@ DuyetDon As screen:
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
                 Height: =Parent.Height
-                Items: ='mWarehouse.Exports'
+                Items: |-
+                    =//'mWarehouse.Exports'
+                    Search(yc,TextInput2_2.Text,Title)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -465,6 +469,7 @@ DuyetDon As screen:
                         ZIndex: =4
 
                     Label18_5 As label:
+                        Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
