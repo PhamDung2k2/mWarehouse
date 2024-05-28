@@ -183,7 +183,7 @@ DuyetDon As screen:
             "TabList2 As 'Tab list'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
                 Height: =55
-                Items: =["Tất cả", "Chưa duyệt", "Đã duyệt"]
+                Items: =["Tất cả", "Chưa duyệt", "Đã duyệt","Từ chối"]
                 OnChange: |-
                     =//false
                     If (
@@ -220,7 +220,7 @@ DuyetDon As screen:
                             )
                         )
                     )
-                Width: =302
+                Width: =381
                 X: =315
                 Y: =5
                 ZIndex: =2
