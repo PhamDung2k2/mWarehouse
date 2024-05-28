@@ -304,27 +304,6 @@ DuyetDon As screen:
                 Y: =26
                 ZIndex: =2
 
-            Button1_2 As button:
-                BorderColor: =App.Theme.Colors.Primary
-                DisabledBorderColor: =RGBA(244, 244, 244, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =App.Theme.Colors.Primary
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =App.Theme.Colors.Darker10
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =App.Theme.Colors.Darker10
-                PressedBorderColor: =App.Theme.Colors.Darker40
-                PressedColor: =Self.Color
-                PressedFill: =App.Theme.Colors.Darker40
-                Size: =15
-                Text: ="🔍"
-                Width: =70
-                X: =430
-                Y: =25
-                ZIndex: =3
-
         Container7_2 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Height: =70
@@ -412,6 +391,9 @@ DuyetDon As screen:
                     Search(yc,TextInput2_2.Text,Title)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
+                OnSelect: |-
+                    =false
+                    //UpdateContext({ShowThongTinYC :true})
                 TemplatePadding: =0
                 TemplateSize: =80
                 Width: =Parent.Width
@@ -513,7 +495,7 @@ DuyetDon As screen:
                                             'mWarehouse.Exports',
                                             ID = ThisItem.ID
                                         ),
-                                        {status: {Value: "Đơn hàng"}}
+                                        {status: {Value: "Đơn hàng"},comment:"Đồng ý nhanh",dateApproved:Now()}
                                     ),
                                     Patch(
                                         'mWarehouse.Imports',
@@ -521,9 +503,12 @@ DuyetDon As screen:
                                             'mWarehouse.Imports',
                                             ID = ThisItem.ID
                                         ),
-                                        {status: {Value: "Đơn hàng"}}
+                                        {status: {Value: "Đơn hàng"},comment:"Đồng ý nhanh",dateApproved:Now()}
                                     )
                                 )
+                            Visible: |-
+                                =//true
+                                If(ThisItem.status.Value = "Chờ duyệt",true,false)
                             Width: =50
                             X: =10
                             Y: =15
@@ -536,6 +521,27 @@ DuyetDon As screen:
                             DisabledColor: =RGBA(244, 244, 244, 1)
                             Height: =50
                             Icon: =Icon.CancelBadge
+                            OnSelect: |-
+                                =If(
+                                    IsBlank(ThisItem.importCode),
+                                    Patch(
+                                        'mWarehouse.Exports',
+                                        LookUp(
+                                            'mWarehouse.Exports',
+                                            ID = ThisItem.ID
+                                        ),
+                                        {status: {Value: "Từ chối"},comment:"Từ chối nhanh",dateApproved:Now()}
+                                    ),
+                                    Patch(
+                                        'mWarehouse.Imports',
+                                        LookUp(
+                                            'mWarehouse.Imports',
+                                            ID = ThisItem.ID
+                                        ),
+                                        {status: {Value: "Từ chối"},comment:"Từ chối nhanh",dateApproved:Now()}
+                                    )
+                                )
+                            Visible: =If(ThisItem.status.Value = "Chờ duyệt",true,false)
                             Width: =50
                             X: =100
                             Y: =15
