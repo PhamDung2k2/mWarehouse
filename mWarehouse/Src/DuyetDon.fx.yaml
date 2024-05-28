@@ -191,7 +191,7 @@ DuyetDon As screen:
                         ClearCollect(
                             yc,
                             'mWarehouse.Imports'
-                        ),
+                        );Collect(yc,'mWarehouse.Exports'),
                         If(
                             TabList2.Selected.Value = "Chưa duyệt",
                             ClearCollect(
