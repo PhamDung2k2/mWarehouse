@@ -1014,46 +1014,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DuyetDon.Container4_2.Container5_2.ComboBox2.SearchItems"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DuyetDon.Container4_2.Container5_2.ComboBox2.SearchItems",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 21,
-                  "charOffset": 49,
-                  "snippet": {
-                    "text": "'Compliance Asset Id'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "SearchItems",
-                "module": "DuyetDon",
-                "type": "DuyetDon.Container4_2.Container5_2.ComboBox2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Search"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "ThongTin.Rectangle1.AccessibleLabel"
                 }
               ],
@@ -10653,19 +10613,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DuyetDon.Container4_2.Container5_2.ComboBox2.AccessibleLabel"
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Container15_2.Icon7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DuyetDon.Container4_2.Container5_2.ComboBox2.AccessibleLabel",
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Container15_2.Icon7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DuyetDon",
-                "type": "DuyetDon.Container4_2.Container5_2.ComboBox2"
+                "type": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Container15_2.Icon7"
               }
             }
           ],
@@ -10726,6 +10686,36 @@
                 "member": "TabIndex",
                 "module": "DuyetDon",
                 "type": "DuyetDon.Container4_2.Container8_2.Gallery3_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Container15_2.Icon7.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Container15_2.Icon7.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DuyetDon",
+                "type": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Container15_2.Icon7"
               }
             }
           ],
