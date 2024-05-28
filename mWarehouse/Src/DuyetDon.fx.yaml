@@ -200,11 +200,21 @@ DuyetDon As screen:
                                     'mWarehouse.Imports',
                                     status.Value = "Chờ duyệt"
                                 ),
-                                ClearCollect(
-                                    yc,
-                                    Filter(
-                                        'mWarehouse.Imports',
-                                        status.Value = "Đơn hàng"
+                                If(
+                                    TabList2.Selected.Value = "Đã duyệt",
+                                    ClearCollect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Imports',
+                                            status.Value = "Đơn hàng"
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Imports',
+                                            status.Value = "Từ chối"
+                                        )
                                     )
                                 )
                             )
