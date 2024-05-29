@@ -499,18 +499,88 @@ DuyetDon As screen:
                                         'mWarehouse.Exports',
                                         LookUp(
                                             'mWarehouse.Exports',
-                                            ID = ThisItem.ID
+                                            exportCode = ThisItem.exportCode
                                         ),
-                                        {status: {Value: "Đơn hàng"},comment:"Đồng ý nhanh",dateApproved:Now()}
-                                    );Notify("Đã đồng ý phê duyệt thành công"),
+                                        {
+                                            status: {Value: "Đơn hàng"},
+                                            comment: "Đồng ý nhanh",
+                                            dateApproved: Now()
+                                        }
+                                    );
+                                    Notify("Đã đồng ý phê duyệt thành công"),
                                     Patch(
                                         'mWarehouse.Imports',
                                         LookUp(
                                             'mWarehouse.Imports',
-                                            ID = ThisItem.ID
+                                            importCode = ThisItem.importCode
                                         ),
-                                        {status: {Value: "Đơn hàng"},comment:"Đồng ý nhanh",dateApproved:Now()}
-                                    );Notify("Đã đồng ý phê duyệt thành công")
+                                        {
+                                            status: {Value: "Đơn hàng"},
+                                            comment: "Đồng ý nhanh",
+                                            dateApproved: Now()
+                                        }
+                                    );
+                                    Notify("Đã đồng ý phê duyệt thành công")
+                                );
+                                //false
+                                If (
+                                    TabList2.Selected.Value = "Tất cả",
+                                    ClearCollect(
+                                        yc,
+                                        'mWarehouse.Imports'
+                                    );
+                                    Collect(
+                                        yc,
+                                        'mWarehouse.Exports'
+                                    ),
+                                    If(
+                                        TabList2.Selected.Value = "Chưa duyệt",
+                                        ClearCollect(
+                                            yc,
+                                            Filter(
+                                                'mWarehouse.Imports',
+                                                status.Value = "Chờ duyệt"
+                                            )
+                                        );
+                                        Collect(
+                                            yc,
+                                            Filter(
+                                                'mWarehouse.Exports',
+                                                status.Value = "Chờ duyệt"
+                                            )
+                                        ),
+                                        If(
+                                            TabList2.Selected.Value = "Đã duyệt",
+                                            ClearCollect(
+                                                yc,
+                                                Filter(
+                                                    'mWarehouse.Imports',
+                                                    status.Value = "Đơn hàng"
+                                                )
+                                            );
+                                            Collect(
+                                                yc,
+                                                Filter(
+                                                    'mWarehouse.Exports',
+                                                    status.Value = "Đơn hàng"
+                                                )
+                                            ),
+                                            ClearCollect(
+                                                yc,
+                                                Filter(
+                                                    'mWarehouse.Imports',
+                                                    status.Value = "Từ chối"
+                                                )
+                                            );
+                                            Collect(
+                                                yc,
+                                                Filter(
+                                                    'mWarehouse.Exports',
+                                                    status.Value = "Từ chối"
+                                                )
+                                            )
+                                        )
+                                    )
                                 )
                             Visible: |-
                                 =//true
