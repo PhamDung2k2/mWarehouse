@@ -392,8 +392,8 @@ DuyetDon As screen:
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: |-
-                    =false
-                    //UpdateContext({ShowThongTinYC :true})
+                    =//false
+                    UpdateContext({ShowThongTinYC :true})
                 TemplatePadding: =0
                 TemplateSize: =80
                 Width: =Parent.Width
@@ -496,7 +496,7 @@ DuyetDon As screen:
                                             ID = ThisItem.ID
                                         ),
                                         {status: {Value: "Đơn hàng"},comment:"Đồng ý nhanh",dateApproved:Now()}
-                                    ),
+                                    );Notify("Đã đồng ý phê duyệt thành công"),
                                     Patch(
                                         'mWarehouse.Imports',
                                         LookUp(
@@ -504,7 +504,7 @@ DuyetDon As screen:
                                             ID = ThisItem.ID
                                         ),
                                         {status: {Value: "Đơn hàng"},comment:"Đồng ý nhanh",dateApproved:Now()}
-                                    )
+                                    );Notify("Đã đồng ý phê duyệt thành công")
                                 )
                             Visible: |-
                                 =//true
@@ -531,7 +531,7 @@ DuyetDon As screen:
                                             ID = ThisItem.ID
                                         ),
                                         {status: {Value: "Từ chối"},comment:"Từ chối nhanh",dateApproved:Now()}
-                                    ),
+                                    );Notify("Đã từ chối phê duyệt thành công"),
                                     Patch(
                                         'mWarehouse.Imports',
                                         LookUp(
@@ -539,7 +539,7 @@ DuyetDon As screen:
                                             ID = ThisItem.ID
                                         ),
                                         {status: {Value: "Từ chối"},comment:"Từ chối nhanh",dateApproved:Now()}
-                                    )
+                                    );Notify("Đã từ chối phê duyệt thành công")
                                 )
                             Visible: =If(ThisItem.status.Value = "Chờ duyệt",true,false)
                             Width: =50
