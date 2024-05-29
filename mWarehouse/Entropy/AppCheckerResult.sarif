@@ -11743,6 +11743,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Label15_2.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Label15_2.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "DuyetDon",
+                "type": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Label15_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Label15_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Label15_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DuyetDon",
+                "type": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Label15_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.cyborg-isometric-3d-rendering-of-cyborgs-engaged-in-automated-work-at-warehouse_9631074"
                 }
               ],
@@ -12103,6 +12163,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Container15_2.Icon8.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Container15_2.Icon8.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "DuyetDon",
+                "type": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Container15_2.Icon8"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "YeuCau.OnVisible"
                 }
               ],
@@ -12266,6 +12356,36 @@
                 "member": "OnSelect",
                 "module": "DuyetDon",
                 "type": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Container15_2.Icon7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Container15_2.Icon8.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Container15_2.Icon8.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "DuyetDon",
+                "type": "DuyetDon.Container4_2.Container8_2.Gallery3_2.Container14_2.Container15_2.Icon8"
               }
             }
           ],

@@ -397,8 +397,7 @@ DuyetDon As screen:
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: |-
-                    =//false
-                    UpdateContext({ShowThongTinYC :true})
+                    =false
                     //Set(ShowThongTinYC,true)
                 TemplatePadding: =0
                 TemplateSize: =80
@@ -429,11 +428,14 @@ DuyetDon As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =45
+                        Height: =60
+                        OnSelect: |-
+                            =//false
+                            UpdateContext({ShowThongTinYC :true})
                         Size: =13
                         Text: =ThisItem.Title
                         Width: =377
-                        Y: =16
+                        Y: =10
                         ZIndex: =1
 
                     Label17_2 As label:
@@ -442,11 +444,12 @@ DuyetDon As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
+                        Height: =60
                         Size: =13
                         Text: =ThisItem.Created
                         Width: =170
                         X: =395
-                        Y: =18
+                        Y: =10
                         ZIndex: =3
 
                     Label18_4 As label:
@@ -467,12 +470,13 @@ DuyetDon As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
+                        Height: =60
                         Size: =13
                         Text: |-
                             =Concatenate(Text(ThisItem.totalPrice,"###,###")," VNĐ")
                         Width: =155
                         X: =794
-                        Y: =18
+                        Y: =10
                         ZIndex: =5
 
                     Container15_2 As groupContainer.manualLayoutContainer:
@@ -604,24 +608,101 @@ DuyetDon As screen:
                                         'mWarehouse.Exports',
                                         LookUp(
                                             'mWarehouse.Exports',
-                                            ID = ThisItem.ID
+                                            exportCode = ThisItem.exportCode
                                         ),
-                                        {status: {Value: "Từ chối"},comment:"Từ chối nhanh",dateApproved:Now()}
-                                    );Notify("Đã từ chối phê duyệt thành công"),
+                                        {
+                                            status: {Value: "Từ chối"},
+                                            comment: "Từ chối nhanh",
+                                            dateApproved: Now()
+                                        }
+                                    );
+                                    Notify("Đã từ chối phê duyệt thành công"),
                                     Patch(
                                         'mWarehouse.Imports',
                                         LookUp(
                                             'mWarehouse.Imports',
-                                            ID = ThisItem.ID
+                                            importCode = ThisItem.importCode
                                         ),
-                                        {status: {Value: "Từ chối"},comment:"Từ chối nhanh",dateApproved:Now()}
-                                    );Notify("Đã từ chối phê duyệt thành công")
+                                        {
+                                            status: {Value: "Từ chối"},
+                                            comment: "Từ chối nhanh",
+                                            dateApproved: Now()
+                                        }
+                                    );
+                                    Notify("Đã từ chối phê duyệt thành công")
+                                );
+                                //false
+                                If (
+                                    TabList2.Selected.Value = "Tất cả",
+                                    ClearCollect(
+                                        yc,
+                                        'mWarehouse.Imports'
+                                    );
+                                    Collect(
+                                        yc,
+                                        'mWarehouse.Exports'
+                                    ),
+                                    If(
+                                        TabList2.Selected.Value = "Chưa duyệt",
+                                        ClearCollect(
+                                            yc,
+                                            Filter(
+                                                'mWarehouse.Imports',
+                                                status.Value = "Chờ duyệt"
+                                            )
+                                        );
+                                        Collect(
+                                            yc,
+                                            Filter(
+                                                'mWarehouse.Exports',
+                                                status.Value = "Chờ duyệt"
+                                            )
+                                        ),
+                                        If(
+                                            TabList2.Selected.Value = "Đã duyệt",
+                                            ClearCollect(
+                                                yc,
+                                                Filter(
+                                                    'mWarehouse.Imports',
+                                                    status.Value = "Đơn hàng"
+                                                )
+                                            );
+                                            Collect(
+                                                yc,
+                                                Filter(
+                                                    'mWarehouse.Exports',
+                                                    status.Value = "Đơn hàng"
+                                                )
+                                            ),
+                                            ClearCollect(
+                                                yc,
+                                                Filter(
+                                                    'mWarehouse.Imports',
+                                                    status.Value = "Từ chối"
+                                                )
+                                            );
+                                            Collect(
+                                                yc,
+                                                Filter(
+                                                    'mWarehouse.Exports',
+                                                    status.Value = "Từ chối"
+                                                )
+                                            )
+                                        )
+                                    )
                                 )
                             Visible: =If(ThisItem.status.Value = "Chờ duyệt",true,false)
                             Width: =50
                             X: =100
                             Y: =15
                             ZIndex: =2
+
+                        Rectangle4 As rectangle:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =Parent.Height
+                            Width: =Parent.Width
+                            ZIndex: =3
 
                     Button2_2 As button:
                         BorderColor: =App.Theme.Colors.Primary
