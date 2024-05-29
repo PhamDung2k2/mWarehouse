@@ -517,7 +517,7 @@ ThongTin_KH As screen:
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
             OnSelect: |-
-                =UpdateContext({ShowThemKH: false})
+                =//UpdateContext({ShowThemKH: false})
             Visible: =ShowThemKH
             Width: =Parent.Width
             ZIndex: =4
@@ -895,7 +895,7 @@ ThongTin_KH As screen:
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
             OnSelect: |-
-                =UpdateContext({ShowThemKH: false})
+                =//UpdateContext({ShowThemKH: false})
             Visible: =ShowThongTinKH
             Width: =Parent.Width
             ZIndex: =6

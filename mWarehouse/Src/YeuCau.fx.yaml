@@ -3592,7 +3592,7 @@ YeuCau As screen:
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
             OnSelect: |-
-                =UpdateContext({ShowThemKH: false})
+                =//UpdateContext({ShowThemKH: false})
             Visible: =ShowThemKH1
             Width: =Parent.Width
             ZIndex: =24

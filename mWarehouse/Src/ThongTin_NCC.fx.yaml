@@ -544,7 +544,7 @@ ThongTin_NCC As screen:
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
             OnSelect: |-
-                =UpdateContext({ShowThemSP: false})
+                =//UpdateContext({ShowThemSP: false})
             Visible: =ShowThemNCC1
             Width: =Parent.Width
             ZIndex: =4
@@ -1107,7 +1107,7 @@ ThongTin_NCC As screen:
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
             OnSelect: |-
-                =UpdateContext({ShowThongTinNCC: false})
+                =//UpdateContext({ShowThongTinNCC: false})
             Visible: =ShowThongTinNCC
             Width: =Parent.Width
             ZIndex: =6

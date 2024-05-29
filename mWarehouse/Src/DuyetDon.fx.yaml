@@ -445,6 +445,9 @@ DuyetDon As screen:
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
                         Height: =60
+                        OnSelect: |-
+                            =//false
+                            UpdateContext({ShowThongTinYC :true})
                         Size: =13
                         Text: =ThisItem.Created
                         Width: =170
@@ -471,6 +474,9 @@ DuyetDon As screen:
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
                         Height: =60
+                        OnSelect: |-
+                            =//false
+                            UpdateContext({ShowThongTinYC :true})
                         Size: =13
                         Text: |-
                             =Concatenate(Text(ThisItem.totalPrice,"###,###")," VNĐ")
@@ -701,6 +707,9 @@ DuyetDon As screen:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =Parent.Height
+                            OnSelect: |-
+                                =//false
+                                UpdateContext({ShowThongTinYC :true})
                             Width: =Parent.Width
                             ZIndex: =3
 
@@ -735,6 +744,9 @@ DuyetDon As screen:
                         HoverBorderColor: =App.Theme.Colors.Darker10
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =App.Theme.Colors.Darker10
+                        OnSelect: |-
+                            =//false
+                            UpdateContext({ShowThongTinYC :true})
                         PressedBorderColor: =App.Theme.Colors.Darker40
                         PressedColor: =Self.Color
                         PressedFill: =App.Theme.Colors.Darker40
@@ -761,8 +773,7 @@ DuyetDon As screen:
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
             OnSelect: |-
-                =//UpdateContext({ShowThemSP: false})
-                false
+                =//UpdateContext({ShowThemDon: false})
             Visible: =ShowThongTinYC
             Width: =Parent.Width
             ZIndex: =4
@@ -781,7 +792,21 @@ DuyetDon As screen:
             Y: =Rectangle1_21.Height/12
             ZIndex: =5
 
-            Icon4_11 As icon.Cancel:
+            Label1_24 As label:
+                Align: =Align.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Bold
+                Size: =13
+                Text: ="Mã đơn nhập"
+                Width: =200
+                X: =20
+                Y: =9
+                ZIndex: =1
+
+            Icon1_3 As icon.Cancel:
                 BorderColor: =App.Theme.Colors.Darker40
                 Color: =Color.Red
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -789,1339 +814,423 @@ DuyetDon As screen:
                 Height: =35
                 Icon: =Icon.Cancel
                 OnSelect: |-
-                    =UpdateContext({ShowThemSP: false})
+                    =UpdateContext({ShowThongTinYC: false})
                 Width: =35
-                X: =1091
-                Y: =12
+                X: =1086
+                Y: =16
                 ZIndex: =2
 
-            Button6_6 As button:
-                BorderColor: =
+            Container13_3 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =283
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1138
+                Y: =274
+                ZIndex: =3
+
+                Gallery2_3 As gallery.galleryVertical:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DelayItemLoading: =true
+                    Height: =283
+                    Items: =Filter('mWarehouse.ImportDetails',importID = Label1_25.Text)
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =70
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    Container18_3 As groupContainer.manualLayoutContainer:
+                        DropShadow: =DropShadow.Regular
+                        Height: =70
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =1128
+                        ZIndex: =1
+
+                        Label14_3 As label:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            Size: =13
+                            Text: =ThisItem.Title
+                            Width: =350
+                            X: =10
+                            Y: =15
+                            ZIndex: =1
+
+                        Button5_3 As button:
+                            BorderColor: =App.Theme.Colors.Primary
+                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            Fill: =RGBA(221, 79, 14, 0.75)
+                            Font: =App.Theme.Font
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            HoverBorderColor: =App.Theme.Colors.Darker10
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =App.Theme.Colors.Darker10
+                            PressedBorderColor: =App.Theme.Colors.Darker40
+                            PressedColor: =Self.Color
+                            PressedFill: =App.Theme.Colors.Darker40
+                            Text: =LookUp('mWarehouse.Products',ID = ThisItem.productID).category.Value
+                            Width: =100
+                            X: =411
+                            Y: =20
+                            ZIndex: =2
+
+                        Label13_14 As label:
+                            Align: =Align.Center
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            Size: =13
+                            Text: |-
+                                =Concatenate(Text(ThisItem.priceImport,"###,###")," VNĐ")
+                            Width: =200
+                            X: =533
+                            Y: =12
+                            ZIndex: =4
+
+                        Label12_11 As label:
+                            Align: =Align.Center
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            Size: =13
+                            Text: =ThisItem.quantity
+                            Width: =80
+                            X: =749
+                            Y: =12
+                            ZIndex: =5
+
+                        Label13_15 As label:
+                            Align: =Align.Center
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            Size: =13
+                            Text: |-
+                                =Concatenate(Text(ThisItem.totalPrice,"###,###")," VNĐ")
+                            Width: =200
+                            X: =849
+                            Y: =12
+                            ZIndex: =6
+
+            Container17_3 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Semibold
+                Height: =80
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1138
+                Y: =55
+                ZIndex: =5
+
+                Label11_3 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
+                    Size: =13
+                    Text: ="Nội dung"
+                    Width: =200
+                    X: =20
+                    Y: =20
+                    ZIndex: =1
+
+                TextInput3_3 As text:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    BorderThickness: =2
+                    Color: =RGBA(0, 0, 0, 1)
+                    Default: =Gallery3_2.Selected.Title
+                    DisabledBorderColor: =RGBA(9, 33, 98, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    FocusedBorderThickness: =4
+                    Font: =App.Theme.Font
+                    HintText: ="Nhập nội dung đơn nhập hàng"
+                    HoverBorderColor: =App.Theme.Colors.Darker40
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =App.Theme.Colors.Lighter70
+                    Size: =13
+                    Width: =571
+                    X: =105
+                    Y: =20
+                    ZIndex: =2
+
+                Label12_9 As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
+                    Size: =13
+                    Text: |-
+                        ="Số lượng:"
+                    Width: =100
+                    X: =676
+                    Y: =20
+                    ZIndex: =3
+
+                Label12_10 As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    Size: =13
+                    Text: =Sum(Filter('mWarehouse.ImportDetails',importID = Label1_25.Text),quantity)
+                    Width: =80
+                    X: =749
+                    Y: =20
+                    ZIndex: =4
+
+                Label13_12 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
+                    Size: =13
+                    Text: |-
+                        ="Tổng giá:"
+                    Width: =100
+                    X: =829
+                    Y: =20
+                    ZIndex: =5
+
+                Label13_13 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    Size: =13
+                    Text: |-
+                        =Concatenate(Text(Sum(Filter('mWarehouse.ImportDetails',importID = Label1_25.Text),totalPrice),"###,###")," VNĐ")
+                    Width: =200
+                    X: =922
+                    Y: =20
+                    ZIndex: =6
+
+            Container16_7 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Regular
+                Height: =70
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1138
+                Y: =206
+                ZIndex: =6
+
+                Label10_50 As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
+                    Size: =13
+                    Text: ="Tên sản phẩm"
+                    Width: =300
+                    X: =20
+                    Y: =16
+                    ZIndex: =2
+
+                Label10_51 As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
+                    Size: =13
+                    Text: ="Loại"
+                    X: =390
+                    Y: =16
+                    ZIndex: =3
+
+                Label10_52 As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
+                    Size: =13
+                    Text: ="Giá nhập"
+                    X: =567
+                    Y: =16
+                    ZIndex: =4
+
+                Label10_53 As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
+                    Size: =13
+                    Text: ="Số lượng"
+                    X: =723
+                    Y: =16
+                    ZIndex: =5
+
+                Label10_54 As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
+                    Size: =13
+                    Text: ="Tổng trị giá"
+                    X: =884
+                    Y: =16
+                    ZIndex: =6
+
+            Label1_25 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                Size: =13
+                Text: |-
+                    =//Concatenate("DN_",Text( Right(Last('mWarehouse.Imports').importCode,3)+1,"000")
+                    If(IsBlank(Gallery3_2.Selected.importCode),Gallery3_2.Selected.exportCode,Gallery3_2.Selected.importCode)
+                Width: =200
+                X: =192
+                Y: =9
+                ZIndex: =7
+
+            Button10_7 As button:
+                BorderColor: =App.Theme.Colors.Primary
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(152, 208, 70, 1)
+                Fill: =App.Theme.Colors.Primary
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =RGBA(127, 178, 57, 1)
+                HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =RGBA(127, 178, 57, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                OnSelect: |-
+                    =UpdateContext({ShowXacNhan:true})
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
                 Size: =15
-                Text: ="Thêm mới"
-                X: =868
-                Y: =524
-                ZIndex: =5
-
-            Label2_6 As label:
-                BorderColor: =App.Theme.Colors.Darker40
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =App.Theme.Font
-                Size: =13
-                Text: =
-                X: =60
-                Y: =32
-                ZIndex: =6
-
-            Label10_50 As label:
-                BorderColor: =App.Theme.Colors.Darker40
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Font: =App.Theme.Font
-                FontWeight: =FontWeight.Semibold
-                Size: =13
-                Text: ="Nhà cung cấp"
-                Width: =130
-                X: =10
-                Y: =19
-                ZIndex: =7
-
-            Toggle1_2 As toggleSwitch:
-                BorderColor: =App.Theme.Colors.Darker40
-                Color: =RGBA(0, 0, 0, 1)
-                FalseFill: =RGBA(128, 130, 133, 1)
-                FalseText: ="Cũ"
-                Font: =App.Theme.Font
-                HandleFill: =RGBA(255, 255, 255, 1)
-                OnChange: =
-                Size: =13
-                TrueFill: =App.Theme.Colors.Primary
-                TrueText: ="Mới"
-                X: =140
-                Y: =25
+                Text: ="Đồng ý"
+                X: =859
+                Y: =579
                 ZIndex: =8
 
-            Container11_108 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_108.Height+ComboBox3_3.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =7
-                Y: =59
+            Button10_6 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =App.Theme.Colors.Primary
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                OnSelect: =
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =15
+                Text: ="Từ chối"
+                X: =672
+                Y: =579
                 ZIndex: =9
 
-                Label16_108 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Tên nhà cung cấp"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                ComboBox3_3 As combobox:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    ChevronBackground: =App.Theme.Colors.Primary
-                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-                    ChevronHoverBackground: =App.Theme.Colors.Darker10
-                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    DisplayFields: =["Title"]
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Items: ='mWarehouse.Suppliers'
-                    PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =App.Theme.Colors.Darker30
-                    SearchFields: =["Title"]
-                    SearchItems: =Search('mWarehouse.Suppliers',ComboBox3_3.SearchText,Title)
-                    SelectionFill: =App.Theme.Colors.Primary
-                    SelectMultiple: =false
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =45
-                    ZIndex: =2
-
-            Container11_109 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_109.Height+TextInput5_93.Height+10
+            Container16_6 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Semibold
+                Height: =70
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =7
-                Y: =59
+                Width: =1138
+                X: =0.3333333333334849
+                Y: =135
                 ZIndex: =10
 
-                Label16_109 As label:
+                Label20 As label:
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
                     Size: =13
-                    Text: ="Tên nhà cung cấp"
-                    Width: =Parent.Width
-                    Y: =4
+                    Text: ="Ghi chú"
+                    Width: =80
+                    X: =20
+                    Y: =15
                     ZIndex: =1
 
-                TextInput5_93 As text:
+                TextInput6 As text:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderThickness: =2
                     Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
+                    Default: =
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     FocusedBorderThickness: =4
                     Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Tên nhà cung cấp"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_106 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_106.Height+TextInput5_91.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =767
-                Y: =19
-                ZIndex: =11
-
-                Label16_106 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Địa chỉ"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_91 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =90
-                    HintText: ="Địa chỉ nhà cung cấp"
+                    Height: =60
+                    HintText: ="Lý do từ chối đơn"
                     HoverBorderColor: =App.Theme.Colors.Darker40
                     HoverColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =App.Theme.Colors.Lighter70
                     Mode: =TextMode.MultiLine
                     Size: =13
-                    Width: =Parent.Width
-                    Y: =45
+                    Width: =575
+                    X: =103
+                    Y: =5
+                    ZIndex: =2
+
+                Label21 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
+                    Size: =13
+                    Text: |-
+                        ="Trạng thái đơn:"
+                    Width: =134
+                    X: =688
+                    Y: =15
                     ZIndex: =3
 
-            Container11_110 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_110.Height+TextInput5_94.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =387
-                Y: =59
-                ZIndex: =12
-
-                Label16_110 As label:
+                Label22 As label:
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Font: =App.Theme.Font
                     Size: =13
-                    Text: ="Tên người đại diện"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_94 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Tên người đại diện"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_112 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_112.Height+TextInput5_96.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =7
-                Y: =159
-                ZIndex: =13
-
-                Label16_112 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Số điện thoại"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_96 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Số điện thoại"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_113 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_113.Height+TextInput5_97.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =388
-                Y: =159
-                ZIndex: =14
-
-                Label16_113 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Viết tắt"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_97 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Tên nhà cung cấp viết tắt"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_114 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_114.Height+TextInput5_98.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =767
-                Y: =159
-                ZIndex: =15
-
-                Label16_114 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Mã code"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_98 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: |-
-                        =//Parent.Default
-                        //Concatenate(Loai_Nam_VT_001)
-                        //Concatenate(If(DataCardValue12.Selected.Value = "Điện thoại","DT"),If(DataCardValue12.Selected.Value = "Tablet","TL"),If(DataCardValue12.Selected.Value = "Laptop","LT"),"_",Right(DataCardValue18.Text,2),"_",DataCardValue13.Text,"_",Text( Right(Last('mWarehouse.Products').productCode,3)+1,"000"))
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Mã code sản phẩm"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_118 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_118.Height+TextInput5_102.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =7
-                Y: =259
-                ZIndex: =16
-
-                Label16_118 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Tên sản phẩm"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_102 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Tên sản phẩm"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_119 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_119.Height+TextInput5_103.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =387
-                Y: =259
-                ZIndex: =17
-
-                Label16_119 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Loại sản phẩm"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_103 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Loại sản phẩm"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_120 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_120.Height+TextInput5_104.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =767
-                Y: =259
-                ZIndex: =18
-
-                Label16_120 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Thương hiệu"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_104 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Thương hiệu"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_124 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_124.Height+TextInput5_108.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =7
-                Y: =359
-                ZIndex: =19
-
-                Label16_124 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Giá nhập"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_108 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Giá nhập"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_125 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_125.Height+TextInput5_109.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =387
-                Y: =359
-                ZIndex: =20
-
-                Label16_125 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Giá xuất"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_109 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Giá xuất"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_126 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_126.Height+TextInput5_110.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =767
-                Y: =359
-                ZIndex: =21
-
-                Label16_126 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Năm ra mắt"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_110 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Năm ra mắt"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_130 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_130.Height+TextInput5_114.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =7
-                Y: =459
-                ZIndex: =22
-
-                Label16_130 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Số lượng"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_114 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Số lượng"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_131 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_131.Height+AddMediaButton1_8.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = true,true,false)
-                Width: =350
-                X: =387
-                Y: =459
-                ZIndex: =23
-
-                Label16_131 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Hình ảnh"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                AddMediaWithImage1_8 As group:
-                    Height: =5
-                    Width: =5
-                    X: =40
-                    Y: =40
+                    Text: =Gallery3_2.Selected.status.Value
+                    X: =822
+                    Y: =15
                     ZIndex: =4
-
-                    UploadedImage1_8 As image:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        Height: =AddMediaButton1_8.Height
-                        Image: =If(IsBlank(AddMediaButton1_8.Media), SampleImage, AddMediaButton1_8.Media)
-                        ImagePosition: =ImagePosition.Fill
-                        Width: =AddMediaButton1_8.Width
-                        X: =AddMediaButton1_8.X
-                        Y: =AddMediaButton1_8.Y
-                        ZIndex: =5
-
-                    AddMediaButton1_8 As addMedia:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        ChangePictureText: ="Đổi hình"
-                        Color: =RGBA(0, 0, 0, 1)
-                        Fill: =RGBA(255, 255, 255, 1)
-                        Height: =130
-                        Size: =15
-                        Text: ="Chạm để thêm hình mới"
-                        Width: =Parent.Width
-                        Y: |
-                            =44
-                        ZIndex: =6
-
-            Container11_107 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_107.Height+TextInput5_92.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =767
-                Y: =20
-                ZIndex: =24
-
-                Label16_107 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Địa chỉ"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_92 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =90
-                    HintText: ="Địa chỉ nhà cung cấp"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Mode: =TextMode.MultiLine
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =45
-                    ZIndex: =3
-
-            Container11_111 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_111.Height+TextInput5_95.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =387
-                Y: =60
-                ZIndex: =25
-
-                Label16_111 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Tên người đại diện"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_95 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Tên người đại diện"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_115 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_115.Height+TextInput5_99.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =7
-                Y: =160
-                ZIndex: =26
-
-                Label16_115 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Số điện thoại"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_99 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Số điện thoại"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_116 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_116.Height+TextInput5_100.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =388
-                Y: =160
-                ZIndex: =27
-
-                Label16_116 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Viết tắt"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_100 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Tên nhà cung cấp viết tắt"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_117 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_117.Height+TextInput5_101.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =767
-                Y: =160
-                ZIndex: =28
-
-                Label16_117 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Mã code"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_101 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: |-
-                        =//Parent.Default
-                        //Concatenate(Loai_Nam_VT_001)
-                        //Concatenate(If(DataCardValue12.Selected.Value = "Điện thoại","DT"),If(DataCardValue12.Selected.Value = "Tablet","TL"),If(DataCardValue12.Selected.Value = "Laptop","LT"),"_",Right(DataCardValue18.Text,2),"_",DataCardValue13.Text,"_",Text( Right(Last('mWarehouse.Products').productCode,3)+1,"000"))
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Mã code sản phẩm"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_121 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_121.Height+TextInput5_105.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =7
-                Y: =260
-                ZIndex: =29
-
-                Label16_121 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Tên sản phẩm"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_105 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Tên sản phẩm"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_122 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_122.Height+TextInput5_106.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =387
-                Y: =260
-                ZIndex: =30
-
-                Label16_122 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Loại sản phẩm"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_106 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Loại sản phẩm"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_123 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_123.Height+TextInput5_107.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =767
-                Y: =260
-                ZIndex: =31
-
-                Label16_123 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Thương hiệu"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_107 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Thương hiệu"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_127 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_127.Height+TextInput5_111.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =7
-                Y: =360
-                ZIndex: =32
-
-                Label16_127 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Giá nhập"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_111 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Giá nhập"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_128 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_128.Height+TextInput5_112.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =387
-                Y: =360
-                ZIndex: =33
-
-                Label16_128 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Giá xuất"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_112 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Giá xuất"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_129 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_129.Height+TextInput5_113.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =767
-                Y: =360
-                ZIndex: =34
-
-                Label16_129 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Năm ra mắt"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_113 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Năm ra mắt"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_132 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_132.Height+TextInput5_115.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =7
-                Y: =460
-                ZIndex: =35
-
-                Label16_132 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Số lượng"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                TextInput5_115 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =""
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Height: =50
-                    HintText: ="Số lượng"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Width: =Parent.Width
-                    Y: =44
-                    ZIndex: =3
-
-            Container11_133 As groupContainer.manualLayoutContainer:
-                Height: |
-                    =Label16_133.Height+AddMediaButton1_9.Height+10
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =If(Toggle1_2.Value = false,true,false)
-                Width: =350
-                X: =387
-                Y: =460
-                ZIndex: =36
-
-                Label16_133 As label:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Font: =App.Theme.Font
-                    Size: =13
-                    Text: ="Hình ảnh"
-                    Width: =Parent.Width
-                    Y: =4
-                    ZIndex: =1
-
-                AddMediaWithImage1_9 As group:
-                    Height: =5
-                    Width: =5
-                    X: =40
-                    Y: =40
-                    ZIndex: =4
-
-                    UploadedImage1_9 As image:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        Height: =AddMediaButton1_9.Height
-                        Image: =If(IsBlank(AddMediaButton1_9.Media), SampleImage, AddMediaButton1_9.Media)
-                        ImagePosition: =ImagePosition.Fill
-                        Width: =AddMediaButton1_9.Width
-                        X: =AddMediaButton1_9.X
-                        Y: =AddMediaButton1_9.Y
-                        ZIndex: =5
-
-                    AddMediaButton1_9 As addMedia:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        ChangePictureText: ="Đổi hình"
-                        Color: =RGBA(0, 0, 0, 1)
-                        Fill: =RGBA(255, 255, 255, 1)
-                        Height: =130
-                        Size: =15
-                        Text: ="Chạm để thêm hình mới"
-                        Width: =Parent.Width
-                        Y: |
-                            =44
-                        ZIndex: =6
 
