@@ -263,6 +263,46 @@
                   "relativeAddress": 0
                 },
                 "region": {
+                  "charLength": 7,
+                  "charOffset": 161,
+                  "snippet": {
+                    "text": "exactin"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ThongTin",
+                "type": "ThongTin.Container9_2.Container16.ComboBox5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.ComboBox5.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.ComboBox5.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
                   "charLength": 3,
                   "charOffset": 64,
                   "snippet": {

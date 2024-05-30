@@ -431,7 +431,14 @@ YeuCau As screen:
                 Items: |-
                     =//'mWarehouse.Exports'
                     Sort(
-                    Search(info,TextInput2_1.Text,Title),Modified,SortOrder.Descending)
+                        Search(
+                            info,
+                            TextInput2_1.Text,
+                            Title
+                        ),
+                        Modified,
+                        SortOrder.Descending
+                    )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
