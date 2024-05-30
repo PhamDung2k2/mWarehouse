@@ -254,6 +254,21 @@
     "OverridableProperties": {},
     "Version": "2.1.0"
   },
+  "Number input": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_NumberInput",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "PowerApps_CoreControls_NumberInput",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Number input",
+    "Version": "2.2.4"
+  },
   "pieChart": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,

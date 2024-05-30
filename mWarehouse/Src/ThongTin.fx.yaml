@@ -1945,28 +1945,6 @@ ThongTin As screen:
                     Y: =16
                     ZIndex: =6
 
-                TextInput4 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Format: =TextFormat.Number
-                    HintText: ="Số lượng"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Tooltip: ="Số lượng"
-                    Width: =100
-                    X: =820
-                    Y: =16
-                    ZIndex: =7
-
                 Icon6 As icon.Check:
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(54, 176, 75, 1)
@@ -1977,7 +1955,7 @@ ThongTin As screen:
                     OnSelect: |-
                         =//false
                         If(
-                            IsBlank(ComboBox4.Selected.ID) Or IsBlank(ComboBox5.Selected.ID) Or IsBlank(TextInput4.Text) Or IsBlank(TextInput3.Text),
+                            IsBlank(ComboBox4.Selected.ID) Or IsBlank(ComboBox5.Selected.ID) Or IsBlank(NumberInput1_1.Value) Or IsBlank(TextInput3.Text),
                             Notify("Hãy điền đủ thông tin !"),
                             Patch(
                                 'mWarehouse.ImportDetails',
@@ -1987,19 +1965,31 @@ ThongTin As screen:
                                     productCode: ComboBox5.Selected.productCode,
                                     importID: Label1_11.Text,
                                     productID: ComboBox5.Selected.ID,
-                                    quantity: Value(TextInput4.Text),
+                                    quantity: Value(NumberInput1_1.Value),
                                     priceImport: Value(ComboBox5.Selected.priceImport),
-                                    totalPrice: Value(ComboBox5.Selected.priceImport * TextInput4.Text)
+                                    totalPrice: Value(ComboBox5.Selected.priceImport * NumberInput1_1.Value)
                                 }
                             );
                             Reset(ComboBox5);
-                            Reset(TextInput4);
+                            Reset(NumberInput1_1);
                             Notify("Thêm thành công!")
                         )
                     Width: =35
                     X: =967
                     Y: =16
                     ZIndex: =8
+
+                "NumberInput1_1 As 'Number input'":
+                    Align: ='NumberInput.Align'.Start
+                    BasePaletteColor: =RGBA(5, 102, 178, 1)
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =40
+                    Max: =LookUp('mWarehouse.Products',ID = ComboBox5_1.Selected.ID).quantity
+                    Value: =LookUp('mWarehouse.Products',ID = ComboBox5_1.Selected.ID).quantity
+                    Width: =100
+                    X: =833
+                    Y: =16
+                    ZIndex: =9
 
             Container17 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Semibold

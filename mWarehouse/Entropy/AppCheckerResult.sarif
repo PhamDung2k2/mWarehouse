@@ -254,6 +254,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.ComboBox4.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.ComboBox4.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 24,
+                  "snippet": {
+                    "text": "TextInput4"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "ThongTin",
+                "type": "ThongTin.Container9_2.Container16.ComboBox4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "TextInput4"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "ThongTin.Container9_2.Container16.ComboBox5.Items"
                 }
               ],
@@ -608,6 +648,46 @@
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.CTDonN.Container16_1.ComboBox4_1.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.CTDonN.Container16_1.ComboBox4_1.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 12,
+                  "charOffset": 26,
+                  "snippet": {
+                    "text": "TextInput4_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "YeuCau",
+                "type": "YeuCau.CTDonN.Container16_1.ComboBox4_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "TextInput4_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -2284,19 +2364,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.TextInput4.AccessibleLabel"
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.NumberInput1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.TextInput4.AccessibleLabel",
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.NumberInput1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ThongTin",
-                "type": "ThongTin.Container9_2.Container16.TextInput4"
+                "type": "ThongTin.Container9_2.Container16.NumberInput1_1"
               }
             }
           ],
@@ -5973,19 +6053,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "YeuCau.CTDonN.Container16_1.TextInput4_1.AccessibleLabel"
+                  "fullyQualifiedName": "YeuCau.CTDonN.Container16_1.NumberInput1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "YeuCau.CTDonN.Container16_1.TextInput4_1.AccessibleLabel",
+                  "fullyQualifiedName": "YeuCau.CTDonN.Container16_1.NumberInput1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "YeuCau",
-                "type": "YeuCau.CTDonN.Container16_1.TextInput4_1"
+                "type": "YeuCau.CTDonN.Container16_1.NumberInput1"
               }
             }
           ],
@@ -11895,6 +11975,66 @@
                 "member": "Text",
                 "module": "ThongTin",
                 "type": "ThongTin.Container1.Label5_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.NumberInput1_1.Value"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.NumberInput1_1.Value",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Value",
+                "module": "ThongTin",
+                "type": "ThongTin.Container9_2.Container16.NumberInput1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.NumberInput1_1.Max"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.NumberInput1_1.Max",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Max",
+                "module": "ThongTin",
+                "type": "ThongTin.Container9_2.Container16.NumberInput1_1"
               }
             }
           ],

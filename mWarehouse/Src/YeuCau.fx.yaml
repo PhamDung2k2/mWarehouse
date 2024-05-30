@@ -886,28 +886,6 @@ YeuCau As screen:
                     Y: =16
                     ZIndex: =6
 
-                TextInput4_1 As text:
-                    BorderColor: =App.Theme.Colors.Darker40
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    FocusedBorderThickness: =4
-                    Font: =App.Theme.Font
-                    Format: =TextFormat.Number
-                    HintText: ="Số lượng"
-                    HoverBorderColor: =App.Theme.Colors.Darker40
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =App.Theme.Colors.Lighter70
-                    Size: =13
-                    Tooltip: ="Số lượng"
-                    Width: =100
-                    X: =820
-                    Y: =16
-                    ZIndex: =7
-
                 Icon6_1 As icon.Check:
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =RGBA(54, 176, 75, 1)
@@ -918,7 +896,7 @@ YeuCau As screen:
                     OnSelect: |-
                         =//false
                         If(
-                            IsBlank(ComboBox4_1.Selected.ID) Or IsBlank(ComboBox5_1.Selected.ID) Or IsBlank(TextInput4_1.Text) Or IsBlank(TextInput3_1.Text),
+                            IsBlank(ComboBox4_1.Selected.ID) Or IsBlank(ComboBox5_1.Selected.ID) Or IsBlank(NumberInput1.Value) Or IsBlank(TextInput3_1.Text),
                             Notify("Hãy điền đủ thông tin !"),
                             Patch(
                                 'mWarehouse.ImportDetails',
@@ -928,19 +906,31 @@ YeuCau As screen:
                                     productCode: ComboBox5_1.Selected.productCode,
                                     importID: Label1_16.Text,
                                     productID: ComboBox5_1.Selected.ID,
-                                    quantity: Value(TextInput4_1.Text),
+                                    quantity: Value(NumberInput1.Value),
                                     priceImport: Value(ComboBox5_1.Selected.priceImport),
-                                    totalPrice: Value(ComboBox5_1.Selected.priceImport * TextInput4_1.Text)
+                                    totalPrice: Value(ComboBox5_1.Selected.priceImport * NumberInput1.Value)
                                 }
                             );
                             Reset(ComboBox5_1);
-                            Reset(TextInput4_1);
+                            Reset(NumberInput1);
                             Notify("Thêm thành công!")
                         )
                     Width: =35
                     X: =967
                     Y: =16
                     ZIndex: =8
+
+                "NumberInput1 As 'Number input'":
+                    Align: ='NumberInput.Align'.Start
+                    BasePaletteColor: =RGBA(5, 102, 178, 1)
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =40
+                    Max: =LookUp('mWarehouse.Products',ID = ComboBox5_1.Selected.ID).quantity
+                    Value: =LookUp('mWarehouse.Products',ID = ComboBox5_1.Selected.ID).quantity
+                    Width: =100
+                    X: =810
+                    Y: =16
+                    ZIndex: =9
 
             Container17_1 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Semibold
@@ -1302,7 +1292,7 @@ YeuCau As screen:
 
             Button11_7 As button:
                 BorderColor: =App.Theme.Colors.Primary
-                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledBorderColor: =RGBA(214, 221, 224, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Fill: =App.Theme.Colors.Primary
