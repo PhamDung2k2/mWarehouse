@@ -1921,7 +1921,18 @@ ThongTin As screen:
                     HoverFill: =App.Theme.Colors.Lighter70
                     InputTextPlaceholder: ="Chọn sản phẩm"
                     IsSearchable: =false
-                    Items: =Filter('mWarehouse.Products',supplierID = ComboBox4.Selected.ID And !(ID exactin 'mWarehouse.ImportDetails'.productID And LookUp('mWarehouse.Imports',importCode exactin 'mWarehouse.ImportDetails'.importID).status.Value = "Chờ duyệt") )
+                    Items: |-
+                        =Filter(
+                            'mWarehouse.Products',
+                            supplierID = ComboBox4.Selected.ID And !(ID exactin Filter(
+                                'mWarehouse.ImportDetails',
+                                importID in Filter(
+                                    'mWarehouse.Imports',
+                                    status.Value = "Chưa duyệt"
+                                ).importCode
+                            ).productID)
+                        )
+                        //And LookUp('mWarehouse.Imports',importCode exactin 'mWarehouse.ImportDetails'.importID).status.Value = "Chờ duyệt"))
                     PressedColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =App.Theme.Colors.Darker30
                     SearchFields: =["Title"]
