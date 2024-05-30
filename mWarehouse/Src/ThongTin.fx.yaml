@@ -1926,9 +1926,9 @@ ThongTin As screen:
                             'mWarehouse.Products',
                             supplierID = ComboBox4.Selected.ID And !(ID exactin Filter(
                                 'mWarehouse.ImportDetails',
-                                importID in Filter(
+                                importID exactin Filter(
                                     'mWarehouse.Imports',
-                                    status.Value = "Chưa duyệt"
+                                    status.Value = "Chờ duyệt"
                                 ).importCode
                             ).productID)
                         )
