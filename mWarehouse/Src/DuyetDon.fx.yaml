@@ -710,6 +710,9 @@ DuyetDon As screen:
                             OnSelect: |-
                                 =//false
                                 UpdateContext({ShowThongTinYC :true})
+                            Visible: |-
+                                =//true
+                                If(ThisItem.status.Value = "Chờ duyệt",false,true)
                             Width: =Parent.Width
                             ZIndex: =3
 
@@ -1124,6 +1127,7 @@ DuyetDon As screen:
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =If(Gallery3_2.Selected.status.Value = "Chờ duyệt",DisplayMode.Edit,DisplayMode.Disabled)
                 Fill: =App.Theme.Colors.Primary
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
@@ -1146,13 +1150,109 @@ DuyetDon As screen:
                 DisabledBorderColor: =RGBA(244, 244, 244, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =If(Gallery3_2.Selected.status.Value = "Chờ duyệt",DisplayMode.Edit,DisplayMode.Disabled)
                 Fill: =App.Theme.Colors.Primary
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
-                OnSelect: =
+                OnSelect: |-
+                    =If(
+                        IsBlank(TextInput6.Text),
+                        Notify("Nhập lý do từ chối duyệt đơn !"),
+                        If(
+                            IsBlank(Gallery3_2.Selected.importCode),
+                            Patch(
+                                'mWarehouse.Exports',
+                                LookUp(
+                                    'mWarehouse.Exports',
+                                    exportCode = Gallery3_2.Selected.exportCode
+                                ),
+                                {
+                                    status: {Value: "Từ chối"},
+                                    comment: TextInput6.Text,
+                                    dateApproved: Now()
+                                }
+                            );
+                            Notify("Đã từ chối phê duyệt thành công"),
+                            Patch(
+                                'mWarehouse.Imports',
+                                LookUp(
+                                    'mWarehouse.Imports',
+                                    importCode = Gallery3_2.Selected.importCode
+                                ),
+                                {
+                                    status: {Value: "Từ chối"},
+                                    comment: TextInput6.Text,
+                                    dateApproved: Now()
+                                }
+                            );
+                            Notify("Đã từ chối phê duyệt thành công")
+                        );
+                        
+                    //false
+                    If (
+                            TabList2.Selected.Value = "Tất cả",
+                            ClearCollect(
+                                yc,
+                                'mWarehouse.Imports'
+                            );
+                            Collect(
+                                yc,
+                                'mWarehouse.Exports'
+                            ),
+                            If(
+                                TabList2.Selected.Value = "Chưa duyệt",
+                                ClearCollect(
+                                    yc,
+                                    Filter(
+                                        'mWarehouse.Imports',
+                                        status.Value = "Chờ duyệt"
+                                    )
+                                );
+                                Collect(
+                                    yc,
+                                    Filter(
+                                        'mWarehouse.Exports',
+                                        status.Value = "Chờ duyệt"
+                                    )
+                                ),
+                                If(
+                                    TabList2.Selected.Value = "Đã duyệt",
+                                    ClearCollect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Imports',
+                                            status.Value = "Đơn hàng"
+                                        )
+                                    );
+                                    Collect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Exports',
+                                            status.Value = "Đơn hàng"
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Imports',
+                                            status.Value = "Từ chối"
+                                        )
+                                    );
+                                    Collect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Exports',
+                                            status.Value = "Từ chối"
+                                        )
+                                    )
+                                )
+                            )
+                        );
+                        UpdateContext({ShowThongTinYC:false})
+                    )
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
@@ -1191,10 +1291,11 @@ DuyetDon As screen:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderThickness: =2
                     Color: =RGBA(0, 0, 0, 1)
-                    Default: =
+                    Default: =Gallery3_2.Selected.comment
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayMode: =If(Gallery3_2.Selected.status.Value = "Chờ duyệt",DisplayMode.Edit,DisplayMode.Disabled)
                     FocusedBorderThickness: =4
                     Font: =App.Theme.Font
                     Height: =60
