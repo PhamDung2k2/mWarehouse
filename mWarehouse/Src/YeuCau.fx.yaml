@@ -928,7 +928,7 @@ YeuCau As screen:
                     Max: =LookUp('mWarehouse.Products',ID = ComboBox5_1.Selected.ID).quantity
                     Value: =LookUp('mWarehouse.Products',ID = ComboBox5_1.Selected.ID).quantity
                     Width: =100
-                    X: =810
+                    X: =833
                     Y: =16
                     ZIndex: =9
 
