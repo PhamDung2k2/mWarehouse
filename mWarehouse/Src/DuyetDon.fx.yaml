@@ -344,7 +344,7 @@ DuyetDon As screen:
                 Size: =13
                 Text: ="Ngày tạo"
                 Width: =109
-                X: =423
+                X: =351
                 Y: =15
                 ZIndex: =3
 
@@ -375,6 +375,20 @@ DuyetDon As screen:
                 X: =816
                 Y: =15
                 ZIndex: =5
+
+            Label10_55 As label:
+                Align: =Align.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                Size: =13
+                Text: ="Ngày duyệt"
+                Width: =109
+                X: =499
+                Y: =15
+                ZIndex: =6
 
         Container8_2 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -428,14 +442,13 @@ DuyetDon As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =60
+                        Height: =75
                         OnSelect: |-
                             =//false
                             UpdateContext({ShowThongTinYC :true})
                         Size: =13
                         Text: =ThisItem.Title
-                        Width: =377
-                        Y: =10
+                        Width: =342
                         ZIndex: =1
 
                     Label17_2 As label:
@@ -444,15 +457,14 @@ DuyetDon As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =App.Theme.Font
-                        Height: =60
+                        Height: =75
                         OnSelect: |-
                             =//false
                             UpdateContext({ShowThongTinYC :true})
                         Size: =13
-                        Text: =ThisItem.Created
-                        Width: =170
-                        X: =395
-                        Y: =10
+                        Text: =Text(ThisItem.Created,DateTimeFormat.ShortDate)
+                        Width: =100
+                        X: =355
                         ZIndex: =3
 
                     Label18_4 As label:
@@ -717,11 +729,10 @@ DuyetDon As screen:
                             ZIndex: =3
 
                     Button2_2 As button:
-                        BorderColor: =App.Theme.Colors.Primary
+                        BorderColor: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(244, 244, 244, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =DisplayMode.View
                         Fill: |-
                             =//RGBA(221, 79, 14, 0.75)
                             If(
@@ -760,9 +771,25 @@ DuyetDon As screen:
                         Size: =12
                         Text: =ThisItem.status.Value
                         Width: =100
-                        X: =637
+                        X: =645
                         Y: =18
                         ZIndex: =8
+
+                    Label17_4 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =75
+                        OnSelect: |-
+                            =//false
+                            UpdateContext({ShowThongTinYC :true})
+                        Size: =13
+                        Text: =ThisItem.dateApproved
+                        Width: =100
+                        X: =496
+                        ZIndex: =9
 
     ThongTinYC As group:
         Height: =5
@@ -1135,7 +1162,191 @@ DuyetDon As screen:
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: |-
-                    =UpdateContext({ShowXacNhan:true})
+                    =If(
+                        IsBlank(TextInput6.Text),
+                        If(
+                            IsBlank(Gallery3_2.Selected.importCode),
+                            Patch(
+                                'mWarehouse.Exports',
+                                LookUp(
+                                    'mWarehouse.Exports',
+                                    exportCode = Gallery3_2.Selected.exportCode
+                                ),
+                                {
+                                    status: {Value: "Đơn hàng"},
+                                    comment: "Đồng ý nhanh",
+                                    dateApproved: Now()
+                                }
+                            );
+                            Notify("Đã đồng ý phê duyệt thành công"),
+                            Patch(
+                                'mWarehouse.Imports',
+                                LookUp(
+                                    'mWarehouse.Imports',
+                                    importCode = Gallery3_2.Selected.importCode
+                                ),
+                                {
+                                    status: {Value: "Đơn hàng"},
+                                    comment: "Đồng ý nhanh",
+                                    dateApproved: Now()
+                                }
+                            );
+                            Notify("Đã đồng ý phê duyệt thành công")
+                        );
+                        
+                    //false
+                    If (
+                            TabList2.Selected.Value = "Tất cả",
+                            ClearCollect(
+                                yc,
+                                'mWarehouse.Imports'
+                            );
+                            Collect(
+                                yc,
+                                'mWarehouse.Exports'
+                            ),
+                            If(
+                                TabList2.Selected.Value = "Chưa duyệt",
+                                ClearCollect(
+                                    yc,
+                                    Filter(
+                                        'mWarehouse.Imports',
+                                        status.Value = "Chờ duyệt"
+                                    )
+                                );
+                                Collect(
+                                    yc,
+                                    Filter(
+                                        'mWarehouse.Exports',
+                                        status.Value = "Chờ duyệt"
+                                    )
+                                ),
+                                If(
+                                    TabList2.Selected.Value = "Đã duyệt",
+                                    ClearCollect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Imports',
+                                            status.Value = "Đơn hàng"
+                                        )
+                                    );
+                                    Collect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Exports',
+                                            status.Value = "Đơn hàng"
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Imports',
+                                            status.Value = "Từ chối"
+                                        )
+                                    );
+                                    Collect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Exports',
+                                            status.Value = "Từ chối"
+                                        )
+                                    )
+                                )
+                            )
+                        );
+                        UpdateContext({ShowThongTinYC: false}),
+                        If(
+                            IsBlank(Gallery3_2.Selected.importCode),
+                            Patch(
+                                'mWarehouse.Exports',
+                                LookUp(
+                                    'mWarehouse.Exports',
+                                    exportCode = Gallery3_2.Selected.exportCode
+                                ),
+                                {
+                                    status: {Value: "Đơn hàng"},
+                                    comment: TextInput6.Text,
+                                    dateApproved: Now()
+                                }
+                            );
+                            Notify("Đã đồng ý phê duyệt thành công"),
+                            Patch(
+                                'mWarehouse.Imports',
+                                LookUp(
+                                    'mWarehouse.Imports',
+                                    importCode = Gallery3_2.Selected.importCode
+                                ),
+                                {
+                                    status: {Value: "Đơn hàng"},
+                                    comment: TextInput6.Text,
+                                    dateApproved: Now()
+                                }
+                            );
+                            Notify("Đã đồng ý phê duyệt thành công")
+                        );
+                        
+                    //false
+                    If (
+                            TabList2.Selected.Value = "Tất cả",
+                            ClearCollect(
+                                yc,
+                                'mWarehouse.Imports'
+                            );
+                            Collect(
+                                yc,
+                                'mWarehouse.Exports'
+                            ),
+                            If(
+                                TabList2.Selected.Value = "Chưa duyệt",
+                                ClearCollect(
+                                    yc,
+                                    Filter(
+                                        'mWarehouse.Imports',
+                                        status.Value = "Chờ duyệt"
+                                    )
+                                );
+                                Collect(
+                                    yc,
+                                    Filter(
+                                        'mWarehouse.Exports',
+                                        status.Value = "Chờ duyệt"
+                                    )
+                                ),
+                                If(
+                                    TabList2.Selected.Value = "Đã duyệt",
+                                    ClearCollect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Imports',
+                                            status.Value = "Đơn hàng"
+                                        )
+                                    );
+                                    Collect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Exports',
+                                            status.Value = "Đơn hàng"
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Imports',
+                                            status.Value = "Từ chối"
+                                        )
+                                    );
+                                    Collect(
+                                        yc,
+                                        Filter(
+                                            'mWarehouse.Exports',
+                                            status.Value = "Từ chối"
+                                        )
+                                    )
+                                )
+                            )
+                        );
+                        UpdateContext({ShowThongTinYC: false})
+                    )
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
@@ -1299,7 +1510,7 @@ DuyetDon As screen:
                     FocusedBorderThickness: =4
                     Font: =App.Theme.Font
                     Height: =60
-                    HintText: ="Lý do từ chối đơn"
+                    HintText: ="Hãy nhập ghi chú khi phê duyệt"
                     HoverBorderColor: =App.Theme.Colors.Darker40
                     HoverColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =App.Theme.Colors.Lighter70

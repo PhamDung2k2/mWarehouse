@@ -327,7 +327,7 @@ YeuCau As screen:
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
                 Size: =15
-                Text: ="Tạo báo giá"
+                Text: ="Tạo đơn xuất"
                 X: =756
                 Y: =32
                 ZIndex: =5
@@ -2124,7 +2124,7 @@ YeuCau As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Visible: =ShowThemDonX
+            Visible: =false
             Width: =Parent.Width/1.2
             X: =Rectangle1_18.Width/12
             Y: =Rectangle1_18.Height/12
