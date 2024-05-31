@@ -1918,6 +1918,25 @@ ThongTin As screen:
                     ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                     ChevronHoverBackground: =App.Theme.Colors.Darker10
                     ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                    DefaultSelectedItems: |-
+                        =If (
+                            !IsEmpty(
+                                Filter(
+                                    'mWarehouse.ImportDetails',
+                                    importID = Label1_11.Text
+                                )
+                            ),
+                            LookUp(
+                                'mWarehouse.Suppliers',
+                                ID exactin Filter(
+                                    'mWarehouse.Products',
+                                    ID exactin Filter(
+                                        'mWarehouse.ImportDetails',
+                                        importID = Label1_11.Text
+                                    ).productID
+                                ).supplierID
+                            )
+                        )
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
@@ -1993,7 +2012,7 @@ ThongTin As screen:
                     OnSelect: |-
                         =//false
                         If(
-                            IsBlank(ComboBox4.Selected.ID) Or IsBlank(ComboBox5.Selected.ID) Or IsBlank(NumberInput1_1.Value) Or IsBlank(TextInput3.Text),
+                            IsBlank(ComboBox4.Selected.ID) Or IsBlank(ComboBox5.Selected.ID) Or IsBlank(NumberInput1_1.Value) ,
                             Notify("Hãy điền đủ thông tin !"),
                             Patch(
                                 'mWarehouse.ImportDetails',
