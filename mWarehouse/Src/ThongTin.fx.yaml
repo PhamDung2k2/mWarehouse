@@ -1865,6 +1865,7 @@ ThongTin As screen:
                             Reset(TextInput5_68);
                             Reset(TextInput5_69);
                             Reset(TextInput5_70);
+                            Reset(TextInput5_81);
                             Reset(AddMediaButton1_5);
                             
                         )
@@ -3899,29 +3900,35 @@ ThongTin As screen:
                     HoverFill: =RGBA(127, 178, 57, 1)
                     OnSelect: |-
                         =If(
-                                IsBlank(TextInput5_66.Text) Or IsBlank(TextInput5_65.Text) Or IsBlank(TextInput5_67.Text) Or IsBlank(TextInput5_68.Text)  Or IsBlank(TextInput5_70.Text) Or IsBlank(ComboBox3_4.Selected.Value),
-                                Notify("Không thể để trống các trường");
-                                ,
-                                Patch(
-                                    'mWarehouse.Products',
-                                    Defaults('mWarehouse.Products'),
-                                    {
-                                        Title: TextInput5_66.Text,
-                                        supplierID: ComboBox4.Selected.ID,
-                                        productCode: TextInput5_65.Text,
-                                        category: {Value: ComboBox3_4.Selected.Value},
-                                        status: {Value: "Đang chờ"},
-                                        priceImport: Value(TextInput5_68.Text),
-                                        priceExport: Value(TextInput5_69.Text),
-                                        brand: TextInput5_67.Text,
-                                        quantity: Value(0),
-                                        year: Value(TextInput5_70.Text),
-                                        image: UploadedImage1_5.Image
-                                    }
-                                );
-                                UpdateContext({ShowThemSPdemo: false});
-                                Notify("Thêm mới thành công");
-                            )
+                            IsBlank(TextInput5_66.Text) Or IsBlank(TextInput5_67.Text) Or IsBlank(TextInput5_68.Text) Or IsBlank(TextInput5_70.Text) Or IsBlank(ComboBox3_4.Selected.Value) Or IsBlank(TextInput5_69.Text) Or IsBlank(TextInput5_81.Text) Or IsBlank(UploadedImage1_5.Image),
+                            Notify("Không thể để trống các trường");
+                            ,
+                            Patch(
+                                'mWarehouse.Products',
+                                Defaults('mWarehouse.Products'),
+                                {
+                                    Title: TextInput5_66.Text,
+                                    supplierID: ComboBox4.Selected.ID,
+                                    productCode: TextInput5_65.Text,
+                                    category: {Value: ComboBox3_4.Selected.Value},
+                                    status: {Value: "Đang chờ"},
+                                    priceImport: Value(TextInput5_68.Text),
+                                    priceExport: Value(TextInput5_69.Text),
+                                    brand: TextInput5_67.Text,
+                                    quantity: Value(0),
+                                    year: Value(TextInput5_70.Text),
+                                    image: UploadedImage1_5.Image
+                                }
+                            );
+                            Patch(
+                                'mWarehouse.ImportDetails',
+                                Defaults('mWarehouse.ImportDetails'),
+                                {}
+                            );
+                            UpdateContext({ShowThemSPdemo: false});
+                            Notify("Thêm mới thành công");
+                            
+                        )
                     PressedBorderColor: =App.Theme.Colors.Darker40
                     PressedColor: =Self.Color
                     PressedFill: =App.Theme.Colors.Darker40
@@ -3986,6 +3993,50 @@ ThongTin As screen:
                             Y: |
                                 =44
                             ZIndex: =6
+
+                Container11_94 As groupContainer.manualLayoutContainer:
+                    Height: |
+                        =Label16_94.Height+TextInput5_81.Height+10
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =350
+                    X: =380
+                    Y: =301
+                    ZIndex: =11
+
+                    Label16_94 As label:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Size: =13
+                        Text: ="Số lượng cần nhập"
+                        Width: =Parent.Width
+                        Y: =4
+                        ZIndex: =1
+
+                    TextInput5_81 As text:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        BorderThickness: =2
+                        Color: =RGBA(0, 0, 0, 1)
+                        Default: =""
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        FocusedBorderThickness: =4
+                        Font: =App.Theme.Font
+                        Format: =TextFormat.Number
+                        Height: =50
+                        HintText: ="Số lượng cần nhập"
+                        HoverBorderColor: =App.Theme.Colors.Darker40
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =App.Theme.Colors.Lighter70
+                        Size: =13
+                        Width: =Parent.Width
+                        Y: =44
+                        ZIndex: =3
 
             Label10_26 As label:
                 BorderColor: =App.Theme.Colors.Darker40
