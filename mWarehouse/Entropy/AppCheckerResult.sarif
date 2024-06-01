@@ -1224,7 +1224,7 @@
                 },
                 "region": {
                   "charLength": 206,
-                  "charOffset": 579,
+                  "charOffset": 523,
                   "snippet": {
                     "text": "Sum(\n                    Filter(\n                        'mWarehouse.ImportDetails',\n                        importID = Label1_22.Text\n                    ),\n                    totalPrice\n                )"
                   }
@@ -15921,6 +15921,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "YeuCau.Container4_1.Container5_1.TextInput2_1.DelayOutput"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container4_1.Container5_1.TextInput2_1.DelayOutput",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DelayOutput",
+                "module": "YeuCau",
+                "type": "YeuCau.Container4_1.Container5_1.TextInput2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-TextInputIsNotDelayOutput",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "YeuCau.HuyBo1.Width"
                 }
               ],
@@ -16504,156 +16534,6 @@
                 "member": "Height",
                 "module": "YeuCau",
                 "type": "YeuCau.HuyBo1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "YeuCau.Container9_20.Container12_7.Container11_9.TextInput5_5.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "YeuCau.Container9_20.Container12_7.Container11_9.TextInput5_5.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "YeuCau",
-                "type": "YeuCau.Container9_20.Container12_7.Container11_9.TextInput5_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "YeuCau.Container9_20.Container12_7.Container11_133.TextInput5_115.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "YeuCau.Container9_20.Container12_7.Container11_133.TextInput5_115.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "YeuCau",
-                "type": "YeuCau.Container9_20.Container12_7.Container11_133.TextInput5_115"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "YeuCau.Container9_20.Container12_7.Container11_134.TextInput5_116.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "YeuCau.Container9_20.Container12_7.Container11_134.TextInput5_116.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "YeuCau",
-                "type": "YeuCau.Container9_20.Container12_7.Container11_134.TextInput5_116"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "YeuCau.Container9_20.Container12_7.Container11_135.TextInput5_117.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "YeuCau.Container9_20.Container12_7.Container11_135.TextInput5_117.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "YeuCau",
-                "type": "YeuCau.Container9_20.Container12_7.Container11_135.TextInput5_117"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "YeuCau.Container9_20.Container12_7.Container11_136.TextInput5_118.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "YeuCau.Container9_20.Container12_7.Container11_136.TextInput5_118.Default",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "YeuCau",
-                "type": "YeuCau.Container9_20.Container12_7.Container11_136.TextInput5_118"
               }
             }
           ],

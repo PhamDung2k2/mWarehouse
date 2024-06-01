@@ -536,7 +536,7 @@ YeuCau As screen:
                             OnSelect: |-
                                 =If(
                                     Gallery3_1.Selected.status.Value <> "Chờ duyệt",
-                                    Notify("Không thể chỉnh sửa thông tin này vì đã được giám đốc phê duyệt !"),If(!IsBlank(Gallery3_1.Selected.importCode),UpdateContext({ShowUpdateSP_DN1: true}))
+                                    Notify("Không thể chỉnh sửa thông tin này vì đã được giám đốc phê duyệt !"),If(!IsBlank(Gallery3_1.Selected.importCode),UpdateContext({ShowThemDonN1: true}))
                                     
                                 )
                             Size: =20
@@ -3343,7 +3343,7 @@ YeuCau As screen:
             Height: =Parent.Height
             OnSelect: |-
                 =UpdateContext({ShowThemDon: false})
-            Visible: =ShowThemDonN
+            Visible: =
             Width: =Parent.Width
             ZIndex: =28
 
@@ -3355,7 +3355,7 @@ YeuCau As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Visible: =ShowThemDonN
+            Visible: =ShowThemDonN1
             Width: =Parent.Width/1.2
             X: =Rectangle1_18.Width/12
             Y: =Rectangle1_18.Height/12
@@ -3465,7 +3465,30 @@ YeuCau As screen:
                             DisabledColor: =RGBA(244, 244, 244, 1)
                             Height: =35
                             Icon: =Icon.HorizontalLine
-                            OnSelect: =RemoveIf('mWarehouse.ImportDetails',ID = Gallery2_2.Selected.ID)
+                            OnSelect: |-
+                                =
+                                If(
+                                    IsEmpty(
+                                        Filter(
+                                            'mWarehouse.Products',
+                                            ID = Gallery2_2.Selected.productID And status.Value = "Đang chờ"
+                                        )
+                                    ),
+                                    RemoveIf(
+                                        'mWarehouse.ImportDetails',
+                                        ID = Gallery2_2.Selected.ID
+                                    );
+                                    RemoveIf(
+                                        'mWarehouse.Products',
+                                        ID = Gallery2_2.Selected.productID
+                                    );
+                                    ,
+                                    RemoveIf(
+                                        'mWarehouse.ImportDetails',
+                                        ID = Gallery2_2.Selected.ID
+                                    );
+                                    
+                                )
                             Width: =35
                             X: =1077
                             Y: =17
@@ -3512,7 +3535,7 @@ YeuCau As screen:
                             Font: =App.Theme.Font
                             Height: =65
                             OnSelect: |-
-                                =UpdateContext({ShowUpdateSP_DN1:true})
+                                =UpdateContext({ShowUpdateSP_DN2:true})
                             Size: =13
                             Text: |-
                                 =Concatenate(Text(ThisItem.totalPrice,"###,###")," VNĐ")
@@ -3728,7 +3751,7 @@ YeuCau As screen:
                     BorderColor: =App.Theme.Colors.Darker40
                     BorderThickness: =2
                     Color: =RGBA(0, 0, 0, 1)
-                    Default: =
+                    Default: =Gallery3_1.Selected.Title
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
@@ -3883,8 +3906,9 @@ YeuCau As screen:
                 Font: =App.Theme.Font
                 FontWeight: =FontWeight.Semibold
                 Size: =13
-                Text: |
-                    =Concatenate("DN_",Text( Right(Last('mWarehouse.Imports').importCode,3)+1,"000"))
+                Text: |-
+                    =//Concatenate("DN_",Text( Right(Last('mWarehouse.Imports').importCode,3)+1,"000"))
+                    Gallery3_1.Selected.importCode
                 Width: =200
                 X: =192
                 Y: =9
@@ -3902,12 +3926,12 @@ YeuCau As screen:
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: |-
-                    =UpdateContext({ShowXacNhan1:true})
+                    =UpdateContext({ShowXacNhan2:true})
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
                 Size: =15
-                Text: ="Xác nhận"
+                Text: ="Cập nhật"
                 X: =859
                 Y: =579
                 ZIndex: =8
@@ -3924,12 +3948,12 @@ YeuCau As screen:
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: |-
-                    =UpdateContext({ShowHuyBo1:true})
+                    =UpdateContext({ShowHuyBo2:true})
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
                 Size: =15
-                Text: ="Hủy bỏ"
+                Text: ="Xóa đơn"
                 X: =672
                 Y: =579
                 ZIndex: =9
@@ -3938,7 +3962,7 @@ YeuCau As screen:
             BorderColor: =App.Theme.Colors.Darker40
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
-            Visible: =ShowHuyBo1
+            Visible: =
             Width: =Parent.Width
             ZIndex: =30
 
@@ -3950,7 +3974,7 @@ YeuCau As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Visible: =ShowHuyBo1
+            Visible: =ShowHuyBo2
             Width: =Container9_14.Width / 1.5
             X: =HuyBo1_1.Width /2.5
             Y: =HuyBo1_1.Height / 1.1
@@ -3984,9 +4008,9 @@ YeuCau As screen:
                 HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: |+
                     =RemoveIf('mWarehouse.ImportDetails',importID = Label1_22.Text);
-                    Notify("Hủy đơn nhập thành công!");
-                    UpdateContext({ShowThemDonN:false});
-                    UpdateContext({ShowHuyBo1:false});
+                    Notify("Xóa đơn nhập thành công!");
+                    UpdateContext({ShowThemDonN1:false});
+                    UpdateContext({ShowHuyBo2:false});
                     Reset(TextInput3_2);
                     Reset(ComboBox4_2);
                     
@@ -4011,7 +4035,7 @@ YeuCau As screen:
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: |-
-                    =UpdateContext({ShowHuyBo1:false})
+                    =UpdateContext({ShowHuyBo2:false})
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
@@ -4025,7 +4049,7 @@ YeuCau As screen:
             BorderColor: =App.Theme.Colors.Darker40
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
-            Visible: =ShowXacNhan1
+            Visible: =
             Width: =Parent.Width
             ZIndex: =32
 
@@ -4037,7 +4061,7 @@ YeuCau As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Visible: =ShowXacNhan1
+            Visible: =ShowXacNhan2
             Width: =Container9_14.Width / 1.5
             X: =XacNhan1_1.Width /2.5
             Y: =XacNhan1_1.Height / 1.1
@@ -4075,16 +4099,14 @@ YeuCau As screen:
                         Notify("Không được để trống !"),
                         Patch(
                             'mWarehouse.Imports',
-                            Defaults('mWarehouse.Imports'),
+                            LookUp('mWarehouse.Imports',importCode = Label1_22.Text),
                             {
                                 Title: TextInput3_2.Text,
-                                importCode: Label1_22.Text,
                                 supplierID: ComboBox4_2.Selected.ID,
                                 userID: LookUp(
                                     'mWarehouse.Users',
                                     account = TextInput1.Text
                                 ).ID,
-                                status: {Value: "Chờ duyệt"},
                                 amount: Value(Label12_7.Text),
                                 totalPrice: Value(
                                     Sum(
@@ -4097,9 +4119,9 @@ YeuCau As screen:
                                 )
                             }
                         );
-                        Notify("Hoàn thành đơn nhập !");
-                        UpdateContext({ShowThemDonN: false});
-                        UpdateContext({ShowXacNhan1: false});
+                        Notify("Cập nhật đơn nhập thành công !");
+                        UpdateContext({ShowThemDonN1: false});
+                        UpdateContext({ShowXacNhan2: false});
                         Reset(ComboBox4_2);
                         Reset(TextInput3_2);
                         //false
@@ -4150,7 +4172,7 @@ YeuCau As screen:
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
                 OnSelect: |-
-                    =UpdateContext({ShowXacNhan1:false})
+                    =UpdateContext({ShowXacNhan2:false})
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
@@ -4166,7 +4188,7 @@ YeuCau As screen:
             Height: =Parent.Height
             OnSelect: |-
                 =//UpdateContext({ShowThemSP: false})
-            Visible: =ShowThemSPdemo1
+            Visible: =
             Width: =Parent.Width
             ZIndex: =34
 
@@ -4178,7 +4200,7 @@ YeuCau As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Visible: =ShowThemSPdemo1
+            Visible: =
             Width: =Parent.Width/1.2
             X: =Rectangle1_19.Width/12
             Y: =Rectangle1_19.Height/12
@@ -4916,7 +4938,7 @@ YeuCau As screen:
             Height: =Parent.Height
             OnSelect: |-
                 =//UpdateContext({ShowThemSP: false})
-            Visible: =ShowUpdateSP_DN1
+            Visible: =ShowUpdateSP_DN2
             Width: =Parent.Width
             ZIndex: =37
 
@@ -4928,7 +4950,7 @@ YeuCau As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Visible: =ShowUpdateSP_DN1
+            Visible: =ShowUpdateSP_DN2
             Width: =Parent.Width/1.2
             X: =Rectangle1_24.Width/12
             Y: =Rectangle1_24.Height/12
@@ -4942,7 +4964,7 @@ YeuCau As screen:
                 Height: =35
                 Icon: =Icon.Cancel
                 OnSelect: |
-                    =UpdateContext({ShowUpdateSP_DN1: false});
+                    =UpdateContext({ShowUpdateSP_DN2: false});
                 Width: =35
                 X: =1091
                 Y: =12
@@ -5011,7 +5033,7 @@ YeuCau As screen:
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
-                        Default: =Text(ComboBox4.Selected.phone,"0000000000")
+                        Default: =Text(ComboBox4_2.Selected.phone,"0000000000")
                         DisabledBorderColor: =RGBA(9, 33, 98, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
@@ -5055,7 +5077,7 @@ YeuCau As screen:
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
-                        Default: =ComboBox4.Selected.representative
+                        Default: =ComboBox4_2.Selected.representative
                         DisabledBorderColor: =RGBA(9, 33, 98, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
@@ -5099,7 +5121,7 @@ YeuCau As screen:
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
-                        Default: =ComboBox4.Selected.address
+                        Default: =ComboBox4_2.Selected.address
                         DisabledBorderColor: =RGBA(9, 33, 98, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
@@ -5144,7 +5166,7 @@ YeuCau As screen:
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
-                        Default: =ComboBox4.Selected.shortcut
+                        Default: =ComboBox4_2.Selected.shortcut
                         DisabledBorderColor: =RGBA(9, 33, 98, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
@@ -5187,7 +5209,8 @@ YeuCau As screen:
                         BorderColor: =App.Theme.Colors.Darker40
                         BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
-                        Default: =ComboBox4.Selected.Title
+                        Default: |
+                            =ComboBox4_2.Selected.Title
                         DisabledBorderColor: =RGBA(9, 33, 98, 1)
                         DisabledColor: =RGBA(0, 0, 0, 1)
                         DisabledFill: =RGBA(255, 255, 255, 1)
@@ -5544,7 +5567,7 @@ YeuCau As screen:
                             ,
                             Patch(
                                 'mWarehouse.Products',
-                                LookUp('mWarehouse.Products',ID = Gallery2.Selected.productID),
+                                LookUp('mWarehouse.Products',ID = Gallery2_2.Selected.productID),
                                 {
                                     Title: TextInput5_120.Text,
                                     priceImport: Value(TextInput5_123.Text),
@@ -5556,7 +5579,7 @@ YeuCau As screen:
                             );
                             Patch(
                                 'mWarehouse.ImportDetails',
-                                LookUp('mWarehouse.ImportDetails',ID = Gallery2.Selected.ID),
+                                LookUp('mWarehouse.ImportDetails',ID = Gallery2_2.Selected.ID),
                                 {
                                     Title: TextInput5_120.Text,
                                     quantity: Value(NumberInput2_1.Value),
@@ -5564,7 +5587,7 @@ YeuCau As screen:
                                     totalPrice: Value(TextInput5_123.Text * NumberInput2_1.Value)
                                 }
                             );
-                            UpdateContext({ShowUpdateSP_DN1: false});
+                            UpdateContext({ShowUpdateSP_DN2: false});
                             Notify("Cập nhật thông tin thành công");
                             
                         )
@@ -5657,6 +5680,7 @@ YeuCau As screen:
                         ZIndex: =1
 
                     "NumberInput2_1 As 'Number input'":
+                        BasePaletteColor: =
                         DisplayMode: =DisplayMode.Edit
                         Height: =50
                         Value: =Gallery2_2.Selected.quantity
