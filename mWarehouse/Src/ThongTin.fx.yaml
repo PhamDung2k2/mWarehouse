@@ -4824,7 +4824,7 @@ ThongTin As screen:
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             Height: =AddMediaButton1_7.Height
-                            Image: =If(IsBlank(AddMediaButton1_7.Media), Gallery3.Selected.image.Full,AddMediaButton1_7.Media )
+                            Image: =If(IsBlank(AddMediaButton1_7.Media), LookUp('mWarehouse.Products',ID = Gallery2.Selected.productID).image.Full,AddMediaButton1_7.Media )
                             ImagePosition: =ImagePosition.Fill
                             Width: =AddMediaButton1_7.Width
                             X: =AddMediaButton1_7.X
