@@ -551,7 +551,7 @@ ThongTin As screen:
                 Items: |-
                     =//'mWarehouse.Products'
                     //BarcodeReader1.Barcodes
-                    If(IsBlank( Barcode),Sort(Search('mWarehouse.Products',TextInput2.Text,Title),Modified,SortOrder.Descending),Sort(Search(Filter('mWarehouse.Products',productCode = First(Barcode).Value),TextInput2.Text,Title),Modified,SortOrder.Descending))
+                    If(IsBlank( Barcode),Sort(Search('mWarehouse.Products',TextInput2.Text,Title),Modified,SortOrder.Descending),Sort(Search(Filter('mWarehouse.Products',productCode = First(Barcode).Value),TextInput2.Text,Title),Modified ,SortOrder.Descending))
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -2918,7 +2918,7 @@ ThongTin As screen:
 
                 Container11_67 As groupContainer.manualLayoutContainer:
                     Height: |
-                        =Label16_67.Height+TextInput5_59.Height+10
+                        =Label16_67.Height+NumberInput5.Height+10
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -2939,25 +2939,14 @@ ThongTin As screen:
                         Y: =4
                         ZIndex: =1
 
-                    TextInput5_59 As text:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        BorderThickness: =2
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =LookUp('mWarehouse.Products',ID = Gallery3.Selected.ID).quantity
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
+                    "NumberInput5 As 'Number input'":
+                        DisplayMode: =DisplayMode.Edit
                         Height: =50
-                        HintText: ="Số lượng"
-                        HoverBorderColor: =App.Theme.Colors.Darker40
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        Size: =13
-                        Width: =Parent.Width
+                        Value: =Gallery3.Selected.quantity
+                        Width: =350
+                        X: =0
                         Y: =44
-                        ZIndex: =3
+                        ZIndex: =4
 
                 Button6_2 As button:
                     BorderColor: =RGBA(255, 255, 255, 1)
@@ -2972,7 +2961,7 @@ ThongTin As screen:
                     HoverFill: =RGBA(127, 178, 57, 1)
                     OnSelect: |-
                         =If(
-                            IsBlank(TextInput5_56.Text) Or IsBlank(TextInput5_57.Text) Or IsBlank(TextInput5_59.Text) Or IsBlank(UploadedImage1_4.Image),
+                            IsBlank(TextInput5_56.Text) Or IsBlank(TextInput5_57.Text) Or IsBlank(NumberInput5.Value) Or IsBlank(UploadedImage1_4.Image),
                             Notify("Không được để trống các trường"),
                             Patch(
                                 'mWarehouse.Products',
@@ -2983,7 +2972,7 @@ ThongTin As screen:
                                 {
                                     priceImport: Value(TextInput5_56.Text),
                                     priceExport: Value(TextInput5_57.Text),
-                                    quantity: Value(TextInput5_59.Text),
+                                    quantity: Value(NumberInput5.Value),
                                     status: {Value: ComboBox6.Selected.Value},
                                     image: UploadedImage1_4.Image
                                 }
@@ -3164,14 +3153,52 @@ ThongTin As screen:
                 HoverBorderColor: =App.Theme.Colors.Darker10
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =App.Theme.Colors.Darker10
-                OnSelect: |+
-                    =RemoveIf('mWarehouse.ImportDetails',importID = Label1_11.Text);
+                OnSelect: |-
+                    =/*RemoveIf('mWarehouse.ImportDetails',importID = Label1_11.Text);
                     Notify("Hủy đơn nhập thành công!");
                     UpdateContext({ShowThemDon:false});
                     UpdateContext({ShowHuyBo:false});
                     Reset(TextInput3);
                     Reset(ComboBox4);
-                    
+                    */
+                    If(
+                        !IsEmpty(
+                            Filter(
+                                'mWarehouse.Products',
+                                ID exactin Filter(
+                                    'mWarehouse.ImportDetails',
+                                    importID = Label1_11.Text
+                                ).productID And status.Value = "Đang chờ"
+                            )
+                        ),
+                        RemoveIf(
+                            'mWarehouse.ImportDetails',
+                            importID = Label1_11.Text
+                        );
+                        RemoveIf(
+                            'mWarehouse.Products',
+                            ID exactin Filter(
+                                'mWarehouse.ImportDetails',
+                                importID = Label1_11.Text
+                            ).productID And status.Value = "Đang chờ"
+                        );
+                        Notify("Hủy đơn nhập thành công!");
+                        UpdateContext({ShowThemDon: false});
+                        UpdateContext({ShowHuyBo: false});
+                        Reset(TextInput3);
+                        Reset(ComboBox4);
+                        ,
+                        RemoveIf(
+                            'mWarehouse.ImportDetails',
+                            importID = Label1_11.Text
+                        );
+                        Notify("Hủy đơn nhập thành công!");
+                        UpdateContext({ShowThemDon: false});
+                        UpdateContext({ShowHuyBo: false});
+                        Reset(TextInput3);
+                        Reset(ComboBox4);
+                        
+                    )
                 PressedBorderColor: =App.Theme.Colors.Darker40
                 PressedColor: =Self.Color
                 PressedFill: =App.Theme.Colors.Darker40
@@ -4748,7 +4775,7 @@ ThongTin As screen:
                     HoverFill: =RGBA(127, 178, 57, 1)
                     OnSelect: |-
                         =If(
-                            IsBlank(TextInput5_87.Text) Or IsBlank(TextInput5_88.Text) Or IsBlank(TextInput5_89.Text) Or IsBlank(TextInput5_91.Text) Or IsBlank(TextInput5_90.Text) Or IsBlank(TextInput5_92.Text) Or IsBlank(UploadedImage1_7.Image),
+                            IsBlank(TextInput5_87.Text) Or IsBlank(TextInput5_88.Text) Or IsBlank(TextInput5_89.Text) Or IsBlank(TextInput5_91.Text) Or IsBlank(TextInput5_90.Text) Or IsBlank(NumberInput4.Value) Or IsBlank(UploadedImage1_7.Image),
                             Notify("Không thể để trống các trường");
                             ,
                             Patch(
@@ -4768,9 +4795,9 @@ ThongTin As screen:
                                 LookUp('mWarehouse.ImportDetails',ID = Gallery2.Selected.ID),
                                 {
                                     Title: TextInput5_87.Text,
-                                    quantity: Value(TextInput5_92.Text),
+                                    quantity: Value(NumberInput4.Value),
                                     priceImport: Value(TextInput5_89.Text),
-                                    totalPrice: Value(TextInput5_89.Text * TextInput5_92.Text)
+                                    totalPrice: Value(TextInput5_89.Text * NumberInput4.Value)
                                 }
                             );
                             UpdateContext({ShowUpdateSP_DN: false});
@@ -4844,7 +4871,7 @@ ThongTin As screen:
 
                 Container11_107 As groupContainer.manualLayoutContainer:
                     Height: |
-                        =Label16_107.Height+TextInput5_92.Height+10
+                        =Label16_107.Height+NumberInput4.Height+10
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -4865,26 +4892,14 @@ ThongTin As screen:
                         Y: =4
                         ZIndex: =1
 
-                    TextInput5_92 As text:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        BorderThickness: =2
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =Gallery2.Selected.quantity
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
-                        Format: =TextFormat.Number
+                    "NumberInput4 As 'Number input'":
+                        DisplayMode: =DisplayMode.Edit
                         Height: =50
-                        HintText: ="Số lượng cần nhập"
-                        HoverBorderColor: =App.Theme.Colors.Darker40
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        Size: =13
-                        Width: =Parent.Width
+                        Value: =Gallery2.Selected.quantity
+                        Width: =350
+                        X: =0
                         Y: =44
-                        ZIndex: =3
+                        ZIndex: =4
 
             Label10_49 As label:
                 BorderColor: =App.Theme.Colors.Darker40
