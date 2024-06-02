@@ -1454,286 +1454,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 11,
-                  "charOffset": 135,
-                  "snippet": {
-                    "text": "ComboBox3_6"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "YeuCau",
-                "type": "YeuCau.CTDonN_1.Container16_4.Icon3_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ComboBox3_6"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 159,
-                  "snippet": {
-                    "text": "TextInput5_110"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "YeuCau",
-                "type": "YeuCau.CTDonN_1.Container16_4.Icon3_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "TextInput5_110"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 186,
-                  "snippet": {
-                    "text": "TextInput5_111"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "YeuCau",
-                "type": "YeuCau.CTDonN_1.Container16_4.Icon3_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "TextInput5_111"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 213,
-                  "snippet": {
-                    "text": "TextInput5_112"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "YeuCau",
-                "type": "YeuCau.CTDonN_1.Container16_4.Icon3_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "TextInput5_112"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 240,
-                  "snippet": {
-                    "text": "TextInput5_113"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "YeuCau",
-                "type": "YeuCau.CTDonN_1.Container16_4.Icon3_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "TextInput5_113"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 267,
-                  "snippet": {
-                    "text": "TextInput5_114"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "YeuCau",
-                "type": "YeuCau.CTDonN_1.Container16_4.Icon3_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "TextInput5_114"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "YeuCau.CTDonN_1.Container16_4.Icon3_4.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 17,
-                  "charOffset": 294,
-                  "snippet": {
-                    "text": "AddMediaButton1_9"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "YeuCau",
-                "type": "YeuCau.CTDonN_1.Container16_4.Icon3_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "AddMediaButton1_9"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "YeuCau.HuyBo1.Button11_5.OnSelect"
                 }
               ],
@@ -1848,6 +1568,86 @@
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.HuyBo1_1.Button11_11.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.HuyBo1_1.Button11_11.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 84,
+                  "snippet": {
+                    "text": "exactin"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "YeuCau",
+                "type": "YeuCau.HuyBo1_1.Button11_11"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.HuyBo1_1.Button11_11.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.HuyBo1_1.Button11_11.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 210,
+                  "snippet": {
+                    "text": "And"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "YeuCau",
+                "type": "YeuCau.HuyBo1_1.Button11_11"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -5556,6 +5356,36 @@
                 "member": "AccessibleLabel",
                 "module": "ThongTin",
                 "type": "ThongTin.Container9_14.Container19_1.Container11_66.TextInput5_58"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_146.AddMediaButton1_9.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_146.AddMediaButton1_9.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container19_6.Container11_146.AddMediaButton1_9"
               }
             }
           ],
@@ -10043,6 +9873,456 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_132.NumberInput3_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_132.NumberInput3_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container19_6.Container11_132.NumberInput3_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_131.TextInput5_112.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_131.TextInput5_112.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container19_6.Container11_131.TextInput5_112"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_130.TextInput5_111.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_130.TextInput5_111.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container19_6.Container11_130.TextInput5_111"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_129.TextInput5_110.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_129.TextInput5_110.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container19_6.Container11_129.TextInput5_110"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_128.TextInput5_109.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_128.TextInput5_109.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container19_6.Container11_128.TextInput5_109"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_127.ComboBox3_6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_127.ComboBox3_6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container19_6.Container11_127.ComboBox3_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_126.TextInput5_108.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_126.TextInput5_108.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container19_6.Container11_126.TextInput5_108"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_125.TextInput5_107.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container19_6.Container11_125.TextInput5_107.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container19_6.Container11_125.TextInput5_107"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container12_6.Container11_124.TextInput5_106.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container12_6.Container11_124.TextInput5_106.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container12_6.Container11_124.TextInput5_106"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container12_6.Container11_123.TextInput5_105.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container12_6.Container11_123.TextInput5_105.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container12_6.Container11_123.TextInput5_105"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container12_6.Container11_122.TextInput5_92.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container12_6.Container11_122.TextInput5_92.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container12_6.Container11_122.TextInput5_92"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container12_6.Container11_121.TextInput5_81.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container12_6.Container11_121.TextInput5_81.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container12_6.Container11_121.TextInput5_81"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container12_6.Container11_8.TextInput5_6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Container12_6.Container11_8.TextInput5_6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Container12_6.Container11_8.TextInput5_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Icon4_12.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Icon4_12.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Icon4_12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Icon4_12.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_21.Icon4_12.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_21.Icon4_12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "YeuCau.Container9_20.Icon4_13.AccessibleLabel"
                 }
               ],
@@ -14423,6 +14703,606 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "YeuCau.Rectangle1_25.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Rectangle1_25.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Rectangle1_25"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Rectangle1_25.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Rectangle1_25.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "YeuCau",
+                "type": "YeuCau.Rectangle1_25"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Icon4_14.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Icon4_14.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Icon4_14"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Icon4_14.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Icon4_14.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Icon4_14"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container12_8.Container11_10.TextInput5_7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container12_8.Container11_10.TextInput5_7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container12_8.Container11_10.TextInput5_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container12_8.Container11_147.TextInput5_113.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container12_8.Container11_147.TextInput5_113.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container12_8.Container11_147.TextInput5_113"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container12_8.Container11_148.TextInput5_114.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container12_8.Container11_148.TextInput5_114.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container12_8.Container11_148.TextInput5_114"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container12_8.Container11_149.TextInput5_126.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container12_8.Container11_149.TextInput5_126.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container12_8.Container11_149.TextInput5_126"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container12_8.Container11_150.TextInput5_127.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container12_8.Container11_150.TextInput5_127.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container12_8.Container11_150.TextInput5_127"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_151.TextInput5_128.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_151.TextInput5_128.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container19_8.Container11_151.TextInput5_128"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_152.TextInput5_129.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_152.TextInput5_129.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container19_8.Container11_152.TextInput5_129"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_153.ComboBox3_8.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_153.ComboBox3_8.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container19_8.Container11_153.ComboBox3_8"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_154.TextInput5_130.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_154.TextInput5_130.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container19_8.Container11_154.TextInput5_130"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_155.TextInput5_131.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_155.TextInput5_131.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container19_8.Container11_155.TextInput5_131"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_156.TextInput5_132.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_156.TextInput5_132.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container19_8.Container11_156.TextInput5_132"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_157.TextInput5_133.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_157.TextInput5_133.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container19_8.Container11_157.TextInput5_133"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_158.NumberInput3_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_158.NumberInput3_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container19_8.Container11_158.NumberInput3_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_159.AddMediaButton1_11.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Container9_22.Container19_8.Container11_159.AddMediaButton1_11.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Container9_22.Container19_8.Container11_159.AddMediaButton1_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Rectangle1_26.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Rectangle1_26.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "YeuCau",
+                "type": "YeuCau.Rectangle1_26"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "YeuCau.Rectangle1_26.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "YeuCau.Rectangle1_26.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "YeuCau",
+                "type": "YeuCau.Rectangle1_26"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.cyborg-isometric-3d-rendering-of-cyborgs-engaged-in-automated-work-at-warehouse_9631074"
                 }
               ],
@@ -15662,36 +16542,6 @@
               },
               "properties": {
                 "member": "ShowThemSPdemo2",
-                "module": "YeuCau",
-                "type": "YeuCau"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 12
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "YeuCau.ShowThemSPdemo3"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "YeuCau.ShowThemSPdemo3",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "ShowThemSPdemo3",
                 "module": "YeuCau",
                 "type": "YeuCau"
               }
