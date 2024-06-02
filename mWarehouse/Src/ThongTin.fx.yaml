@@ -1902,7 +1902,7 @@ ThongTin As screen:
                             Reset(TextInput5_68);
                             Reset(TextInput5_69);
                             Reset(TextInput5_70);
-                            Reset(TextInput5_81);
+                            Reset(NumberInput3);
                             Reset(AddMediaButton1_5);
                             
                         )
@@ -2041,8 +2041,13 @@ ThongTin As screen:
                     BasePaletteColor: =RGBA(5, 102, 178, 1)
                     DisplayMode: =DisplayMode.Edit
                     Height: =40
-                    Max: =LookUp('mWarehouse.Products',ID = ComboBox5_1.Selected.ID).quantity
-                    Value: =LookUp('mWarehouse.Products',ID = ComboBox5_1.Selected.ID).quantity
+                    Max: |-
+                        =//LookUp('mWarehouse.Products',ID = ComboBox5_1.Selected.ID).quantity
+                        100
+                    Min: =1
+                    Value: |-
+                        =//LookUp('mWarehouse.Products',ID = ComboBox5_1.Selected.ID).quantity
+                        1
                     Width: =100
                     X: =833
                     Y: =16
@@ -3956,7 +3961,7 @@ ThongTin As screen:
                     HoverFill: =RGBA(127, 178, 57, 1)
                     OnSelect: |-
                         =If(
-                            IsBlank(TextInput5_66.Text) Or IsBlank(TextInput5_67.Text) Or IsBlank(TextInput5_68.Text) Or IsBlank(TextInput5_70.Text) Or IsBlank(ComboBox3_4.Selected.Value) Or IsBlank(TextInput5_69.Text) Or IsBlank(TextInput5_81.Text) Or IsBlank(UploadedImage1_5.Image),
+                            IsBlank(TextInput5_66.Text) Or IsBlank(TextInput5_67.Text) Or IsBlank(TextInput5_68.Text) Or IsBlank(TextInput5_70.Text) Or IsBlank(ComboBox3_4.Selected.Value) Or IsBlank(TextInput5_69.Text) Or IsBlank(NumberInput3.Value) Or IsBlank(UploadedImage1_5.Image),
                             Notify("Không thể để trống các trường");
                             ,
                             Patch(
@@ -3984,9 +3989,9 @@ ThongTin As screen:
                                     productCode: TextInput5_65.Text,
                                     importID: Label1_11.Text,
                                     productID: Last('mWarehouse.Products').ID,
-                                    quantity: Value(TextInput5_81.Text),
+                                    quantity: Value(NumberInput3.Value),
                                     priceImport: Value(TextInput5_68.Text),
-                                    totalPrice: Value(TextInput5_68.Text * TextInput5_81.Text)
+                                    totalPrice: Value(TextInput5_68.Text * NumberInput3.Value)
                                 }
                             );
                             UpdateContext({ShowThemSPdemo: false});
@@ -4060,7 +4065,7 @@ ThongTin As screen:
 
                 Container11_94 As groupContainer.manualLayoutContainer:
                     Height: |
-                        =Label16_94.Height+TextInput5_81.Height+10
+                        =Label16_94.Height+NumberInput3.Height+10
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -4081,26 +4086,15 @@ ThongTin As screen:
                         Y: =4
                         ZIndex: =1
 
-                    TextInput5_81 As text:
-                        BorderColor: =App.Theme.Colors.Darker40
-                        BorderThickness: =2
-                        Color: =RGBA(0, 0, 0, 1)
-                        Default: =""
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        FocusedBorderThickness: =4
-                        Font: =App.Theme.Font
-                        Format: =TextFormat.Number
+                    "NumberInput3 As 'Number input'":
+                        DisplayMode: =DisplayMode.Edit
                         Height: =50
-                        HintText: ="Số lượng cần nhập"
-                        HoverBorderColor: =App.Theme.Colors.Darker40
-                        HoverColor: =RGBA(0, 0, 0, 1)
-                        HoverFill: =App.Theme.Colors.Lighter70
-                        Size: =13
-                        Width: =Parent.Width
+                        Min: =1
+                        Value: =1
+                        Width: =350
+                        X: =0
                         Y: =44
-                        ZIndex: =3
+                        ZIndex: =4
 
             Label10_26 As label:
                 BorderColor: =App.Theme.Colors.Darker40
