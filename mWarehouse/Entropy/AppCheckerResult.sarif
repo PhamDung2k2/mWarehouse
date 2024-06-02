@@ -494,6 +494,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.ComboBox5.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ThongTin.Container9_2.Container16.ComboBox5.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 279,
+                  "snippet": {
+                    "text": "And"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ThongTin",
+                "type": "ThongTin.Container9_2.Container16.ComboBox5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "ThongTin.Container4.Container8.Gallery3.Items"
                 }
               ],

@@ -1987,6 +1987,9 @@ ThongTin As screen:
                                     'mWarehouse.Imports',
                                     status.Value = "Chờ duyệt"
                                 ).importCode
+                            ).productID) And !(ID exactin Filter(
+                                'mWarehouse.ImportDetails',
+                                importID = Label1_11.Text
                             ).productID)
                         )
                         //And LookUp('mWarehouse.Imports',importCode exactin 'mWarehouse.ImportDetails'.importID).status.Value = "Chờ duyệt"))
