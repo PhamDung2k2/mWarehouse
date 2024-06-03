@@ -27,6 +27,20 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
+  "attachments": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/attachments",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": true,
+    "LastModifiedTimestamp": "0",
+    "Name": "attachments",
+    "OverridableProperties": {},
+    "Version": "2.3.0"
+  },
   "Barcode Reader": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -111,7 +125,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "form",
     "OverridableProperties": {},
-    "Version": "2.4.1"
+    "Version": "2.4.2"
   },
   "gallery": {
     "CustomGroupControlTemplateName": "",
@@ -240,6 +254,21 @@
     "OverridableProperties": {},
     "Version": "2.1.0"
   },
+  "Number input": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_NumberInput",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "PowerApps_CoreControls_NumberInput",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Number input",
+    "Version": "2.2.4"
+  },
   "pieChart": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -282,6 +311,21 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
+  "Tab list": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_TabList",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "PowerApps_CoreControls_TabList",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Tab list",
+    "Version": "2.2.20"
+  },
   "text": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -295,6 +339,35 @@
     "Name": "text",
     "OverridableProperties": {},
     "Version": "2.3.2"
+  },
+  "Text": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/PowerApps_CoreControls_TextCanvas",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "PowerApps_CoreControls_TextCanvas",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Text",
+    "Version": "0.0.30"
+  },
+  "toggleSwitch": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/toggleSwitch",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": true,
+    "LastModifiedTimestamp": "0",
+    "Name": "toggleSwitch",
+    "OverridableProperties": {},
+    "Version": "2.1.0"
   },
   "typedDataCard": {
     "CustomGroupControlTemplateName": "",

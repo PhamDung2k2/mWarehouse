@@ -35,6 +35,7 @@
       "disableruntimepolicies": false,
       "dynamicschema": false,
       "enableappembeddingux": false,
+      "enablecanvasappruntimecopilot": false,
       "enablechatbotfeature": true,
       "enablecomponentnamemaps": false,
       "enablecomponentscopeoldbehavior": false,
@@ -58,7 +59,7 @@
       "exportimportcomponents2": true,
       "externalmessage": false,
       "fluentv9controls": false,
-      "fluentv9controlspreview": false,
+      "fluentv9controlspreview": true,
       "formuladataprefetch": true,
       "formularepair": false,
       "generatedebugpublishedapp": false,
@@ -99,12 +100,12 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 5,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
     "DocumentLayoutHeight": 768,
-    "DocumentLayoutLockOrientation": false,
+    "DocumentLayoutLockOrientation": true,
     "DocumentLayoutMaintainAspectRatio": true,
     "DocumentLayoutOrientation": "landscape",
     "DocumentLayoutScaleToFit": true,
@@ -112,7 +113,7 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "c15d4c7b-7699-44fd-bc60-af97f9e87a49",
-    "Id": "c15d4c7b-7699-44fd-bc60-af97f9e87a49",
+    "Id": "3ede5b16-7f7f-42d3-a1fb-b3fc270f9942",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "",
     "ManualOfflineProfileId": "",
@@ -140,6 +141,7 @@
     "ThongTin_NCC",
     "ThongKe",
     "YeuCau",
-    "DuyetDon"
+    "DuyetDon",
+    "Screen1"
   ]
 }

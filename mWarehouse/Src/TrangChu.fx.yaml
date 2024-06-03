@@ -367,7 +367,7 @@ TrangChu As screen:
                     BorderColor: =App.Theme.Colors.Darker40
                     DelayItemLoading: =true
                     Height: =Parent.Height
-                    Items: ='mWarehouse.Exports'
+                    Items: ='mWarehouse.Imports'
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
@@ -500,7 +500,9 @@ TrangChu As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =41
                 Size: =13
-                Text: ="Hiện có 7 đơn nhập cần duyệt"
+                Text: |-
+                    =//"Hiện có 7 đơn nhập cần duyệt"
+                    Concatenate("Hiện có ",CountIf('mWarehouse.Imports',status.Value = "Chờ duyệt")," đơn nhập cần duyệt")
                 Width: =250
                 X: =830
                 Y: =28

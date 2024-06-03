@@ -532,7 +532,7 @@ ThongTin_NCC As screen:
                             Y: =24
                             ZIndex: =1
 
-    ThemNCC_4 As group:
+    ThongTinNCC As group:
         Height: =5
         Width: =5
         X: =40
@@ -544,7 +544,7 @@ ThongTin_NCC As screen:
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
             OnSelect: |-
-                =UpdateContext({ShowThemSP: false})
+                =//UpdateContext({ShowThemSP: false})
             Visible: =ShowThemNCC1
             Width: =Parent.Width
             ZIndex: =4
@@ -1107,7 +1107,7 @@ ThongTin_NCC As screen:
             Fill: =RGBA(202, 202, 202, 0.5)
             Height: =Parent.Height
             OnSelect: |-
-                =UpdateContext({ShowThongTinNCC: false})
+                =//UpdateContext({ShowThongTinNCC: false})
             Visible: =ShowThongTinNCC
             Width: =Parent.Width
             ZIndex: =6
@@ -1581,10 +1581,10 @@ ThongTin_NCC As screen:
                         Color: =RGBA(0, 0, 0, 1)
                         Default: =Parent.Default
                         DelayOutput: =true
-                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(244, 244, 244, 1)
-                        DisplayMode: =Parent.DisplayMode
+                        DisabledBorderColor: =RGBA(9, 33, 98, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =Parent.DisplayMode.Disabled
                         FocusedBorderThickness: =4
                         Font: =App.Theme.Font
                         HoverBorderColor: =App.Theme.Colors.Darker40
